@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShortTerm from '../../components/ShortTerm.astro';
+const allPosts = await Astro.glob('./*.md');
+const pageTitle = "Term List";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h2>A list of terms</h2>
+    <ul class="space-y-4">
+        {allPosts.map((post) => <ShortTerm url={post.url} title={post.frontmatter.title} desc={post.frontmatter.description}/>)}
+    </ul>
+</BaseLayout>
