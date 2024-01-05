@@ -20,3 +20,19 @@ The passage above leaves one huge question unanswered—how did the diver perfor
 ## III. Importance of Cliffhangers
 
 Cliffhangers are a crucial tool for storytelling because they encourage people to come back for each new segment, for example, a TV show’s weekly episode. A show or book series is successful if the audience is interested in the plotline, because then they will want to keep watching or reading. Thus, so long as a cliffhanger creates questions, fans will want answers.
+
+## IV. Examples of Cliffhangers in Literature
+
+### Example 1
+
+A very famous cliffhanger is still unresolved today from George R.R. Martin’s fantasy novel *A Dance with Dragons*, the fifth book in his *Song of Ice and Fire* series, which is also known by its HBO television series *Game of Thrones*. In fact, fans have been waiting for answers since the book’s release in 2011. The cliffhanger involves the well-loved character Jon Snow, whose fate is left unclear after the following passage:
+
+> Then Bowen Marsh stood there before him, tears running down his cheeks. “For the Watch.” He punched Jon in the belly. When he pulled his hand away, the dagger stayed where he had buried it.
+>
+> Jon fell to his knees. He found the dagger’s hilt and wrenched it free. In the cold night air the wound was smoking. “Ghost,” he whispered. Pain washed over him. Stick them with the pointy end. When the third dagger took him between the shoulder blades, he gave a grunt and fell face-first into the snow. He never felt the fourth knife. Only the cold …
+
+This is the last passage and chapter narrated from the point of view of Jon Snow, but; the book ends only a few chapters later. So, this leaves an ambiguous ending for the audience—is Jon Snow dead, or does he survive? Fans are still waiting for the next book of the *Song of Ice and Fire* series; in fact, the Internet is full of theories about this cliffhanger and Jon Snow’s fate.
+
+## Example 2
+
+Marvel Comics’ The *Spectacular Spider-Girl* often features stories that are “to be concluded” in the next issue; a commonly used technique in comic book series. They end in the midst of major action, usually with Spider Girl stuck in a dangerous situation.
