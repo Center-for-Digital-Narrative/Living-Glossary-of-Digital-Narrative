@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Antagonist
 author: Colin Robinson
 description: "In a story, the antagonist is the opposite of the protagonist, or main character. Typically, this is a villain of some kind, but not always! It’s just the opponent of the main character, or someone who gets in their way."

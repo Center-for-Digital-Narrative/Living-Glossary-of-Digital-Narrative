@@ -2,7 +2,7 @@
 const { title, url, desc } = Astro.props
 ---
 <li class="not-prose">
-    <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href={url}>{title}</a>
+    <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href={url} transition:name=`term ${title}`>{title}</a>
     <br>
-    <span class="text-base italic">{desc}</span>
+    <span class="text-base italic" transition:name=`term desc ${title}`>{desc}</span>
 </li>

@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+    const termEntries = await getCollection('terms');
+    return termEntries.map(entry => ({
+        params: { slug: entry.slug }, props: { entry },
+    }));
+}
+
+export function formatDate(date: Date): string {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // getMonth() is zero-based; adding 1
+    const day = date.getDate().toString().padStart(2, '0');
+
+    return `${year}-${month}-${day}`;
+}
+
+const { entry  } = Astro.props;
+const { Content } = await entry.render();
+---
+<BaseLayout pageTitle={entry.data.title}>
+    <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
+    <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
+    <p>{formatDate(entry.data.pubDate)}</p>
+    <p>Written by: {entry.data.author}</p>
+    <Content />
+</BaseLayout>

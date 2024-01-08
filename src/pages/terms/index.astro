@@ -1,12 +1,14 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ShortTerm from '../../components/ShortTerm.astro';
-const allPosts = await Astro.glob('./*.md');
+const allPosts = await getCollection("terms");
 const pageTitle = "Term List";
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <h2>A list of terms</h2>
+    <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white">A list of terms</h1>
     <ul class="space-y-4">
-        {allPosts.map((post) => <ShortTerm url={post.url} title={post.frontmatter.title} desc={post.frontmatter.description}/>)}
+        {allPosts.map((post) => <ShortTerm url={`/terms/${post.slug}/`} title={post.data.title} desc={post.data.description}/>)}
     </ul>
 </BaseLayout>

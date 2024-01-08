@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: Doppelganger
 author: Colin Robinson
 description: "Doppelganger is a twin or double of some character, usually in the form of an evil twin. They sometimes impersonate a main character or cause confusion among the love interests."
