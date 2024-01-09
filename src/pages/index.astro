@@ -1,9 +1,8 @@
 ---
-// Component Imports
 import Button from '../components/Button.astro';
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import Search from "astro-pagefind/components/Search";
+import {Particles} from "../components/particles";
 ---
 
 <html lang="en">
@@ -17,8 +16,10 @@ import Button from '../components/Button.astro';
 
 	<body>
 		<div class="grid place-items-center h-screen content-center">
+			<Particles client:load/>
 			<Button>Tailwind Button in Astro!</Button>
 			<a href="/terms/" class="p-4 underline">Term List</a>
+			<Search id="search" className="pagefind-ui" uiOptions={{ showImages: false }} />
 		</div>
 	</body>
 </html>
