@@ -1,3 +1,5 @@
 Front page logo:
 https://ato-ui.vercel.app/
 https://github.com/bennymi/ato-ui/blob/main/src/docs/components/landing-page/ring.svelte
+
+astro-pagefind was updated to support astro v4 but the npm package has not updated. Check and try to update again.
