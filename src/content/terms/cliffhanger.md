@@ -2,7 +2,7 @@
 title: 'Cliffhanger'
 pubDate: 2022-07-01
 description: 'A "Cliffhanger" is a narrative device often used at the end of a story segment that leaves the audience in a heightened state of suspense or uncertainty. It refers to an unresolved and crucial moment, usually at the conclusion of a chapter, episode, or season, where the fate of the characters or the outcome of the plot is left hanging.'
-author: Colin Robinson
+author: john-smith
 ---
 ## I. What is a Cliffhanger?
 

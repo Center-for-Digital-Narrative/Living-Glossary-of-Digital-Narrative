@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShortTerm from '../../components/ShortTerm.astro';
+const allPosts = await getCollection("authors");
+const pageTitle = "Authors";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white">Authors</h1>
+    <ul class="space-y-4">
+        {allPosts.map((post) => <li><a href={`/authors/${post.slug}/`}>{post.data.name}</a></li>)}
+    </ul>
+</BaseLayout>

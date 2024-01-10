@@ -174,7 +174,23 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"terms": {
+		"authors": {
+"colin-robinson.md": {
+	id: "colin-robinson.md";
+  slug: "colin-robinson";
+  body: string;
+  collection: "authors";
+  data: InferEntrySchema<"authors">
+} & { render(): Render[".md"] };
+"john-smith.md": {
+	id: "john-smith.md";
+  slug: "john-smith";
+  body: string;
+  collection: "authors";
+  data: InferEntrySchema<"authors">
+} & { render(): Render[".md"] };
+};
+"terms": {
 "antagonist.md": {
 	id: "antagonist.md";
   slug: "antagonist";
@@ -201,9 +217,7 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"authors": {
-};
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
