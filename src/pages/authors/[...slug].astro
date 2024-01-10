@@ -16,7 +16,7 @@ const allPosts = await getCollection('terms', ({ data }) => {
 });
 
 ---
-<BaseLayout pageTitle={entry.data.title}>
+<BaseLayout pageTitle={entry.data.name}>
     <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white">{entry.data.name}</h1>
     <Content />
     <h3>My articles:</h3>
