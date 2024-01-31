@@ -4,7 +4,7 @@ pubDate: 2022-07-01
 description: 'A "Cliffhanger" is a narrative device often used at the end of a story segment that leaves the audience in a heightened state of suspense or uncertainty. It refers to an unresolved and crucial moment, usually at the conclusion of a chapter, episode, or season, where the fate of the characters or the outcome of the plot is left hanging.'
 author: john-smith
 ---
-## I. What is a Cliffhanger
+## I. What is a Cliffhanger?????
 
 A **cliffhanger** is when a story or plotline ends suddenly or a large plot twist occurs and is left unresolved. It is a device that is used to cause suspense, but most importantly, it leaves unanswered questions that make the reader or viewer want to come back to learn what will happen. The phrase comes from the idea of “hanging off a cliff”—whatever happens will determine the character’s future and the story’s plot, leaving audiences “on the edge” of knowing. Cliffhangers are a particularly popular and widely used device in television, whose success relies heavily on audiences returning to watch week after week with episodes that are “to be continued.”
 
