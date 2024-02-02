@@ -5,8 +5,8 @@ const terms = defineCollection({
     schema: z.object({
         title: z.string(),
         description: z.string(),
-        author: reference('authors'),
-        pubDate: z.date(),
+        author: reference('authors').optional(),
+        pubDate: z.date().optional(),
     }),
 });
 

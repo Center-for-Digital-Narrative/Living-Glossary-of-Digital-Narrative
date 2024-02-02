@@ -198,6 +198,41 @@ declare module 'astro:content' {
   collection: "terms";
   data: InferEntrySchema<"terms">
 } & { render(): Render[".md"] };
+"augmented-reality.md": {
+	id: "augmented-reality.md";
+  slug: "augmented-reality";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"avatar.md": {
+	id: "avatar.md";
+  slug: "avatar";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"born-digital.md": {
+	id: "born-digital.md";
+  slug: "born-digital";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"chatbot.md": {
+	id: "chatbot.md";
+  slug: "chatbot";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"chthulucene.md": {
+	id: "chthulucene.md";
+  slug: "chthulucene";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
 "cliffhanger.md": {
 	id: "cliffhanger.md";
   slug: "cliffhanger";
@@ -205,9 +240,226 @@ declare module 'astro:content' {
   collection: "terms";
   data: InferEntrySchema<"terms">
 } & { render(): Render[".md"] };
+"codework.md": {
+	id: "codework.md";
+  slug: "codework";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"combinatory-cinema.md": {
+	id: "combinatory-cinema.md";
+  slug: "combinatory-cinema";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"creative-captioning.md": {
+	id: "creative-captioning.md";
+  slug: "creative-captioning";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"cybertext.md": {
+	id: "cybertext.md";
+  slug: "cybertext";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"data-forensics.md": {
+	id: "data-forensics.md";
+  slug: "data-forensics";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"digital-humanities.md": {
+	id: "digital-humanities.md";
+  slug: "digital-humanities";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
 "doppelganger.md": {
 	id: "doppelganger.md";
   slug: "doppelganger";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"email-narrative.md": {
+	id: "email-narrative.md";
+  slug: "email-narrative";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"embodiment.md": {
+	id: "embodiment.md";
+  slug: "embodiment";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"emulation.md": {
+	id: "emulation.md";
+  slug: "emulation";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"fanfiction.md": {
+	id: "fanfiction.md";
+  slug: "fanfiction";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"first-person.md": {
+	id: "first-person.md";
+  slug: "first-person";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"generative-poetry.md": {
+	id: "generative-poetry.md";
+  slug: "generative-poetry";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"gutenberg-parenthesis.md": {
+	id: "gutenberg-parenthesis.md";
+  slug: "gutenberg-parenthesis";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"hyperreading.md": {
+	id: "hyperreading.md";
+  slug: "hyperreading";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"implied-reader.md": {
+	id: "implied-reader.md";
+  slug: "implied-reader";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"indie-games.md": {
+	id: "indie-games.md";
+  slug: "indie-games";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"instapoetry.md": {
+	id: "instapoetry.md";
+  slug: "instapoetry";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"interactive-fiction.md": {
+	id: "interactive-fiction.md";
+  slug: "interactive-fiction";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"intertextuality.md": {
+	id: "intertextuality.md";
+  slug: "intertextuality";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"jane-space.md": {
+	id: "jane-space.md";
+  slug: "jane-space";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"kinetic-typography.md": {
+	id: "kinetic-typography.md";
+  slug: "kinetic-typography";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"link-rot.md": {
+	id: "link-rot.md";
+  slug: "link-rot";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"machine-learning.md": {
+	id: "machine-learning.md";
+  slug: "machine-learning";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"media-archeology.md": {
+	id: "media-archeology.md";
+  slug: "media-archeology";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"netprov.md": {
+	id: "netprov.md";
+  slug: "netprov";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"obsolescence.md": {
+	id: "obsolescence.md";
+  slug: "obsolescence";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"parasocial.md": {
+	id: "parasocial.md";
+  slug: "parasocial";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"platform-studies.md": {
+	id: "platform-studies.md";
+  slug: "platform-studies";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"relational-posthumanism.md": {
+	id: "relational-posthumanism.md";
+  slug: "relational-posthumanism";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"remix.md": {
+	id: "remix.md";
+  slug: "remix";
+  body: string;
+  collection: "terms";
+  data: InferEntrySchema<"terms">
+} & { render(): Render[".md"] };
+"surveillance-capitalism.md": {
+	id: "surveillance-capitalism.md";
+  slug: "surveillance-capitalism";
   body: string;
   collection: "terms";
   data: InferEntrySchema<"terms">
