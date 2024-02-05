@@ -12,7 +12,7 @@ export async function getStaticPaths() {
 const { entry  } = Astro.props;
 const { Content } = await entry.render();
 const allPosts = await getCollection('terms', ({ data }) => {
-    return data.author.slug === entry.slug;
+    //return data.author.slug === entry.slug;
 });
 
 ---
