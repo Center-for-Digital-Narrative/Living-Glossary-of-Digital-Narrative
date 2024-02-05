@@ -9,23 +9,25 @@ export async function getStaticPaths() {
     }));
 }
 
-export function formatDate(date: Date): string {
+/*export function formatDate(date: Date): string {
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // getMonth() is zero-based; adding 1
     const day = date.getDate().toString().padStart(2, '0');
 
     return `${year}-${month}-${day}`;
-}
+}*/
 
 const { entry  } = Astro.props;
-const author = await getEntry(entry.data.author);
-const { Content } = await entry.render();
+//const author = await getEntry(entry.data.author);
+const { Content, headings } = await entry.render();
+
+// https://kld.dev/building-table-of-contents/
 ---
 <BaseLayout pageTitle={entry.data.title}>
     <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
     <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
-    <p> <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate)}</time></p>
-    <p>Written by: <a href={`/authors/${author.slug}/`}>{author.data.name}</a></p>
+    <!--<p> <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate)}</time></p>-->
+    <!--<p>Written by: <a href={`/authors/${author.slug}/`}>{author.data.name}</a></p>-->
 
     <Content />
 </BaseLayout>
