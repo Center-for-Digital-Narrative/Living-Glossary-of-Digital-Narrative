@@ -24,10 +24,12 @@ const { Content, headings } = await entry.render();
 // https://kld.dev/building-table-of-contents/
 ---
 <BaseLayout pageTitle={entry.data.title}>
-    <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
-    <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
-    <!--<p> <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate)}</time></p>-->
-    <!--<p>Written by: <a href={`/authors/${author.slug}/`}>{author.data.name}</a></p>-->
+    <article class="prose lg:prose-xl data-pagefind-body">
+        <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
+        <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
+        <!--<p> <time datetime={entry.data.pubDate.toISOString()}>{formatDate(entry.data.pubDate)}</time></p>-->
+        <!--<p>Written by: <a href={`/authors/${author.slug}/`}>{author.data.name}</a></p>-->
 
-    <Content />
+        <Content />
+    </article>
 </BaseLayout>

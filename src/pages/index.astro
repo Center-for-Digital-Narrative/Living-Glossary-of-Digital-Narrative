@@ -1,22 +1,15 @@
 ---
 import { Image } from 'astro:assets';
 import heroImage from "../assets/hero.png";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>The Living Glossary of Digital Narrative</title>
-	</head>
+<BaseLayout pageTitle='The Living Glossary of Digital Narrative'>
+        <div class="mt-40">
+            <Image src={heroImage} alt="The main logo" height="500" class="mx-auto"/>
 
-	<body>
-        <div class="grid place-items-center h-screen content-center">
-            <Image src={heroImage} alt="The main logo" height="500" />
-
-            <form class="w-96">
+            <!--
+            <form class="w-96 mx-auto">
                 <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
                 <div class="relative">
                     <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -27,8 +20,20 @@ import heroImage from "../assets/hero.png";
                     <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required>
                 </div>
             </form>
+-->
+
+
+            <form class="w-96 mx-auto">
+                <div class="relative">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <a transition:name='search' href="/search" type="button" class="cursor-text w-full p-4 pl-10 text-base text-gray-400 border border-gray-300 rounded-lg text-left">Search</a>
+                </div>
+            </form>
+
 
         </div>
-
-	</body>
-</html>
+</BaseLayout>
