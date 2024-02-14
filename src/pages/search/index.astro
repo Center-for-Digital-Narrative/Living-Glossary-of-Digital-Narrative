@@ -8,12 +8,12 @@ import Search from "astro-pagefind/components/Search";
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         setTimeout(()=>{
-            document.querySelector('.pagefind-ui__search-input').focus();
+            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
         }, 50);
     });
     document.addEventListener("astro:page-load", () => {
         setTimeout(()=>{
-            document.querySelector('.pagefind-ui__search-input').focus();
+            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
         }, 50);
     });
 </script>
