@@ -13,8 +13,6 @@ const { pageTitle } = Astro.props;
 </head>
 <body>
 
-
-
 <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a href="https://cdn.uib.no" class="flex items-center space-x-3 rtl:space-x-reverse hover:underline">
@@ -36,11 +34,17 @@ const { pageTitle } = Astro.props;
             </li>
         </ul>
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
+            <button type="button" class="text-center inline-flex items-center hover:text-cyan-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                </svg>
+            </button>
+
             <img src="/UiB_PositivEmblem.png" class="h-16" alt="CDN Logo" />
         </div>
     </div>
 </nav>
-<nav class="mb-4 bg-gray-50 dark:bg-gray-700">
+<nav class="mb-4 bg-gray-100 dark:bg-gray-700">
     <div class="max-w-screen-xl px-4 py-2 mx-auto">
         <div class="flex justify-between items-center">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
