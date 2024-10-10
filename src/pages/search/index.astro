@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Search from "astro-pagefind/components/Search";
+import NavSmall from "../../components/NavSmall.astro";
 ---
 
 <script>
@@ -19,5 +20,8 @@ import Search from "astro-pagefind/components/Search";
 </script>
 
 <BaseLayout pageTitle='Search | LGDN'>
-    <Search id="search" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
+    <NavSmall />
+    <div class="container">
+        <Search id="search" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
+    </div>
 </BaseLayout>

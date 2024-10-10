@@ -1,0 +1,28 @@
+---
+
+
+---
+<style>
+    #hero {
+        background-color: #ffd97c;
+        background-image: url('/hero-books.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% calc(50% + 70px);
+    }
+    #hero h1 {
+        color: #333;
+    }
+    #hero a {
+        background: #f4e0b0;
+    }
+</style>
+<div id="hero" class="h-[640px] bg-amber-300 flex flex-col items-center justify-center">
+    <h1 class="montserrat-title text-6xl 2xl:text-7xl">The Living Glossary of Digital Narrative</h1>
+
+    <form class="w-[1200px] mt-10">
+        <a transition:name='search' href="/search" type="button" class="cursor-text w-full p-4 text-base rounded-3xl text-left">
+            <img src="/search-icon.png"  alt="search icon"/>
+        </a>
+    </form>
+</div>
