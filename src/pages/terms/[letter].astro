@@ -1,0 +1,34 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection('terms');
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+
+    return alphabet.map(letter => {
+        // Filter terms that start with the current letter
+        const termsStartingWithLetter = allPosts.filter(post =>
+            post.slug.toLowerCase().startsWith(letter)
+        );
+
+        return {
+            params: { letter }, // Dynamic route parameter for the letter
+            props: { terms: termsStartingWithLetter }, // Pass filtered terms as props
+        };
+    });
+}
+
+const { letter } = Astro.params
+const { terms } = Astro.props;
+
+---
+
+<html>
+<body>
+<h1>Terms starting with "{letter.toUpperCase()}"</h1>
+<ul>
+    {terms.map((post) => <li><a href={post.slug}>{post.data.title}</a></li>)}
+</ul>
+</body>
+</html>
