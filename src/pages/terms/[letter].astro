@@ -1,6 +1,9 @@
 ---
 import { getCollection, getEntry } from 'astro:content';
-
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NavSmall from "../../components/NavSmall.astro";
+import ShortTerm from "../../components/ShortTerm.astro";
+import TermSnippet from "../../components/TermSnippet.astro";
 
 export async function getStaticPaths() {
     const allPosts = await getCollection('terms');
@@ -24,11 +27,10 @@ const { terms } = Astro.props;
 
 ---
 
-<html>
-<body>
-<h1>Terms starting with "{letter.toUpperCase()}"</h1>
-<ul>
-    {terms.map((post) => <li><a href={post.slug}>{post.data.title}</a></li>)}
-</ul>
-</body>
-</html>
+<BaseLayout pageTitle={letter.toUpperCase() + ' | LGDN'}>
+    <NavSmall />
+    <div class="container mt-10">
+        <h1 class="text-secondary text-4xl font-bold mb-10">Terms beginning with {letter.toUpperCase()}</h1>
+        {terms.map( (post) => <TermSnippet url={`/terms/${post.slug}/`} title={post.data.title} desc={post.data.description}/>)}
+    </div>
+</BaseLayout>

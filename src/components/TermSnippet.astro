@@ -1,0 +1,8 @@
+---
+const { title, url, desc } = Astro.props
+---
+<div class="dashedtitle-container">
+    <a class="text-secondary text-xl font-bold dashedtitle" href={url}>{title}</a>
+    <div class="dashedtitle-line"></div>
+</div>
+<span class="text-base italic">{desc}</span>

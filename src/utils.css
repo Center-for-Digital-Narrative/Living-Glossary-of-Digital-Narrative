@@ -4,10 +4,25 @@
 .text-secondary {
     color: #cf3c3a;
 }
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
-.montserrat-title {
-     font-family: "Montserrat", sans-serif;
-     font-optical-sizing: auto;
-     font-weight: 700;
-     font-style: normal;
+.dashedtitle-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.dashedtitle {
+    margin: 0;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.dashedtitle-line {
+    flex-grow: 1;
+    border-bottom: 2px dashed black;
 }
