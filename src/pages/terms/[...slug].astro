@@ -3,6 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection, getEntry } from 'astro:content';
 import natural from "natural";
 import TableOfContents from "../../components/toc/TableOfContents.astro";
+import NavSmall from "../../components/NavSmall.astro";
 
 export async function getStaticPaths() {
     const termEntries = await getCollection('terms');
@@ -21,31 +22,21 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 //const author = await getEntry(entry.data.author);
-const { Content, headings } = await entry.render();
+const { Content } = await entry.render();
 
-const TfIdf = natural.TfIdf;
-const tfidf = new TfIdf();
-
-// https://kld.dev/building-table-of-contents/
 ---
-<BaseLayout pageTitle={entry.data.title}>
-    <article class="prose lg:prose-xl data-pagefind-body">
-        <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
-        <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
-        <p> <time>02 Feb 2024</time></p>
-        <p>Written by: <a href='/authors/colin-robinson/'>Colin Robinson</a></p>
-    </article>
+<BaseLayout pageTitle={entry.data.title + ' | LGDN'}>
+    <NavSmall />
+    <div class="container p-2 md:p-0">
+        <div class="flex flex-col items-center mt-10">
+            <article class="prose data-pagefind-body">
+                <h1 class="md:text-5xl lg:text-8xl mb-4" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
+                <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
+            </article>
 
-    <div class="flex gap-36 items-start">
-        <div class="hidden lg:block order-2 pt-8 sticky top-0">
-            <TableOfContents headings={headings} />
-        </div>
-        <div class="grid gap-8 justify-items-start max-w-2xl my-8">
-            <article class="prose lg:prose-xl data-pagefind-body">
+            <article class="prose my-8 data-pagefind-body">
                 <Content />
             </article>
         </div>
     </div>
-
-
 </BaseLayout>

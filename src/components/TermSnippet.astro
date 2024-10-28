@@ -1,8 +1,10 @@
 ---
 const { title, url, desc } = Astro.props
 ---
-<div class="dashedtitle-container">
-    <a class="text-secondary text-xl font-bold dashedtitle" href={url}>{title}</a>
-    <div class="dashedtitle-line"></div>
+<div class="mb-5">
+    <div class="dashedtitle-container">
+        <a class="text-secondary text-xl font-bold dashedtitle" href={url} transition:name=`term ${title}`>{title}</a>
+        <div class="dashedtitle-line"></div>
+    </div>
+    <span class="text-base italic" transition:name=`term desc ${title}`>{desc}</span>
 </div>
-<span class="text-base italic">{desc}</span>

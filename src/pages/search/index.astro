@@ -21,7 +21,7 @@ import NavSmall from "../../components/NavSmall.astro";
 
 <BaseLayout pageTitle='Search | LGDN'>
     <NavSmall />
-    <div class="container">
+    <div class="container" transition:name='search'>
         <Search id="search" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
     </div>
 </BaseLayout>
