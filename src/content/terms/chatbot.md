@@ -1,4 +1,4 @@
 ---
 title: Chatbot
-description: "A chatbot is an artificial intelligence program designed to simulate conversation with human users, especially over the internet."
+description: "Software application designed to simulate conversation with human users, often used in digital narratives to provide interactive storytelling experiences"
 ---

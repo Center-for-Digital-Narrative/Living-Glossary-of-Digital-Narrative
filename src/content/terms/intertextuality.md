@@ -1,4 +1,4 @@
 ---
 title: Intertextuality
-description: "In digital culture, intertextuality refers to the relationship between texts, or between texts and other media, where one references or echoes another, enriching the reader's experience."
+description: "Relationship between texts, where a text references, alludes to, or is influenced by another text, enriching the reader's understanding and interpretation"
 ---

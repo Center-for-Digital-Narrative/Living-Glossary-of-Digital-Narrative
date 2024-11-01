@@ -1,4 +1,4 @@
 ---
 title: Machine Learning
-description: "Machine Learning is a subset of artificial intelligence that enables computer systems to learn from and make decisions based on data, improving their performance over time without being explicitly programmed."
+description: "Subset of artificial intelligence that involves the development of algorithms that allow computers to learn and adapt through experience, used in digital narratives to generate content or enhance interactivity"
 ---

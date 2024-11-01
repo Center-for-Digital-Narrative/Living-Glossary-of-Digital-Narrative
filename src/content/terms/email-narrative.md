@@ -1,4 +1,4 @@
 ---
 title: Email Narrative
-description: "An email narrative is a story or novel that unfolds through a series of emails, leveraging the format's immediacy and personal tone to engage readers."
+description: "Form of digital storytelling that unfolds through the exchange of emails, utilizing the medium's format for character development, plot progression, and reader interaction"
 ---

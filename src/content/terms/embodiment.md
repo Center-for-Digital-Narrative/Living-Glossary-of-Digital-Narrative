@@ -1,4 +1,4 @@
 ---
 title: Embodiment
-description: "In digital culture, embodiment refers to the sense of physical presence and interaction within a virtual environment, often through avatars or haptic feedback."
+description: "Experience of bodily presence within digital narratives, often the result of content or mechanics intended to make readers aware of their physical and sensory experience"
 ---

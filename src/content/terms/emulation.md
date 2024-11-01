@@ -1,4 +1,4 @@
 ---
 title: Emulation
-description: "Emulation involves replicating the functionality of one computer system or environment within another, allowing for the preservation and use of older software or games on new hardware."
+description: "Replication of the functionality of older hardware or software on new systems, ensuring the continued accessibility and functionality of digital works"
 ---

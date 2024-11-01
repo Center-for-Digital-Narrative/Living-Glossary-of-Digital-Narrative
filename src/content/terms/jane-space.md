@@ -1,4 +1,4 @@
 ---
 title: Jane Space
-description: "Jane Space is a term used to describe virtual environments or spaces that are designed to be inclusive and supportive of women and marginalized groups, fostering safe online communities."
+description: "Lexias that are part of a work but have ‘orphan status’, lacking inbound links to access the lexia"
 ---

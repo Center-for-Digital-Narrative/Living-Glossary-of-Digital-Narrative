@@ -1,10 +1,15 @@
 ---
-const { title, url, desc } = Astro.props
+const { term } = Astro.props
+
+const visible = term.data.author;
+// const visible = true;
+
 ---
 <div class="mb-5">
     <div class="dashedtitle-container">
-        <a class="text-secondary text-xl font-bold dashedtitle" href={url} transition:name=`term ${title}`>{title}</a>
+        {visible && <a class="text-secondary text-xl font-bold dashedtitle" href={`/terms/${term.slug}/`} transition:name=`term ${term.data.title}`>{term.data.title}</a>}
+        {!visible && <span class="opacity-70 text-xl font-bold dashedtitle" transition:name=`term ${term.data.title}`>{term.data.title}</span>}
         <div class="dashedtitle-line"></div>
     </div>
-    <span class="text-base italic" transition:name=`term desc ${title}`>{desc}</span>
+    <span class="text-base italic" transition:name=`term desc ${term.data.title}`>{term.data.description}</span>
 </div>

@@ -1,4 +1,4 @@
 ---
 title: Hyperreading
-description: "Hyperreading is a non-linear method of reading digital texts that involves skimming, scanning, and navigating through hyperlinks, contrasting with the deep, focused reading of print."
+description: "Form of non-linear reading enabled by digital texts, characterized by clicking on hyperlinks, skimming, and scanning, allowing readers to quickly gather information from multiple sources"
 ---

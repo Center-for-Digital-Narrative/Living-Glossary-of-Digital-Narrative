@@ -1,4 +1,4 @@
 ---
 title: Codework
-description: "Codework refers to creative literary experiments that blend programming code with traditional language to explore the poetic and aesthetic potentials of computer code."
+description: "Creative integration of computer code within literary texts, where programming languages are used alongside natural language to create layered meanings and effects"
 ---

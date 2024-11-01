@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getCollection, getEntry } from 'astro:content';
-import natural from "natural";
-import TableOfContents from "../../components/toc/TableOfContents.astro";
+import { getCollection } from 'astro:content';
 import NavSmall from "../../components/NavSmall.astro";
 
 export async function getStaticPaths() {
@@ -12,31 +10,51 @@ export async function getStaticPaths() {
     }));
 }
 
-/*export function formatDate(date: Date): string {
+export function formatDate(date: Date|undefined): string {
+    if(!date) return 'Unknown Date';
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0'); // getMonth() is zero-based; adding 1
     const day = date.getDate().toString().padStart(2, '0');
 
     return `${year}-${month}-${day}`;
-}*/
+}
 
 const { entry } = Astro.props;
-//const author = await getEntry(entry.data.author);
 const { Content } = await entry.render();
 
 ---
 <BaseLayout pageTitle={entry.data.title + ' | LGDN'}>
     <NavSmall />
     <div class="container p-2 md:p-0">
-        <div class="flex flex-col items-center mt-10">
-            <article class="prose data-pagefind-body">
-                <h1 class="md:text-5xl lg:text-8xl mb-4" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
-                <p><em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em></p>
-            </article>
+        <div class="flex flex-col items-center">
+            <article class="prose xl:prose-lg my-8 data-pagefind-body">
+                <h1 style="margin-bottom:0.1em" class="text-4xl lg:text-7xl xl:text-8xl font-bold" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
+                <p>
+                    <em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em>
+                    <br>
+                    <span class="text-sm">{entry.data.author ?? 'Unknown Author'}, {formatDate(entry.data.pubDate)}</span>
+                </p>
 
-            <article class="prose my-8 data-pagefind-body">
                 <Content />
+
+                <h2 class="border-t pt-8">Cite This</h2>
+                <span id="citation_text" class="mr-6">{entry.data.author ?? 'Unknown Author'}. "{entry.data.title}." <em>The Living Glossary of Digital Narrative</em>, {formatDate(entry.data.pubDate)}. https://glossary.cdn.uib.no/terms/{entry.slug}</span>
+                <button type="button" class="text-gray-700 bg-gray-200 hover:bg-gray-400 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
+                    </svg>
+                </button>
+
             </article>
         </div>
     </div>
 </BaseLayout>
+
+<script>
+    const copyButton = document.getElementById("copy_button");
+    const citationText = document.getElementById("citation_text");
+    if(!copyButton || !citationText) throw new Error("Missing elements");
+    copyButton.addEventListener('click', () => {
+        navigator.clipboard.writeText(citationText.innerText)
+    });
+</script>

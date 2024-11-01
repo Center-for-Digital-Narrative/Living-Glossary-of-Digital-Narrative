@@ -1,4 +1,4 @@
 ---
 title: Interactive Fiction
-description: "Interactive Fiction is a genre of electronic literature that allows readers to participate in the story, making choices that affect the narrative's outcome."
+description: "Variety of text-based games that allows readers to participate in a story, either by typing commands or making choices that affect the narrative's direction and outcome"
 ---

@@ -1,4 +1,4 @@
 ---
 title: Born Digital
-description: "Content is described as born digital when it has been created in a digital format from the outset rather than being converted from a physical form."
+description: "Media creation specifically for digital formats, utilizing the capabilities and features of electronic devices and software from their inception, rather than being digitized after creation"
 ---

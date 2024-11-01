@@ -1,4 +1,4 @@
 ---
 title: Fanfiction
-description: "Fanfiction is a genre of writing where enthusiasts create their own stories based on characters, settings, and plots from existing works, often shared online."
+description: "Genre of writing, often published and shared in online communities, where fans create new stories based on characters, settings, or plots from existing works"
 ---

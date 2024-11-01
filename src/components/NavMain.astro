@@ -1,6 +1,19 @@
+<style>
+    #nav_main {
+        font-size: min(18px, 4.5vw);
+    }
+    /* md: */
+    @media (min-width: 768px) {
+        #nav_main {
+            /* text-2xl */
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+</style>
 <div class="bg-primary">
     <nav class="container">
-        <div class="flex flex-col md:flex-row pb-2 md:pb-0 justify-center md:justify-between items-center mx-auto max-w-screen-2xl text-gray-900 text-lg md:text-2xl">
+        <div id="nav_main" class="flex flex-col md:flex-row pb-2 md:pb-0 justify-center md:justify-between items-center mx-auto max-w-screen-2xl text-gray-900">
             <a href="https://cdn.uib.no">
                 <img src="/CDN_Logo.png" class="h-24 xl:h-[125px]" alt="CDN Logo" />
             </a>

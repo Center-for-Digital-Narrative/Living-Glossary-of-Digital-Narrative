@@ -2,15 +2,15 @@
 import { getCollection } from "astro:content";
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ShortTerm from '../../components/ShortTerm.astro';
+import NavSmall from "../../components/NavSmall.astro";
+import TermSnippet from "../../components/TermSnippet.astro";
 const allPosts = await getCollection("terms");
-const pageTitle = "Term List";
 ---
-<BaseLayout pageTitle={pageTitle}>
-    <article class="prose lg:prose-xl data-pagefind-ignore">
-        <h1 class="tracking-tight md:text-5xl lg:text-6xl dark:text-white">A list of terms</h1>
-        <ul class="space-y-4">
-            {allPosts.map((post) => <ShortTerm url={`/terms/${post.slug}/`} title={post.data.title} desc={post.data.description}/>)}
-        </ul>
-    </article>
+
+<BaseLayout pageTitle='Term List | LGDN'>
+    <NavSmall />
+    <div class="container mt-10 px-4">
+        <h1 class="text-secondary text-4xl font-bold mb-10">Term List</h1>
+        {allPosts.map( (post:any) => <TermSnippet term={post} />)}
+    </div>
 </BaseLayout>

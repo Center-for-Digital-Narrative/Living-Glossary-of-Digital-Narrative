@@ -5,5 +5,6 @@ import pagefind from "astro-pagefind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), pagefind()]
+  integrations: [tailwind(), pagefind()],
+  prefetch: true
 });
