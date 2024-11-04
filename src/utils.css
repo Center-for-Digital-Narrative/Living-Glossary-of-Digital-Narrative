@@ -4,6 +4,9 @@
 .text-secondary {
     color: #cf3c3a;
 }
+.bg-accent {
+    background-color: #ffd97c
+}
 .montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -25,4 +28,16 @@
 .dashedtitle-line {
     flex-grow: 1;
     border-bottom: 2px dashed black;
+}
+
+#nav_small_title {
+    font-size: min(20px, 4.5vw);
+}
+/* s,: */
+@media (min-width: 640px) {
+    /* text-xl */
+    #nav_small_title {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
 }

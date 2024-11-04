@@ -27,12 +27,14 @@
     </form>
 </div>
 <div class="bg-primary hidden md:block">
-    <nav class="container mb-4 ">
-        <div class="max-w-screen-2xl py-6 mx-auto flex flex-row md:text-lg xl:text-3xl justify-between">
-            <div>
+    <nav class="container mb-4">
+        <div class="py-6 px-4 mx-auto flex flex-row md:text-lg xl:text-xl 2xl:text-2xl justify-between">
+            <div class="flex flex-row gap-4 2xl:gap-8">
+                <a href="/about/" class="hover:underline">About</a>
+                <a href="/submit/" class="hover:underline">Submit</a>
                 <a href="/terms/" class="hover:underline">Term List</a>
             </div>
-            <ul class="flex flex-row text-gray-900 gap-2 md:gap-3 xl:gap-5 2xl:gap-6">
+            <ul class="flex flex-row gap-1 lg:gap-3 xl:gap-5">
                 <li><a href="/terms/a" class="hover:underline" transition:name=`letter A`>A</a></li>
                 <li><a href="/terms/b" class="hover:underline" transition:name=`letter B`>B</a></li>
                 <li><a href="/terms/c" class="hover:underline" transition:name=`letter C`>C</a></li>
@@ -64,6 +66,13 @@
     </nav>
 </div>
 <!-- Mobile banner -->
-<nav class="flex md:hidden mb-4 text-xl py-2 justify-center" style="background-color: #ffd97c;">
-    <h1 class="font-semibold">The Living Glossary of Digital Narrative</h1>
+<nav class="md:hidden mb-4 text-lg py-2 justify-center text-center bg-accent">
+    <a href="/">
+        <span id="nav_small_title" class="font-semibold hover:underline">The Living Glossary of Digital Narrative</span>
+    </a>
+    <div class="md:flex flex-row gap-4 2xl:gap-8 ">
+        <a href="/about/" class="hover:underline pr-4 md:pr-0">About</a>
+        <a href="/submit/" class="hover:underline">Submit</a>
+        <a href="/terms/" class="hover:underline pl-4 md:pl-0">Term List</a>
+    </div>
 </nav>

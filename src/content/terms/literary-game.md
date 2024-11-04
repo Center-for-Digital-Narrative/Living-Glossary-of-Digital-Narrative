@@ -14,7 +14,10 @@ As an example of how one might decide whether a media artifact falls within the 
 
 Whatever form it takes, a literary game does not exist in a vacuum. And, as Clara Fernández-Vara (2014) wrote, “When we analyze games, we study meaning within the game (meaningful play) and around it (cultural significance). The text is not limited to the work itself, but also to where the text is interpreted and by whom” (p. 6). Labeling a media artifact a “literary game” is largely an exercise in symbolism, but the possibilities inherent in the coupling of the ludic and the literary fit well within the porous confines of electronic literature.
 
-## References
+
+## Bibliography
+
+### Works Referenced
 
 Coltrain, J., & Ramsay, S. (2019). Can Video Games Be Humanities Scholarship? *Debates in the Digital Humanities 2019*, 36-45.
 
@@ -25,3 +28,14 @@ Fernández-Vara, C. (2019). *Introduction to game analysis*. Routledge.
 Millard, D. E. (2020, July). Games/hypertext. In *Proceedings of the 31st ACM Conference on Hypertext and Social Media* (pp. 123-126).
 
 Montfort, N., & Moulthrop, S. (2003, August). Face It, Tiger, You Just Hit the Jackpot: Reading and Playing Cadre’s Varicella. In *Fineart Forum* (Vol. 17, No. 8). 
+
+### See Also
+
+* Electronic literature
+* Hypertext
+* Interactive fiction 
+
+### Further Reading
+
+* Ensslin, A. (2014). *Literary gaming*. MIT Press.
+* Montfort, N., & Moulthrop, S. (2003, August). Face It, Tiger, You Just Hit the Jackpot: Reading and Playing Cadre’s Varicella. In *Fineart Forum* (Vol. 17, No. 8).

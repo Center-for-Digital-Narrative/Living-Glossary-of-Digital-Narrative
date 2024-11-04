@@ -39,7 +39,7 @@ const { Content } = await entry.render();
 
                 <h2 class="border-t pt-8">Cite This</h2>
                 <span id="citation_text" class="mr-6">{entry.data.author ?? 'Unknown Author'}. "{entry.data.title}." <em>The Living Glossary of Digital Narrative</em>, {formatDate(entry.data.pubDate)}. https://glossary.cdn.uib.no/terms/{entry.slug}</span>
-                <button type="button" class="text-gray-700 bg-gray-200 hover:bg-gray-400 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
+                <button id="copy_button" type="button" class="text-gray-700 bg-gray-200 hover:bg-gray-400 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
                     </svg>
@@ -56,5 +56,6 @@ const { Content } = await entry.render();
     if(!copyButton || !citationText) throw new Error("Missing elements");
     copyButton.addEventListener('click', () => {
         navigator.clipboard.writeText(citationText.innerText)
+        alert("copied to clipboard");
     });
 </script>
