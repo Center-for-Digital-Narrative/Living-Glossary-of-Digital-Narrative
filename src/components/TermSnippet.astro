@@ -7,9 +7,9 @@ const visible = term.data.author;
 ---
 <div class="mb-5">
     <div class="dashedtitle-container">
-        {visible && <a class="text-secondary text-xl font-bold dashedtitle" href={`/terms/${term.slug}/`} transition:name=`term ${term.data.title}`>{term.data.title}</a>}
-        {!visible && <span class="opacity-70 text-xl font-bold dashedtitle" transition:name=`term ${term.data.title}`>{term.data.title}</span>}
+        {visible && <a class="text-secondary text-2xl font-bold dashedtitle" href={`/terms/${term.slug}/`} transition:name=`term ${term.data.title}`>{term.data.title}</a>}
+        {!visible && <span class="opacity-70 text-2xl font-bold dashedtitle" transition:name=`term ${term.data.title}`>{term.data.title}</span>}
         <div class="dashedtitle-line"></div>
     </div>
-    <span class="text-base italic" transition:name=`term desc ${term.data.title}`>{term.data.description}</span>
+    <span class="text-lg italic" transition:name=`term desc ${term.data.title}`>{term.data.description}</span>
 </div>

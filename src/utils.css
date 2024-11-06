@@ -1,16 +1,15 @@
+body {
+    font-family: 'Segoe Pro', Arial, sans-serif;
+}
+
 .bg-primary {
     background-color: #e9e5e1;
 }
 .text-secondary {
-    color: #cf3c3a;
+    color: #0076AD;
 }
 .bg-accent {
-    background-color: #ffd97c
-}
-.montserrat {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    background-color: #e4d673
 }
 
 .dashedtitle-container {
