@@ -4,25 +4,22 @@
 ---
 <style>
     #hero {
-        background-color: hsl(193.53deg 40.48% 50.59%);
+        background-color: #2B9991;
         //background-image: url('/hero-books.png');
         //background-repeat: no-repeat;
         //background-size: cover;
         //background-position: 50% calc(50% + 70px);
     }
-    #hero h1 {
-        color: #333;
-    }
     #hero a {
-        background-color: hsl(193.53deg 40.48% 70.59%);
+        background-color: hsl(175.64deg 56.12% 43%);
     }
 </style>
 <div id="hero" class="hidden md:flex h-[300px] xl:h-[500px] 2xl:h-[640px] bg-amber-300 flex-col items-center justify-center">
-    <h1 class="font-bold md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">The Living Glossary of Digital Narrative</h1>
+    <h1 class="font-bold md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-light">The Living Glossary of Digital Narrative</h1>
 
     <form class="w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-10">
         <a data-astro-prefetch="load" transition:name='search' href="/search" type="button" class="cursor-text block w-full p-4 text-base rounded-3xl text-left">
-            <img src="/search-icon.png"  alt="search icon"/>
+            <img src="/search-icon.png"  alt="search icon" style="filter: invert(1);" />
         </a>
     </form>
 </div>
