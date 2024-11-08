@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from 'astro:content';
 import NavSmall from "../../components/NavSmall.astro";
+import NavMobile from "../../components/NavMobile.astro";
 
 export async function getStaticPaths() {
     const termEntries = await getCollection('terms');
@@ -25,25 +26,32 @@ const { Content } = await entry.render();
 ---
 <BaseLayout pageTitle={entry.data.title + ' | LGDN'}>
     <NavSmall />
+    <NavMobile />
     <div class="container p-2 md:p-0">
         <div class="flex flex-col items-center">
-            <article class="prose xl:prose-lg my-8 data-pagefind-body">
-                <h1 style="margin-bottom:0.1em" class="text-4xl lg:text-7xl xl:text-8xl font-bold" transition:name=`term ${entry.data.title}`>{entry.data.title}</h1>
+            <article class="prose dark:prose-invert xl:prose-lg my-8 data-pagefind-body">
+                <h1 style="margin-bottom:0.1em" class="text-4xl lg:text-7xl xl:text-8xl font-bold">{entry.data.title}</h1>
                 <p>
-                    <em transition:name=`term desc ${entry.data.title}`>{entry.data.description}</em>
+                    <em>{entry.data.description}</em>
                     <br>
                     <span class="text-sm">{entry.data.author ?? 'Unknown Author'}, {formatDate(entry.data.pubDate)}</span>
                 </p>
 
                 <Content />
 
-                <h2 class="border-t pt-8">Cite This</h2>
-                <span id="citation_text" class="mr-6">{entry.data.author ?? 'Unknown Author'}. "{entry.data.title}." <em>The Living Glossary of Digital Narrative</em>, {formatDate(entry.data.pubDate)}. https://glossary.cdn.uib.no/terms/{entry.slug}</span>
-                <button id="copy_button" type="button" class="text-gray-700 bg-gray-200 hover:bg-gray-400 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
+                <h2 class="border-t pt-8 relative">
+                    <span>Cite This</span>
+                    <button id="copy_button" type="button" class="text-gray-700 bg-gray-200 hover:bg-gray-400 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2 ">
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"/>
                     </svg>
+                    <div id="copy_tooltip" role="tooltip" class="absolute left-44 z-10 transition-opacity duration-300 inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Coppied to clipboard
+                    </div>
                 </button>
+                </h2>
+                <span id="citation_text" class="mr-6">{entry.data.author ?? 'Unknown Author'}. "{entry.data.title}." <em>The Living Glossary of Digital Narrative</em>, {formatDate(entry.data.pubDate)}. https://glossary.cdn.uib.no/terms/{entry.slug}</span>
+
 
             </article>
         </div>
@@ -51,11 +59,17 @@ const { Content } = await entry.render();
 </BaseLayout>
 
 <script>
-    const copyButton = document.getElementById("copy_button");
-    const citationText = document.getElementById("citation_text");
-    if(!copyButton || !citationText) throw new Error("Missing elements");
-    copyButton.addEventListener('click', () => {
-        navigator.clipboard.writeText(citationText.innerText)
-        alert("copied to clipboard");
+    document.addEventListener('astro:page-load', () => {
+        const copyButton = document.getElementById("copy_button");
+        const citationText = document.getElementById("citation_text");
+        const tooltip = document.getElementById('copy_tooltip');
+        if (!copyButton || !citationText || !tooltip) return;
+        copyButton.addEventListener('click', () => {
+            navigator.clipboard.writeText(citationText.innerText)
+            tooltip.classList.remove('opacity-0');
+            setTimeout(() => {
+                tooltip.classList.add('opacity-0');
+            }, 1000);
+        });
     });
 </script>

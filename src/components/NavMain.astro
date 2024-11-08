@@ -1,3 +1,6 @@
+---
+import ThemeIcon from "./ThemeIcon.astro";
+---
 <style>
     #nav_main {
         font-size: min(18px, 4.5vw);
@@ -11,43 +14,47 @@
         }
     }
 </style>
-<div class="bg-primary">
+<div class="bg-beige dark:bg-dark">
     <nav class="container">
         <div id="nav_main" class="flex flex-col md:flex-row pb-2 md:pb-0 justify-center md:justify-between items-center mx-auto max-w-screen-2xl text-gray-900">
-            <a href="https://cdn.uib.no">
-                <img src="/CDN_Logo.png" class="h-24 xl:h-[125px]" alt="CDN Logo" />
+            <a href="/">
+                <img src="/CDN-horizontal_color.svg" class="dark:hidden h-24 xl:h-[125px]" alt="CDN Logo" />
+                <img src="/CDN-horizontal_Negative color.svg" class="hidden dark:block h-24 xl:h-[125px]" alt="CDN Logo" />
             </a>
-            <ul class="flex flex-row mt-0 space-x-8">
+            <ul class="flex flex-row mt-0 space-x-8 text-black dark:text-white">
                 <li>
-                    <a href="/" class="text-secondary">Glossary</a>
+                    <a href="/" class="text-secondary underline">Glossary</a>
                 </li>
                 <li>
-                    <a href="#">DNKB</a>
+                    <a href="#" class="hover:underline">DNKB</a>
                 </li>
                 <li>
-                    <a href="https://www.uib.no/en/cdn/171927/cdn-launches-cell-index" target="_blank">Index</a>
+                    <a href="https://www.uib.no/en/cdn/171927/cdn-launches-cell-index" class="hover:underline" target="_blank">Index</a>
                 </li>
                 <li>
-                    <a href="https://collection.cdn.uib.no">Collection</a>
-                </li>
-            </ul>
-            <ul class="hidden lg:flex flex-row mt-0 space-x-8 opacity-50 ">
-                <li>
-                    <a class="flex flex-row space-x-2 items-center cursor-not-allowed">
-                        <svg class="w-7 h-full text-secondary relative bottom-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Account</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="text-secondary cursor-not-allowed">
-                        <svg class="w-5 h-full text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                        </svg>
-                    </a>
+                    <a href="https://collection.cdn.uib.no" class="hover:underline">Collection</a>
                 </li>
             </ul>
+
+            <ThemeIcon />
+
+            <!--<ul class="hidden flex-row mt-0 space-x-8 opacity-50 ">-->
+            <!--    <li>-->
+            <!--        <a class="flex flex-row space-x-2 items-center cursor-not-allowed">-->
+            <!--            <svg class="w-7 h-full text-secondary relative bottom-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">-->
+            <!--                <path fill-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z" clip-rule="evenodd"/>-->
+            <!--            </svg>-->
+            <!--            <span>Account</span>-->
+            <!--        </a>-->
+            <!--    </li>-->
+            <!--    <li>-->
+            <!--        <a class="text-secondary cursor-not-allowed">-->
+            <!--            <svg class="w-5 h-full text-secondary" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">-->
+            <!--                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>-->
+            <!--            </svg>-->
+            <!--        </a>-->
+            <!--    </li>-->
+            <!--</ul>-->
         </div>
     </nav>
 </div>

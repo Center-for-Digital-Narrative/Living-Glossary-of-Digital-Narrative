@@ -1,7 +1,7 @@
 ---
 
 
----
+import NavSmall from "./NavSmall.astro";---
 <style>
     #hero {
         background-color: #2B9991;
@@ -23,13 +23,12 @@
         </a>
     </form>
 </div>
-<div class="bg-primary hidden md:block">
+<div class="bg-beige hidden md:block">
     <nav class="container mb-4">
         <div class="py-6 px-4 mx-auto flex flex-row md:text-lg xl:text-xl 2xl:text-2xl justify-between">
             <div class="flex flex-row gap-4 2xl:gap-8">
                 <a href="/about/" class="hover:underline">About</a>
                 <a href="/submit/" class="hover:underline">Submit</a>
-                <a href="/terms/" class="hover:underline">Term List</a>
             </div>
             <ul class="flex flex-row gap-1 lg:gap-3 xl:gap-5">
                 <li><a href="/terms/a" class="hover:underline" transition:name=`letter A`>A</a></li>
@@ -62,14 +61,3 @@
         </div>
     </nav>
 </div>
-<!-- Mobile banner -->
-<nav class="md:hidden mb-4 text-lg py-2 justify-center text-center bg-accent">
-    <a href="/">
-        <span id="nav_small_title" class="font-semibold hover:underline">The Living Glossary of Digital Narrative</span>
-    </a>
-    <div class="md:flex flex-row gap-4 2xl:gap-8 ">
-        <a href="/about/" class="hover:underline pr-4 md:pr-0">About</a>
-        <a href="/submit/" class="hover:underline">Submit</a>
-        <a href="/terms/" class="hover:underline pl-4 md:pl-0">Term List</a>
-    </div>
-</nav>

@@ -1,16 +1,22 @@
 body {
-    font-family: 'Segoe Pro', Arial, sans-serif;
     color: #002934;
 }
 
-.bg-primary {
+.bg-beige {
     background-color: #e9e5e1;
 }
+.dark body {
+    background-color: #002934;
+}
+.dark\:bg-dark:is(.dark *) {
+    background-color: #002934;
+}
+
 .text-secondary {
     color: #2B9991;
 }
 .text-light {
-    color: #f5f5f5;
+    color: #ffffff;
 }
 .bg-accent {
     background-color: #2B9991;
@@ -32,15 +38,11 @@ body {
     flex-grow: 1;
     border-bottom: 2px dashed black;
 }
-
-#nav_small_title {
-    font-size: min(20px, 4.5vw);
+.dark .dashedtitle-line {
+    border-color: white;
 }
-/* s,: */
-@media (min-width: 640px) {
-    /* text-xl */
-    #nav_small_title {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
+
+#search {
+    --pagefind-ui-text: #002934;
+    --pagefind-ui-font: 'Segoe Pro', Arial, sans-serif;
 }

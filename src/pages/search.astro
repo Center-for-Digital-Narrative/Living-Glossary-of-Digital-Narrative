@@ -1,9 +1,10 @@
 ---
 import { getCollection } from "astro:content";
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Search from "astro-pagefind/components/Search";
-import NavSmall from "../../components/NavSmall.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {default as PageFind} from "astro-pagefind/components/Search"; // https://github.com/withastro/language-tools/issues/580
+import NavSmall from "../components/NavSmall.astro";
+import NavMobile from "../components/NavMobile.astro";
 ---
 
 <script>
@@ -21,7 +22,8 @@ import NavSmall from "../../components/NavSmall.astro";
 
 <BaseLayout pageTitle='Search | LGDN'>
     <NavSmall />
-    <div class="container" transition:name='search'>
-        <Search id="search" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
+    <NavMobile />
+    <div class="container mt-4 px-2" transition:name='search'>
+        <PageFind id="search" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
     </div>
 </BaseLayout>

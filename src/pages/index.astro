@@ -1,8 +1,18 @@
 ---
+import { getCollection } from "astro:content";
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
+import TermSnippet from "../components/TermSnippet.astro";
+import NavMobile from "../components/NavMobile.astro";
+const allPosts = await getCollection("terms");
 ---
 
 <BaseLayout pageTitle='The Living Glossary of Digital Narrative'>
     <Hero />
+    <NavMobile class="md:hidden" />
+    <div class="container mt-10 px-4 overflow-hidden">
+        <h1 class="text-secondary text-4xl font-bold mb-10">Term List</h1>
+        {allPosts.map( (post:any) => <TermSnippet term={post} />)}
+    </div>
 </BaseLayout>
