@@ -5,11 +5,10 @@ const visible = term.data.author;
 // const visible = true;
 
 ---
-<div class="mb-5">
-    <div class="dashedtitle-container">
-        {visible && <a class="text-secondary text-xl font-bold dashedtitle" href={`/terms/${term.slug}/`}>{term.data.title}</a>}
-        {!visible && <span class="text-xl dark:text-white font-bold dashedtitle">{term.data.title}</span>}
-        <div class="dashedtitle-line"></div>
+<div class="mb-10">
+    <div>
+        {visible && <a class="text-accent text-3xl font-bold" href={`/terms/${term.slug}/`}>{term.data.title}</a>}
+        {!visible && <span class="text-3xl dark:text-white font-bold">{term.data.title}</span>}
     </div>
-    <span class="text-base italic dark:text-gray-300">{term.data.description}</span>
+    <span class="text-xl dark:text-gray-300">{term.data.description}</span>
 </div>

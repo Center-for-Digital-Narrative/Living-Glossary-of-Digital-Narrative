@@ -5,30 +5,33 @@ import NavSmall from "./NavSmall.astro";---
 <style>
     #hero {
         background-color: #2B9991;
-        //background-image: url('/hero-books.png');
-        //background-repeat: no-repeat;
-        //background-size: cover;
-        //background-position: 50% calc(50% + 70px);
+        background-image: url('/hero-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% calc(50%);
     }
     #hero a {
-        background-color: hsl(175.64deg 56.12% 43%);
+        background-color: rgba(255, 255, 255, 0.7);
     }
 </style>
-<div id="hero" class="hidden md:flex h-[300px] xl:h-[500px] 2xl:h-[640px] bg-amber-300 flex-col items-center justify-center">
-    <h1 class="font-bold md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-light">The Living Glossary of Digital Narrative</h1>
+<div id="hero" class="hidden md:flex h-[300px] xl:h-[500px] 2xl:h-[640px]">
+    <div class="container relative md:flex h-full flex-col items-center justify-center">
+        <h1 class="absolute top-[10%] left-8 font-semibold text-4xl xl:text-5xl 2xl:text-6xl text-white">The Living Glossary<br>of Digital Narrative</h1>
 
-    <form class="w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-10">
-        <a data-astro-prefetch="load" transition:name='search' href="/search" type="button" class="cursor-text block w-full p-4 text-base rounded-3xl text-left">
-            <img src="/search-icon.png"  alt="search icon" style="filter: invert(1);" />
-        </a>
-    </form>
+        <div class="w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-20">
+            <a data-astro-prefetch="load" transition:name="search" href="/search" type="button" class="cursor-text flex items-center justify-end block w-full p-4 text-base rounded-full" aria-label="link to search page">
+                <img src="/search-icon.png" alt="search icon" class="ml-auto h-6 w-6 mr-5" />
+            </a>
+        </div>
+    </div>
 </div>
-<div class="bg-beige hidden md:block">
+<div class="bg-secondary hidden md:block">
     <nav class="container mb-4">
         <div class="py-6 px-4 mx-auto flex flex-row md:text-lg xl:text-xl 2xl:text-2xl justify-between">
             <div class="flex flex-row gap-4 2xl:gap-8">
                 <a href="/about/" class="hover:underline">About</a>
                 <a href="/submit/" class="hover:underline">Submit</a>
+                <a href="/search/" class="hover:underline">Search</a>
             </div>
             <ul class="flex flex-row gap-1 lg:gap-3 xl:gap-5">
                 <li><a href="/terms/a" class="hover:underline" transition:name=`letter A`>A</a></li>

@@ -29,7 +29,7 @@ const { terms } = Astro.props;
     <NavSmall />
     <NavMobile />
     <div class="container mt-10 px-4" data-pagefind-ignore="all">
-        <h1 class="text-secondary text-4xl font-bold mb-10"><span>Terms starting with</span> <span transition:name=`letter ${letter.toUpperCase()}`>{letter.toUpperCase()}</span></h1>
+        <h1 class="text-secondary text-xl font-bold mb-10 uppercase"><span>Terms starting with</span> <span transition:name=`letter ${letter.toUpperCase()}`>{letter.toUpperCase()}</span></h1>
         {terms.map( (post:any) => <TermSnippet term={post} />)}
     </div>
 </BaseLayout>
