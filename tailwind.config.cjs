@@ -8,7 +8,7 @@ module.exports = {
         },
 		extend: {
 			fontFamily: {
-				'sans': ['"Segoe Pro"', ...defaultTheme.fontFamily.sans],
+				'sans': ['"Segoe UI"', ...defaultTheme.fontFamily.sans],
 			},
 			typography: {
 				DEFAULT: {

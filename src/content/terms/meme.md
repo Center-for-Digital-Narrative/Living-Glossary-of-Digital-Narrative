@@ -1,0 +1,47 @@
+---
+title: Meme
+description: "An image, video, or text that is shared and modified extensively by users in digital spaces, giving rise to a rich body of derivatives "
+author: Shweta Khilnani
+pubDate: 2025-03-14
+---
+## Explication
+
+The term "meme" was coined by Richard Dawkins in 1976 in the final chapter of the book *The Selfish Gene*. Dawkins proposed the term meme as an example of how a replicator could function in the same way as DNA. He defined it as the name for a "new replicator, a noun that conveys the idea of cultural transmission, or a unit of imitation" (1989). The term was intended to rhyme with the word ‘gene’ and conveys a similar ability to be replicated and imitated. For Dawkins, this was a part of a "larger effort to apply evolutionary theory to cultural change" (Shifman 2014). 
+
+The term became popular within the framework of digital or electronic texts, where it refers to any item such as a video, image or written text which is shared repeatedly by people on the internet, making it go ‘viral’ in the process. At the same time, people often modify or remix the content of such items, resulting in the production of countless derivatives which are socially, culturally and politically contextual. Due to these features, memes have been identified as key examples of postmodern digital poetics and third generation electronic literature (Flores 2021).  
+
+Owing to their replicability and rapid circulation, memes are often studied within the rubric of participatory cultures in the digital realm. They are also characterized by their intertextuality as they refer to other memes and are embedded within a complex mesh of information and ideas. In the recent past, memes have played an instrumental role in the articulation of several digital narratives. For instance, memes were employed extensively during the 2016 US Presidential Elections to share grassroot political ideas (Moody-Ramirez and Church 2019). They were also used extensively to shape popular digital narratives during the coronavirus pandemic (Saint Laurent et. al 2021).  
+
+Memes have been studied as a "secondary layer of language" in digital spaces, engendering new forms of memetic participation (Shifman 2014). Critics have also studied the peculiar semiotic practices inherent in memes and how these express ideological practices (Wiggins 2019).  
+
+{see-also}
+
+## See Also
+
+* Intertextuality
+* Participatory Narrative
+* Multimodality
+* Remix
+
+## Works Referenced
+
+De Saint Laurent, Constance, Vlad P. Glăveanu, and Ioana Literat. "Internet Memes as Partial Stories: Identifying Political Narratives in Coronavirus Memes." *Social Media + Society*, vol. 7, no. 1, Jan. 2021, https://doi.org/10.1177/2056305121988932 
+
+Dawkins, Richard. *The Selfish Gene*. Oxford University Press, 1989 
+
+Flores, Leonardo. "Third Generation Electronic Literature." *Electronic Literature as Digital Humanities: Contexts, Forms, and Practice*, edited by Dene Grigar and James O’Sullivan, Bloomsbury Academic, 2021. 
+
+Moody-Ramirez, Mia and Andrew B. Church. "Analysis of Facebook Meme Group Used During the 2016 US Presidential Elections." *Social Media + Society*, vol. 5, no. 1, Jan. 2019, https://doi.org/10.1177/2056305118808799 
+
+Shifman, Limor. *Memes in Digital Culture*. MIT Press, 2014.  
+
+Wiggins, Bradley E. *The Discursive Power of Memes in Digital Culture: Ideology, Semiotics and Intertexuality*. Routledge, 2019. 
+
+
+## Further Reading
+
+Skains, R. Lyle. *Neverending Stories: The Popular Emergence of Digital Fiction*. Bloomsbury Academic, 2023 
+
+Frazer, Ryan, and Bronwyn Carlson. "Indigenous Memes and the Invention of a People." *Social Media + Society*, vol. 3, no. 4, Oct. 2017, https://doi.org/10.1177/2056305117738993. 
+
+Breuer, Adam, and Alastair Iain Johnston. "Memes, Narratives and the Emergent US–China Security Dilemma." *Cambridge Review of International Affairs*, vol. 32, no. 4, July 2019, pp. 429–55. https://doi.org/10.1080/09557571.2019.1622083. 
