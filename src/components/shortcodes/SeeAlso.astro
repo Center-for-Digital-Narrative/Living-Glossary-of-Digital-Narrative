@@ -1,30 +1,28 @@
 ---
 import { getCollection } from "astro:content";
 
-export interface Props {
-  items: string[];
+interface Props {
+    items: string;
 }
 
 const { items } = Astro.props;
+const parsedItems:string[] = JSON.parse(items);
 
 const allEntries = await getCollection("terms"); // Change to your actual collection name
 
 const getItem = (slug: string) => {
     const item = allEntries.find((entry) => entry.slug === slug);
     if(!item) return null;
-    return item.data.author ? { title: item.data.title, link: `/terms/${item.id}` } : { title: item.data.title };
+    return item.data.author ? { title: item.data.title, link: `/terms/${item.slug}` } : { title: item.data.title };
 };
 ---
-
 {items.length > 0 && (
-  <section>
     <h2>See Also</h2>
     <ul>
-      {items.map(slug => {
+      {parsedItems.map(slug => {
         const item = getItem(slug);
         if(!item) return null;
         return item.link ? <li><a href={item.link}>{item.title}</a></li> : <li>{item.title}</li>;
       })}
     </ul>
-  </section>
 )}
