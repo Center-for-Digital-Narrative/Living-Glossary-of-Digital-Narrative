@@ -1,14 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import pagefind from "astro-pagefind";
-import {remarkSeeAlso} from "./src/plugins/remarkSeeAlso.js";
+import mdx from "@astrojs/mdx";
 
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), pagefind()],
+  integrations: [tailwind(), pagefind(), mdx()],
   prefetch: true,
-  markdown: {
-    remarkPlugins: [remarkGfm, remarkSeeAlso], // Add the custom plugin
-  },
 });

@@ -6,6 +6,7 @@ import NavMobile from "../../components/NavMobile.astro";
 import TermSnippet from "../../components/TermSnippet.astro";
 import TermCitation from "../../components/toc/TermCitation.astro";
 import {formatDate} from "../../utils/formatDate";
+import SeeAlso from "../../components/shortcodes/SeeAlso.astro";
 
 export async function getStaticPaths() {
     const termEntries = await getCollection('terms');
@@ -17,6 +18,9 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
+const components = {
+    SeeAlso
+};
 ---
 <BaseLayout pageTitle={entry.data.title + ' | LGDN'}>
     <NavSmall />
@@ -32,7 +36,7 @@ const { Content } = await entry.render();
                     {entry.data.pubDate && <span class="text-sm">{formatDate(entry.data.pubDate)}</span>}
                 </p>
 
-                <Content />
+                <Content components={components} />
 
                 <TermCitation term={entry} />
 
