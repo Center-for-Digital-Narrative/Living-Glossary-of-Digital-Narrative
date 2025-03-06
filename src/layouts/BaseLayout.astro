@@ -3,6 +3,8 @@ import '../utils.css';
 import { ViewTransitions } from 'astro:transitions';
 import NavMain from "../components/NavMain.astro";
 import Footer from "../components/Footer.astro";
+import NavMobile from "../components/NavMobile.astro";
+import NavSmall from "../components/NavSmall.astro";
 const { pageTitle } = Astro.props;
 ---
 <html lang="en" style="overflow-y: scroll">
@@ -14,14 +16,18 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <ViewTransitions />
 </head>
-<body class="flex flex-col h-screen">
+<body class="flex flex-col min-h-screen">
 
     <NavMain />
+
+    <NavSmall />
+    <NavMobile />
 
     <div class="flex-grow">
         <slot />
     </div>
 
     <Footer />
+
 </body>
 </html>

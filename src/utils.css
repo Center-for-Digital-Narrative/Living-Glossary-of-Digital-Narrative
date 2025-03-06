@@ -1,5 +1,6 @@
 .dark body {
-    background-color: #002934;
+    /*background-color: #002934;*/
+    background-color: black;
 }
 .dark\:bg-dark:is(.dark *) {
     background-color: #002934;
@@ -24,7 +25,11 @@
     border-bottom: #002934 2px solid;
     padding-bottom: 2px;
 }
-
+.dark .mainnav-link-active,
+.dark .mainnav-link:hover {
+    border-bottom: #fff 1px solid;
+    padding-bottom: 2px;
+}
 
 #search_results {
     --pagefind-ui-text: #002934;

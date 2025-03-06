@@ -9,9 +9,7 @@ const allPosts = await getCollection("terms");
 ---
 
 <BaseLayout pageTitle='Term List | LGDN'>
-    <NavSmall />
-    <NavMobile />
-    <div class="container mt-10 px-4 overflow-hidden">
+    <div class="container mt-10 px-4 overflow-hidden" data-pagefind-ignore="all">
         <h1 class="text-secondary text-4xl font-bold mb-10">Term List</h1>
         {allPosts.map( (post:any) => <TermSnippet term={post} />)}
     </div>

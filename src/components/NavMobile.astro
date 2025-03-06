@@ -7,9 +7,12 @@ const { class: className, ...rest } = Astro.props
         background: rgb(255 255 255 / 16%);
         width: 38px;
     }
+    a:active {
+        background: rgb(255 255 255 / 16%);
+    }
 </style>
 <StickyHeader
-        class:list={['lg:hidden sticky top-0 z-20 transition-all bg-secondary text-white', className]} {...rest}
+        class:list={['md:hidden sticky top-0 z-20 transition-all bg-secondary text-white', className]} {...rest}
         scrollY={50}
         defaultClass="py-5"
         activeClass="py-2">
@@ -20,18 +23,23 @@ const { class: className, ...rest } = Astro.props
             </a>
             <MenuIcon class="w-4 h-4 text-white"/>
         </div>
-        <MenuItems class="hidden px-3 pt-3">
+        <MenuItems class="hidden pt-3">
             <ul class="text-lg">
-                <li class="pb-2">
-                    <a href="/about/">About</a>
+                <li>
+                    <a href="/about/" class="block px-4 py-2 border-y border-gray-600">About</a>
                 </li>
-                <li class="pb-2">
-                    <a href="/submit/">Submit</a>
+                <li>
+                    <a href="/submit/" class="block px-4 py-2 border-b border-gray-600">Submit</a>
                 </li>
-                <li class="pb-2">
-                    <a href="/search/">Search</a>
+                <li>
+                    <a href="/search/" class="block px-4 py-2 border-b border-gray-600">Search</a>
                 </li>
-                <li class="flex flex-row flex-wrap gap-2">
+                <li class="flex flex-row flex-wrap gap-2 px-3 pt-4 pb-2">
+                    <style>
+                        li > a {
+                            flex-basis: calc(100% / 7 - 0.5rem); /* 7 items per row */
+                        }
+                    </style>
                     <a href="/terms/a" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">A</a>
                     <a href="/terms/b" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">B</a>
                     <a href="/terms/c" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">C</a>

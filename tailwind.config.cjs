@@ -16,6 +16,8 @@ module.exports = {
 						'--tw-prose-body': '#002934',
 						'--tw-prose-headings': '#002934',
 						'--tw-prose-bold': '#002934',
+                        '--tw-prose-invert-body': '#dbdee1',
+                        '--tw-prose-invert-headings': '#317284',
 						maxWidth: "100ch"
 					}
 				}
