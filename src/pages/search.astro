@@ -1,10 +1,6 @@
 ---
-import { getCollection } from "astro:content";
-
 import BaseLayout from '../layouts/BaseLayout.astro';
 import {default as PageFind} from "astro-pagefind/components/Search"; // https://github.com/withastro/language-tools/issues/580
-import NavSmall from "../components/NavSmall.astro";
-import NavMobile from "../components/NavMobile.astro";
 ---
 
 <script>
@@ -19,6 +15,20 @@ import NavMobile from "../components/NavMobile.astro";
         }, 50);
     });
 </script>
+
+<style is:global>
+    .pagefind-ui {
+        --pagefind-ui-scale: 1;
+        --pagefind-ui-font: "Segoe UI", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    .dark .pagefind-ui {
+        --pagefind-ui-primary: #d1d5db;;
+        --pagefind-ui-text: #d1d5db;
+        --pagefind-ui-background: #152028;
+        --pagefind-ui-border: #152028;
+        --pagefind-ui-tag: #152028;
+    }
+</style>
 
 <BaseLayout pageTitle='Search | LGDN'>
     <div class="container mt-4 px-2" transition:name='search'>
