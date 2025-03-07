@@ -16,6 +16,9 @@
 .text-secondary {
     color: #002934;
 }
+.dark .text-secondary {
+    color: #317284;
+}
 .text-accent {
     color: #2B9991;
 }
