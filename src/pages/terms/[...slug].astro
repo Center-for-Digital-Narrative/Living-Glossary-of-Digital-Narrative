@@ -29,8 +29,8 @@ const components = {
                 <p>
                     <em>{entry.data.description}</em>
                     <br>
-                    {entry.data.author && <span class="text-sm">{entry.data.author}</span>}
-                    {entry.data.pubDate && <span class="text-sm">{formatDate(entry.data.pubDate)}</span>}
+                    {entry.data.author && <span>{entry.data.author}</span>}
+                    {entry.data.pubDate && <span>{formatDate(entry.data.pubDate)}</span>}
                 </p>
 
                 <Content components={components} />

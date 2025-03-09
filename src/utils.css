@@ -22,6 +22,11 @@
 .text-accent {
     color: #2B9991;
 }
+.heading-underline {
+    text-underline-offset: 8px;
+    text-decoration-color: #2B9991;
+    text-decoration-line: underline;
+}
 
 .mainnav-link-active,
 .mainnav-link:hover {

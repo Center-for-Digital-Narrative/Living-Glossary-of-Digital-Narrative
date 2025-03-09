@@ -14,11 +14,16 @@ module.exports = {
 				DEFAULT: {
 					css: {
 						'--tw-prose-body': '#002934',
-						'--tw-prose-headings': '#002934',
+						'--tw-prose-headings': '#000000',
 						'--tw-prose-bold': '#002934',
                         '--tw-prose-invert-body': '#dbdee1',
-                        '--tw-prose-invert-headings': '#317284',
-						maxWidth: "100ch"
+                        '--tw-prose-invert-headings': '#FFFFFF',
+						maxWidth: "100ch",
+						h2: {
+							'text-underline-offset': '8px',
+							'text-decoration-color': '#2B9991',
+							'text-decoration-line': 'underline',
+						},
 					}
 				}
 			}
