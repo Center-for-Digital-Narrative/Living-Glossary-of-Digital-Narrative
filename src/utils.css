@@ -1,5 +1,4 @@
 .dark body {
-    /*background-color: #002934;*/
     background-color: black;
 }
 .dark\:bg-dark:is(.dark *) {

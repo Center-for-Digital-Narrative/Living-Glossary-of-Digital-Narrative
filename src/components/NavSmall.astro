@@ -1,3 +1,12 @@
+---
+interface Props {
+    letter?: string;
+}
+const { letter } = Astro.props;
+
+const allLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const lettersWithoutTerms = ['o', 'q', 'u', 'x', 'y', 'z'];
+---
 <div class="bg-secondary hidden md:block sticky top-0 z-20" data-pagefind-ignore="all">
     <nav class="container py-2 overflow-hidden">
         <div class="flex flex-col xl:flex-row sm:justify-between md:items-center text-light px-5">
@@ -11,32 +20,11 @@
                     <a href="/search" class="hover:underline">Search</a>
                 </div>
                 <div class="hidden md:flex flex-row gap-2 text-center">
-                    <a href="/terms/a" class="hover:underline">A</a>
-                    <a href="/terms/b" class="hover:underline">B</a>
-                    <a href="/terms/c" class="hover:underline">C</a>
-                    <a href="/terms/d" class="hover:underline">D</a>
-                    <a href="/terms/e" class="hover:underline">E</a>
-                    <a href="/terms/f" class="hover:underline">F</a>
-                    <a href="/terms/g" class="hover:underline">G</a>
-                    <a href="/terms/h" class="hover:underline">H</a>
-                    <a href="/terms/i" class="hover:underline">I</a>
-                    <a href="/terms/j" class="hover:underline">J</a>
-                    <a href="/terms/k" class="hover:underline">K</a>
-                    <a href="/terms/l" class="hover:underline">L</a>
-                    <a href="/terms/m" class="hover:underline">M</a>
-                    <a href="/terms/n" class="hover:underline">N</a>
-                    <a class="cursor-default opacity-20">O</a>
-                    <a href="/terms/p" class="hover:underline">P</a>
-                    <a class="cursor-default opacity-20">Q</a>
-                    <a href="/terms/r" class="hover:underline">R</a>
-                    <a href="/terms/s" class="hover:underline">S</a>
-                    <a href="/terms/t" class="hover:underline">T</a>
-                    <a class="cursor-default opacity-20">U</a>
-                    <a href="/terms/v" class="hover:underline">V</a>
-                    <a href="/terms/w" class="hover:underline">W</a>
-                    <a class="cursor-default opacity-20">X</a>
-                    <a class="cursor-default opacity-20">Y</a>
-                    <a class="cursor-default opacity-20">Z</a>
+                    {allLetters.map(l => (
+                            (lettersWithoutTerms.includes(l) || l===letter)
+                                ? <a class="cursor-default opacity-20">{l.toUpperCase()}</a>
+                                : <a href={`/terms/${l}`} transition:name=`letter ${l.toUpperCase()}` class="hover:underline">{l.toUpperCase()}</a>
+                    ))}
                 </div>
             </div>
         </div>

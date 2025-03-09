@@ -25,7 +25,8 @@ const components = {
     <div class="container p-2 md:p-0">
         <div class="flex flex-col items-center">
             <article class="prose dark:prose-invert xl:prose-lg my-8 data-pagefind-body">
-                <h1 style="margin-bottom:0.1em" class="text-4xl lg:text-7xl xl:text-8xl font-bold">{entry.data.title}</h1>
+                <h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold">{entry.data.title}</h1>
+                <!--<h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold" transition:name=`title ${entry.slug}`>{entry.data.title}</h1>-->
                 <p>
                     <em>{entry.data.description}</em>
                     <br>

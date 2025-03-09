@@ -1,3 +1,7 @@
+---
+const allLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const lettersWithoutTerms = ['o', 'q', 'u', 'x', 'y', 'z'];
+---
 <style>
     #hero {
         background-color: #82af65;
@@ -30,32 +34,11 @@
                 <a href="/search/" class="hover:underline">Search</a>
             </div>
             <ul class="flex flex-row gap-1 lg:gap-3 xl:gap-5">
-                <li><a href="/terms/a" class="hover:underline" transition:name=`letter A`>A</a></li>
-                <li><a href="/terms/b" class="hover:underline" transition:name=`letter B`>B</a></li>
-                <li><a href="/terms/c" class="hover:underline" transition:name=`letter C`>C</a></li>
-                <li><a href="/terms/d" class="hover:underline" transition:name=`letter D`>D</a></li>
-                <li><a href="/terms/e" class="hover:underline" transition:name=`letter E`>E</a></li>
-                <li><a href="/terms/f" class="hover:underline" transition:name=`letter F`>F</a></li>
-                <li><a href="/terms/g" class="hover:underline" transition:name=`letter G`>G</a></li>
-                <li><a href="/terms/h" class="hover:underline" transition:name=`letter H`>H</a></li>
-                <li><a href="/terms/i" class="hover:underline" transition:name=`letter I`>I</a></li>
-                <li><a href="/terms/j" class="hover:underline" transition:name=`letter J`>J</a></li>
-                <li><a href="/terms/k" class="hover:underline" transition:name=`letter K`>K</a></li>
-                <li><a href="/terms/l" class="hover:underline" transition:name=`letter L`>L</a></li>
-                <li><a href="/terms/m" class="hover:underline" transition:name=`letter M`>M</a></li>
-                <li><a href="/terms/n" class="hover:underline" transition:name=`letter N`>N</a></li>
-                <li><a class="cursor-default opacity-50">O</a></li>
-                <li><a href="/terms/p" class="hover:underline" transition:name=`letter P`>P</a></li>
-                <li><a class="cursor-default opacity-50">Q</a></li>
-                <li><a href="/terms/r" class="hover:underline" transition:name=`letter R`>R</a></li>
-                <li><a href="/terms/s" class="hover:underline" transition:name=`letter S`>S</a></li>
-                <li><a href="/terms/t" class="hover:underline" transition:name=`letter T`>T</a></li>
-                <li><a class="cursor-default opacity-50">U</a></li>
-                <li><a href="/terms/v" class="hover:underline" transition:name=`letter V`>V</a></li>
-                <li><a href="/terms/w" class="hover:underline" transition:name=`letter W`>W</a></li>
-                <li><a class="cursor-default opacity-50">X</a></li>
-                <li><a class="cursor-default opacity-50">Y</a></li>
-                <li><a class="cursor-default opacity-50">Z</a></li>
+                {allLetters.map(l => (
+                    (lettersWithoutTerms.includes(l))
+                        ? <li><a class="cursor-default opacity-50">{l.toUpperCase()}</a></li>
+                        : <li><a href={`/terms/${l}`} class="hover:underline">{l.toUpperCase()}</a></li>
+                ))}
             </ul>
         </div>
     </nav>
