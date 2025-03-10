@@ -101,7 +101,7 @@
                     toggleDarkMode(localStorage.getItem('color-theme') === 'light');
                 // if NOT set via local storage previously
                 } else {
-                    toggleDarkMode(document.documentElement.classList.contains('dark') === true);
+                    toggleDarkMode(document.documentElement.classList.contains('dark') === false);
                 }
             });
         }

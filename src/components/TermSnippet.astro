@@ -3,7 +3,8 @@ const { term } = Astro.props
 ---
 <div class="mb-10">
     <div>
-        {term.data.author && <a class="text-accent text-3xl font-bold hover:underline" href={`/terms/${term.slug}/`}>{term.data.title}</a>}
+        {term.data.author && <a class="text-accent-blue text-3xl font-bold hover:underline" href={`/terms/${term.slug}/`}>{term.data.title}</a>}
+        <!--{term.data.author && <a class="text-accent-blue text-3xl font-bold hover:underline" href={`/terms/${term.slug}/`} transition:name=`title ${term.slug}`>{term.data.title}</a>}-->
         {!term.data.author && <span class="text-3xl dark:text-gray-200 font-bold">{term.data.title}</span>}
     </div>
     <span class="text-xl dark:text-gray-300">{term.data.description}</span>

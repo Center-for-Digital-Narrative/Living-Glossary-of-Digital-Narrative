@@ -28,9 +28,8 @@ const { terms } = Astro.props;
 
 <BaseLayout pageTitle={letter.toUpperCase() + ' | LGDN'} letter={letter}>
     <div class="container mt-10 px-4" data-pagefind-ignore="all">
-        <h1 class="heading-underline text-black dark:text-white text-xl font-bold mb-10 uppercase">
-            <span>Terms starting with</span>
-            <span class="ml-2" transition:name=`letter ${letter.toUpperCase()}`>{letter}</span>
+        <h1 class="underline underline-offset-8 decoration-accent-blue text-black dark:text-white text-xl font-bold mb-10 uppercase">
+            <span>Terms starting with</span><span class="ml-2 transition-colors duration-500 ease-in" transition:name=`letter ${letter.toUpperCase()}`>{letter}</span>
         </h1>
         {terms.map( (post:any) => <TermSnippet term={post} />)}
     </div>

@@ -10,6 +10,11 @@ module.exports = {
 			fontFamily: {
 				'sans': ['"Segoe UI"', ...defaultTheme.fontFamily.sans],
 			},
+            colors: {
+                'dark-blue': '#002934',
+                'beige': '#f5f5f5',
+                'accent-blue': '#2B9991'
+            },
 			typography: {
 				DEFAULT: {
 					css: {
