@@ -29,6 +29,22 @@ module.exports = {
 							'text-decoration-color': '#2B9991',
 							'text-decoration-line': 'underline',
 						},
+                        a: {
+                            fontWeight: 'normal',
+                            color: 'var(--tw-prose-body)',
+                            "&:visited": {
+                                color: '#551a8b',
+                            },
+                            ".dark": {
+                                color: "var(--tw-prose-invert-body)",
+                            },
+                            ".dark &:visited": {
+                                color: '#b086d5',
+                            },
+                            "&:hover": {
+                                textDecoration: "none",
+                            }
+                        },
 					}
 				}
 			}

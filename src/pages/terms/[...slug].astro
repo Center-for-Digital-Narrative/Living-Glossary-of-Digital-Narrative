@@ -38,7 +38,16 @@ const components = {
 
                 <TermCitation term={entry} />
 
-                <p class="border-t pt-6 text-sm">Text is available under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+                {(!entry.data.author || !entry.data.pubDate) &&
+                    <div class="border-t">
+                        <p>You're in luck! There's no explication for this term and you can be the one write it! <a href="/submit" class="ml-2 font-bold text-accent-blue dark:text-accent-blue visited:text-accent-blue dark:visited:text-accent-blue">Submit</a></p>
+                    </div>
+                }
+
+                {entry.data.author && entry.data.pubDate &&
+                    <p class="border-t pt-6 text-sm">Text is available under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+                }
+
             </article>
         </div>
     </div>

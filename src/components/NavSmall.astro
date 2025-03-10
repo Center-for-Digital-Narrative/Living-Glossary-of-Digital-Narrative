@@ -1,11 +1,9 @@
 ---
+import {allLetters, lettersWithoutTerms} from "../utils/letters";
 interface Props {
     letter?: string;
 }
 const { letter } = Astro.props;
-
-const allLetters = 'abcdefghijklmnopqrstuvwxyz'.split('');
-const lettersWithoutTerms = ['o', 'q', 'u', 'x', 'y', 'z'];
 ---
 <div class="bg-dark-blue text-white hidden md:block sticky top-0 z-20" data-pagefind-ignore="all">
     <nav class="container py-2 overflow-hidden">

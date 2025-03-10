@@ -1,6 +1,7 @@
 ---
 import {Astronav, MenuItems, MenuIcon, StickyHeader, Dropdown, DropdownItems} from "astro-navbar";
 import ThemeIcon from "./ThemeIcon.astro";
+import {allLetters, lettersWithoutTerms} from "../utils/letters";
 const { class: className, ...rest } = Astro.props
 ---
 <style>
@@ -8,8 +9,8 @@ const { class: className, ...rest } = Astro.props
         background: rgb(255 255 255 / 16%);
         width: 38px;
     }
-    a:active {
-        background: rgb(255 255 255 / 16%);
+    .letter-button:hover {
+        background: rgb(255 255 255 / 50%);
     }
 </style>
 <StickyHeader
@@ -48,7 +49,7 @@ const { class: className, ...rest } = Astro.props
                                         <a href="https://elmcip.net">ELMCIP</a>
                                     </li>
                                     <li class="py-1">
-                                        <a href="https://www.uib.no/en/cdn/171927/cdn-launches-cell-index">Index</a>
+                                        <a href="https://cellproject.net/">CELL</a>
                                     </li>
                                     <li class="py-1">
                                         <a href="https://collection.cdn.uib.no">Collection</a>
@@ -59,13 +60,13 @@ const { class: className, ...rest } = Astro.props
                     </Dropdown>
                 </li>
                 <li class="block px-4 py-2 border-y border-gray-600">
-                    <a href="/about/">About</a>
+                    <a href="/about/" class="hover:underline">About</a>
                 </li>
                 <li class="block px-4 py-2 border-b border-gray-600">
-                    <a href="/submit/">Submit</a>
+                    <a href="/submit/" class="hover:underline">Submit</a>
                 </li>
                 <li class="block px-4 py-2 border-b border-gray-600">
-                    <a href="/search/">Search</a>
+                    <a href="/search/" class="hover:underline">Search</a>
                 </li>
                 <li class="flex flex-row flex-wrap gap-2 px-3 pt-4 pb-2">
                     <style>
@@ -73,32 +74,11 @@ const { class: className, ...rest } = Astro.props
                             flex-basis: calc(100% / 7 - 0.5rem); /* 7 items per row */
                         }
                     </style>
-                    <a href="/terms/a" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">A</a>
-                    <a href="/terms/b" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">B</a>
-                    <a href="/terms/c" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">C</a>
-                    <a href="/terms/d" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">D</a>
-                    <a href="/terms/e" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">E</a>
-                    <a href="/terms/f" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">F</a>
-                    <a href="/terms/g" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">G</a>
-                    <a href="/terms/h" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">H</a>
-                    <a href="/terms/i" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">I</a>
-                    <a href="/terms/j" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">J</a>
-                    <a href="/terms/k" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">K</a>
-                    <a href="/terms/l" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">L</a>
-                    <a href="/terms/m" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">M</a>
-                    <a href="/terms/n" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">N</a>
-                    <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">O</a>
-                    <a href="/terms/p" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">P</a>
-                    <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">Q</a>
-                    <a href="/terms/r" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">R</a>
-                    <a href="/terms/s" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">S</a>
-                    <a href="/terms/t" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">T</a>
-                    <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">U</a>
-                    <a href="/terms/v" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">V</a>
-                    <a href="/terms/w" class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">W</a>
-                    <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">X</a>
-                    <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">Y</a>
-                    <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">Z</a>
+                    {allLetters.map(l => (
+                        (lettersWithoutTerms.includes(l))
+                            ? <a class="cursor-default opacity-20 px-3 py-2 text-sm font-medium text-center text-white rounded-lg">{l.toUpperCase()}</a>
+                            : <a href={`/terms/${l}`} class="px-3 py-2 text-sm font-medium text-center text-white rounded-lg letter-button">{l.toUpperCase()}</a>
+                    ))}
                     <a>&nbsp;</a>
                     <ThemeIcon />
                 </li>
