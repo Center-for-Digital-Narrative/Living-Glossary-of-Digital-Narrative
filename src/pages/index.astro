@@ -1,6 +1,6 @@
 ---
 import '../utils.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import NavMain from "../components/NavMain.astro";
 import Footer from "../components/Footer.astro";
 import NavMobile from "../components/NavMobile.astro";
@@ -17,7 +17,7 @@ const allPosts = await getCollection("terms");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content={Astro.generator} />
     <title>The Living Glossary of Digital Narrative</title>
-    <ViewTransitions />
+    <ClientRouter />
 </head>
 <body class="flex flex-col min-h-screen dark:bg-black">
 

@@ -6,7 +6,7 @@ interface Props {
 }
 
 interface Item {
-    slug: string;
+    id: string;
     data: {
         title: string;
         description: string;
@@ -19,17 +19,17 @@ const parsedItems:string[] = JSON.parse(items);
 
 const allEntries = await getCollection("terms"); // Change to your actual collection name
 
-const getItem = (slug: string):Item|undefined => {
-    return allEntries.find((entry) => entry.slug === slug);
+const getItem = (id: string):Item|undefined => {
+    return allEntries.find((entry) => entry.id === id);
 };
 ---
 {items.length > 0 && (
     <h2>See Also</h2>
     <ul>
-      {parsedItems.map(slug => {
-        const item = getItem(slug);
+      {parsedItems.map(id => {
+        const item = getItem(id);
         if(!item) return null;
-        return item.data.pubDate ? <li><a href=`/terms/{item.slug}`><strong>{item.data.title}</strong></a> - <em>{item.data.description}</em></li> : <li><strong>{item.data.title}</strong> - <em>{item.data.description}</em></li>;
+        return item.data.pubDate ? <li><a href=`/terms/{item.id}`><strong>{item.data.title}</strong></a> - <em>{item.data.description}</em></li> : <li><strong>{item.data.title}</strong> - <em>{item.data.description}</em></li>;
       })}
     </ul>
 )}

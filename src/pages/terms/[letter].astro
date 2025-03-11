@@ -1,22 +1,18 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import NavSmall from "../../components/NavSmall.astro";
 import TermSnippet from "../../components/TermSnippet.astro";
-import NavMobile from "../../components/NavMobile.astro";
-import { fade } from 'astro:transitions';
+import {lettersWithTerms} from "../../utils/letters";
 
 export async function getStaticPaths() {
-    const allPosts = await getCollection('terms');
-    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    const terms = await getCollection('terms');
 
-    return alphabet.map(letter => {
+    return lettersWithTerms.map(letter => {
         // Filter terms that start with the current letter
-        const termsStartingWithLetter = allPosts.filter(post => post.slug.toLowerCase().startsWith(letter));
-
+        const termsStartingWithLetter = terms.filter(term => term.id.toLowerCase().startsWith(letter));
         return {
-            params: { letter }, // Dynamic route parameter for the letter
-            props: { terms: termsStartingWithLetter }, // Pass filtered terms as props
+            params: { letter },
+            props: { terms: termsStartingWithLetter },
         };
     });
 }

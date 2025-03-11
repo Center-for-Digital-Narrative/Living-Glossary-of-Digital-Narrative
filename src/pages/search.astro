@@ -2,20 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import {default as PageFind} from "astro-pagefind/components/Search"; // https://github.com/withastro/language-tools/issues/580
 ---
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(()=>{
-            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
-        }, 50);
-    });
-    document.addEventListener("astro:page-load", () => {
-        setTimeout(()=>{
-            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
-        }, 50);
-    });
-</script>
-
 <style is:global>
     .pagefind-ui {
         --pagefind-ui-scale: 1;
@@ -30,9 +16,20 @@ import {default as PageFind} from "astro-pagefind/components/Search"; // https:/
         --pagefind-ui-tag: #152028;
     }
 </style>
-
 <BaseLayout pageTitle='Search | LGDN'>
     <div class="container mt-4 px-2" transition:name='search'>
         <PageFind id="search_results" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
     </div>
 </BaseLayout>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(()=>{
+            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
+        }, 50);
+    });
+    document.addEventListener("astro:page-load", () => {
+        setTimeout(()=>{
+            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
+        }, 50);
+    });
+</script>

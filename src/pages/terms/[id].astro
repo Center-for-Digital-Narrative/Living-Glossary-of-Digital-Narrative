@@ -1,50 +1,49 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { getCollection } from 'astro:content';
-import NavSmall from "../../components/NavSmall.astro";
-import NavMobile from "../../components/NavMobile.astro";
+import { getCollection, render } from 'astro:content';
 import TermCitation from "../../components/TermCitation.astro";
 import {formatDate} from "../../utils/formatDate";
 import SeeAlso from "../../components/shortcodes/SeeAlso.astro";
 
 export async function getStaticPaths() {
-    const termEntries = await getCollection('terms');
-    return termEntries.map(entry => ({
-        params: { slug: entry.slug }, props: { entry },
+    const terms = await getCollection('terms');
+    return terms.map(term => ({
+        params: { id: term.id },
+        props: { term },
     }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { term } = Astro.props;
+const { Content } = await render(term);
 
 const components = {
     SeeAlso
 };
 ---
-<BaseLayout pageTitle={entry.data.title + ' | LGDN'}>
+<BaseLayout pageTitle={term.data.title + ' | LGDN'}>
     <div class="container p-2 md:p-0">
         <div class="flex flex-col items-center">
             <article class="prose dark:prose-invert xl:prose-lg my-8 data-pagefind-body">
-                <h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold">{entry.data.title}</h1>
-                <!--<h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold transition-colors duration-500 ease-in" transition:name=`title ${entry.slug}`>{entry.data.title}</h1>-->
+                <h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold">{term.data.title}</h1>
+                <!--<h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold transition-colors duration-500 ease-in" transition:name=`title ${term.id}`>{term.data.title}</h1>-->
                 <p>
-                    <em>{entry.data.description}</em>
+                    <em>{term.data.description}</em>
                     <br>
-                    {entry.data.author && <span>{entry.data.author}</span>}
-                    {entry.data.pubDate && <span>{formatDate(entry.data.pubDate)}</span>}
+                    {term.data.author && <span>{term.data.author}</span>}
+                    {term.data.pubDate && <span>{formatDate(term.data.pubDate)}</span>}
                 </p>
 
                 <Content components={components} />
 
-                <TermCitation term={entry} />
+                <TermCitation term={term} />
 
-                {(!entry.data.author || !entry.data.pubDate) &&
+                {(!term.data.author || !term.data.pubDate) &&
                     <div class="border-t">
                         <p>You're in luck! There's no explication for this term and you can be the one write it! <a href="/submit" class="ml-2 font-bold text-accent-blue dark:text-accent-blue visited:text-accent-blue dark:visited:text-accent-blue">Submit</a></p>
                     </div>
                 }
 
-                {entry.data.author && entry.data.pubDate &&
+                {term.data.author && term.data.pubDate &&
                     <p class="border-t pt-6 text-sm">Text is available under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
                 }
 
