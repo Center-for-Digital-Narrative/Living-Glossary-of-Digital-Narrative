@@ -17,6 +17,7 @@ module.exports = {
 						},
                         a: {
                             fontWeight: 'normal',
+                            wordBreak: 'break-word',
                             color: 'var(--tw-prose-body)',
                             "&:visited": {
                                 color: '#551a8b',

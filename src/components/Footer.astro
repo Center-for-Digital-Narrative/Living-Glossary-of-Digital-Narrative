@@ -2,72 +2,163 @@
 import {Astronav, MenuItems, MenuIcon, StickyHeader, Dropdown, DropdownItems} from "astro-navbar";
 ---
 <footer>
-    <Astronav>
-        <MenuItems>
-            <ul class="text-sm bg-beige">
-                <li class="p-4 border-t border-gray-600">
-                    <Dropdown class="group">
-                        <button class="flex items-center justify-between w-full">
-                            <span>Research</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                            </svg>
-                        </button>
-                        <DropdownItems>
-                            <div>
-                                <ul class="px-3">
-                                    <li class="p-4">
-                                        <a href="/">Glossary</a>
-                                    </li>
-                                    <li class="p-4">
-                                        <a href="https://elmcip.net">ELMCIP</a>
-                                    </li>
-                                    <li class="p-4">
-                                        <a href="https://cellproject.net/">CELL</a>
-                                    </li>
-                                    <li class="p-4">
-                                        <a href="https://collection.cdn.uib.no">Collection</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </DropdownItems>
-                    </Dropdown>
-                </li>
-                <li class="p-4 border-t border-gray-600">
-                    <Dropdown class="group">
-                        <button class="flex items-center justify-between w-full">
-                            <span>Activity</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
-                            </svg>
-                        </button>
-                        <DropdownItems>
-                            <div>
-                                <ul class="px-3">
-                                    <li class="p-4">
-                                        <a href="/">Glossary</a>
-                                    </li>
-                                    <li class="p-4">
-                                        <a href="https://elmcip.net">ELMCIP</a>
-                                    </li>
-                                    <li class="p-4">
-                                        <a href="https://cellproject.net/">CELL</a>
-                                    </li>
-                                    <li class="p-4">
-                                        <a href="https://collection.cdn.uib.no">Collection</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </DropdownItems>
-                    </Dropdown>
-                </li>
-            </ul>
-        </MenuItems>
-    </Astronav>
-</footer>
+    <div class="md:hidden">
+        <Astronav>
+            <MenuItems>
+                <ul class="text-sm bg-beige">
+                    <li class="p-4 border-t border-gray-600">
+                        <Dropdown class="group">
+                            <button class="flex items-center justify-between w-full">
+                                <span class="capitalize">Research</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <DropdownItems>
+                                <div>
+                                    <ul class="px-3">
+                                        <li class="mt-4 mb-4">
+                                            <a href="https://www.uib.no/en/cdn/166867/electronic-literature" class="hover:underline">Electronic
+                                                Literature</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/167114/computational-narrative-systems"
+                                               class="hover:underline">Computational Narrative Systems</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/167115/computer-games-and-interactive-digital-narrative"
+                                               class="hover:underline">Computer Games and Interactive Digital Narrative</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/167118/social-media-and-network-narratives"
+                                               class="hover:underline">Social Media and Network Narratives</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/166949/extending-digital-narrative"
+                                               class="hover:underline">Extending Digital Narrative</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/167136/artistic-integrated-research"
+                                               class="hover:underline">Artistic Integrated Research</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/167163/cdn-project-portfolio" class="hover:underline">Project
+                                                Portfolio</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/171261/publishing-and-infrastructure-group-paig"
+                                               class="hover:underline">Publishing and Infrastructure Group (PAIG)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </DropdownItems>
+                        </Dropdown>
+                    </li>
+                    <li class="p-4 border-t border-gray-600">
+                        <Dropdown class="group">
+                            <button class="flex items-center justify-between w-full">
+                                <span class="capitalize">Activity</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <DropdownItems>
+                                <div>
+                                    <ul class="px-3">
+                                        <li class="mt-4 mb-4">
+                                            <a href="https://www.uib.no/en/cdn/172639/listen-center-season-3" class="hover:underline">Podcast:
+                                                Off Center</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/168456/cdn-talks" class="hover:underline">CDN seminars,
+                                                lectures and panels in recording</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/170887/cdn-publications" class="hover:underline">CDN
+                                                Publications</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/168236/call-papers-%E2%80%93-cdn"
+                                               class="hover:underline">Call for papers</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </DropdownItems>
+                        </Dropdown>
+                    </li>
+                    <li class="p-4 border-t border-gray-600">
+                        <Dropdown class="group">
+                            <button class="flex items-center justify-between w-full">
+                                <span class="capitalize">Team</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <DropdownItems>
+                                <div>
+                                    <ul class="px-3">
+                                        <li class="mt-4 mb-4">
+                                            <a href="https://www.uib.no/en/cdn/138238/cdn-management-and-partners"
+                                               class="hover:underline">Management and Partners</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/persons" class="hover:underline">Staff at CDN</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/150959/meet-professor-iis-center-digital-narrative"
+                                               class="hover:underline">Professor IIs</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/161344/meet-advisory-board-center-digital-narrative"
+                                               class="hover:underline">CDN Advisory Board</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/167137/cdn-affiliated-researchers"
+                                               class="hover:underline">CDN Affiliated Researchers</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/160817/cdn-hiring-open-positions"
+                                               class="hover:underline">CDN job listings</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/170059/guests-center-digital-narrative"
+                                               class="hover:underline">Guests at CDN</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </DropdownItems>
+                        </Dropdown>
+                    </li>
+                    <li class="p-4 border-t border-gray-600">
+                        <Dropdown class="group">
+                            <button class="flex items-center justify-between w-full">
+                                <span class="capitalize">Keep in touch</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3 h-3 mt-0.5 group-open:rotate-180">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                                </svg>
+                            </button>
+                            <DropdownItems>
+                                <div>
+                                    <ul class="px-3">
+                                        <li class="mt-4 mb-4">
+                                            <a href="https://pub.dialogapi.no/s/MjM1MDM6NmMwMTliODUtNjRiZi00M2RmLWIwN2MtNzE5Yjg1YjE5MDll"
+                                               class="hover:underline">Subscribe to our newsletter</a>
+                                        </li>
+                                        <li class="mb-4">
+                                            <a href="https://www.uib.no/en/cdn/172639/listen-center-season-3" class="hover:underline">Listen
+                                                to our podcast</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </DropdownItems>
+                        </Dropdown>
+                    </li>
+                </ul>
+            </MenuItems>
+        </Astronav>
+    </div>
 
-<footer>
-    <div class="bg-beige dark:bg-dark-blue mt-14">
+    <div class="hidden md:block bg-beige dark:bg-dark-blue mt-14">
         <div class="container">
             <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
                 <div>
@@ -177,12 +268,10 @@ import {Astronav, MenuItems, MenuIcon, StickyHeader, Dropdown, DropdownItems} fr
         </div>
     </div>
     <div class="py-4 bg-dark-blue text-white">
-        <div class="container">
-            <div class="px-2 text-center">
-                <span>The Center for Digital Narrative (CDN) is a Norwegian Centre of Research Excellence funded by the Norwegian Research Council from 2023-2033.</span>
-                <a href="https://www.uib.no/en/cdn/138235/about-center-digital-narrative"
-                   class="underline whitespace-nowrap">Learn more</a>
-            </div>
+        <div class="px-2 text-sm md:text-base text-center">
+            <span>The Center for Digital Narrative (CDN) is a Norwegian Centre of Research Excellence funded by the Norwegian Research Council from 2023-2033.</span>
+            <a href="https://www.uib.no/en/cdn/138235/about-center-digital-narrative"
+               class="underline whitespace-nowrap">Learn more</a>
         </div>
     </div>
 </footer>
