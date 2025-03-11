@@ -1,20 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-        container: {
-            center: true,
-        },
 		extend: {
-			fontFamily: {
-				'sans': ['"Segoe UI"', ...defaultTheme.fontFamily.sans],
-			},
-            colors: {
-                'dark-blue': '#002934',
-                'beige': '#f5f5f5',
-                'accent-blue': '#2B9991'
-            },
 			typography: {
 				DEFAULT: {
 					css: {
@@ -49,10 +35,5 @@ module.exports = {
 				}
 			}
 		}
-
-	},
-	darkMode: 'class',
-	plugins: [
-		require('@tailwindcss/typography'),
-	],
+	}
 };
