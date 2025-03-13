@@ -25,7 +25,6 @@ const components = {
         <div class="flex flex-col items-center">
             <article class="prose dark:prose-invert xl:prose-lg my-8 data-pagefind-body">
                 <h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold">{term.data.title}</h1>
-                <!--<h1 style="margin-bottom: 0" class="text-4xl lg:text-7xl xl:text-8xl font-bold transition-colors duration-500 ease-in" transition:name=`title ${term.id}`>{term.data.title}</h1>-->
                 <p>
                     <em>{term.data.description}</em>
                     <br>
@@ -38,15 +37,14 @@ const components = {
                 <TermCitation term={term} />
 
                 {(!term.data.author || !term.data.pubDate) &&
-                    <div class="border-t">
-                        <p>You're in luck! There's no explication for this term and you can be the one write it! <a href="/submit" class="ml-2 font-bold text-accent-blue dark:text-accent-blue visited:text-accent-blue dark:visited:text-accent-blue">Submit</a></p>
+                    <div class="border-t not-prose pt-6">
+                        <p>You're in luck! There's no explication for this term and you can be the one write it! <a href="/submit" class="underline hover:no-underline ml-2 font-bold text-accent-blue">Submit</a></p>
                     </div>
                 }
 
                 {term.data.author && term.data.pubDate &&
-                    <p class="border-t pt-6 text-sm">Text is available under the <a class="text-black dark:text-gray-200 visited:text-black dark:visited:text-gray-200" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>.</p>
+                    <p class="not-prose mt-4 border-t pt-6 text-sm">Text is available under the <a class="underline hover:no-underline" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a></p>
                 }
-
             </article>
         </div>
     </div>

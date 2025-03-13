@@ -11,6 +11,8 @@ The Living Glossary of Digital Narrative (LGDN) is a peer-reviewed, academic glo
 
 Unlike static reference books, the living glossary grows through contributions from experts across disciplines and career stages. No matter your background, your expertise can help shape the way digital narrative is understood. Browse our guidelines below to see how you can contribute, or suggest a term you think belongs in the Glossary.
 
+Send your submissions to [glossary.cdn.@uib.no](mailto:glossary.cdn.@uib.no)
+
 ## Taxonomy of an LGDN Entry
 
 Glossary entries are composed of four separate sections:
@@ -32,7 +34,7 @@ Contributors are encouraged to **select a term from the editorial team’s list 
 
 ### Explications
 
-Explications are the focus of contributions and are **in-depth, encyclopaedic descriptions** of a term. Explications are expected to be around **300-700 words** in length. If you exceed this word limit, indicate your wordcount when you submit, and the team will decide if revision is needed. An explication **must include references**. References and in-text citations must be formatted in MLA style.
+Explications are the focus of contributions and are **in-depth, encyclopaedic descriptions** of a term. Explications are expected to be around **300-700 words** in length. If you exceed this word limit, indicate your wordcount when you submit, and the team will decide if revision is needed. An explication **must include references**. References and [in-text citations](https://style.mla.org/in-text-citations-overview/) *must* be formatted in MLA style.
 
 Explications are expected to be written in a neutral manner and will provide examples of the term in use within scholarly and, where applicable, creative contexts. Explications may cover topics like the term’s evolution and history, any previous or ongoing academic discussions surrounding the term, and any varying interpretations.
 

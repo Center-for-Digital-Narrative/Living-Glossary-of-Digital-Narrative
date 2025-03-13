@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig, envField} from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import pagefind from "astro-pagefind";
 import mdx from "@astrojs/mdx";
@@ -6,15 +6,21 @@ import rehypeSeeAlso from "./src/plugins/rehypeSeeAlso";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [pagefind(), mdx()],
+    integrations: [pagefind(), mdx()],
 
-  markdown: {
-      rehypePlugins: [rehypeSeeAlso]
-  },
+    markdown: {
+        rehypePlugins: [rehypeSeeAlso]
+    },
 
-  prefetch: true,
+    prefetch: true,
 
-  vite: {
-    plugins: [tailwindcss()]
-  }
+    vite: {
+        plugins: [tailwindcss()]
+    },
+
+    env: {
+        schema: {
+            BUILD_TIME: envField.string({ context: "server", access: "public", default: new Date().toISOString() })
+        }
+    }
 });
