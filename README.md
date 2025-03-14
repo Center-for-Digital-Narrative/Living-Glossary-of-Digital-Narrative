@@ -27,6 +27,37 @@ To start the development server:
 npm start
 ```
 
+## Editing
+
+Terms with explications are stored as mdx files. Template looks like:
+
+```md
+---
+title: ExampleTitle
+description: "description of the term"
+author: John Smith
+pubDate: 2025-03-14
+seeAlso:
+    - cybertext
+    - generative-poetry
+    - remix
+---
+## Explication
+
+The explication goes here.
+
+::see-also
+(The ::see-also shortcode is automatically replaced with the list of related terms)
+
+## Works Referenced
+
+References to works go here.
+
+## Further Reading
+
+Further reading goes here.
+```
+
 ## License
 
 ### Software License (Code)
