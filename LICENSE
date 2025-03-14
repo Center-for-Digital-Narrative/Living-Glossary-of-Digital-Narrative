@@ -1,0 +1,29 @@
+# License for This Repository
+
+## Software License (Code)
+All **source code** in this repository is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**.
+
+This means:
+- You are free to use, modify, and distribute the code.
+- Any modifications must also be released under the same AGPL-3.0 license.
+- If you deploy modified versions as a web service, you must provide access to the modified source code.
+
+A full copy of the AGPL-3.0 license is provided in the file **AGPL-3.0.txt** or can be found [here](https://www.gnu.org/licenses/agpl-3.0.html).
+
+## Content License (Non-Code Content)
+All **written content and non-code assets** in this repository, **except logos and images**, are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** license.
+
+This means:
+- You may share and adapt the content **for non-commercial purposes**, as long as you give appropriate credit.
+- Any derivative works must be shared under the same license.
+
+A full copy of the CC BY-NC-SA 4.0 license is provided in the file **CC-BY-NC-SA-4.0.txt** or can be found [here](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+## Copyright Retention for Logos and Images
+All **logos and images** included in this repository **remain fully copyrighted** by the Center for Digital Narrative and the University of Bergen.  
+They **may not** be used, modified, or redistributed without explicit written permission.
+
+## Summary
+- **Code** → Licensed under **AGPL-3.0**.
+- **Content → Licensed under **CC BY-NC-SA 4.0**.
+- **Logos and Images** → **All rights reserved**
