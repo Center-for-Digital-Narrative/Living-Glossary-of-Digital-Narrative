@@ -20,7 +20,7 @@ if (!term.data.author || !term.data.pubDate) {
 </h2>
 <span id="citation_text" class="mr-6">{term.data.author}. "{term.data.title}." <em>The Living Glossary of Digital Narrative</em>, {formatDate(term.data.pubDate, 'y')}. https://glossary.cdn.uib.no/terms/{term.id}</span>
 
-<script>
+<script is:inline data-astro-rerun>
 document.addEventListener('astro:page-load', () => {
     const copyButton = document.getElementById("copy_button");
     const citationText = document.getElementById("citation_text");
