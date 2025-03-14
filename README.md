@@ -13,7 +13,7 @@ To set up the project locally:
 
 ```sh
 # clone the repository
-git clone https://github.com/Center-for-Digital-Narrative/Glossary-of-Digital-Narrative.git
+git clone https://github.com/Center-for-Digital-Narrative/Living-Glossary-of-Digital-Narrative.git
 # change into the project directory
 cd Glossary-of-Digital-Narrative
 # install dependencies
