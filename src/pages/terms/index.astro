@@ -2,10 +2,8 @@
 import { getCollection } from "astro:content";
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import NavSmall from "../../components/NavSmall.astro";
 import TermSnippet from "../../components/TermSnippet.astro";
-import NavMobile from "../../components/NavMobile.astro";
-const allPosts = await getCollection("terms");
+const allPosts = (await getCollection("terms")).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 
 <BaseLayout pageTitle='Term List | LGDN'>

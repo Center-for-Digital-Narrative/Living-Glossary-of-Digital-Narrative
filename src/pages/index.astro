@@ -7,7 +7,7 @@ import NavMobile from "../components/NavMobile.astro";
 import Hero from "../components/Hero.astro";
 import TermSnippet from "../components/TermSnippet.astro";
 import {getCollection} from "astro:content";
-const allPosts = await getCollection("terms");
+const allPosts = (await getCollection("terms")).sort((a, b) => a.data.title.localeCompare(b.data.title));
 ---
 <html lang="en" style="overflow-y: scroll">
 <head>

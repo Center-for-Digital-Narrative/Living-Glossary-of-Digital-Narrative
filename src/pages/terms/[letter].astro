@@ -9,7 +9,9 @@ export async function getStaticPaths() {
 
     return lettersWithTerms.map(letter => {
         // Filter terms that start with the current letter
-        const termsStartingWithLetter = terms.filter(term => term.id.toLowerCase().startsWith(letter));
+        const termsStartingWithLetter = terms
+            .filter(term => term.id.toLowerCase().startsWith(letter))
+            .sort((a, b) => a.data.title.localeCompare(b.data.title));
         return {
             params: { letter },
             props: { terms: termsStartingWithLetter },
