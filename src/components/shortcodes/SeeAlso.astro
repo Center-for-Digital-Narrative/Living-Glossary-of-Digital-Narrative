@@ -29,7 +29,9 @@ const getItem = (id: string):Item|undefined => {
       {parsedItems.map(id => {
         const item = getItem(id);
         if(!item) return null;
-        return item.data.pubDate ? <li><a href=`/terms/{item.id}`><strong>{item.data.title}</strong></a> - <em>{item.data.description}</em></li> : <li><strong>{item.data.title}</strong> - <em>{item.data.description}</em></li>;
+          return item.data.pubDate
+              ? <li><a href={`/terms/${item.id}`}><strong>{item.data.title}</strong></a> - <em>{item.data.description}</em></li>
+              : <li><strong>{item.data.title}</strong> - <em>{item.data.description}</em></li>;
       })}
     </ul>
 )}
