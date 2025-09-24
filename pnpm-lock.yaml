@@ -48,6 +48,9 @@ importers:
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.18(tailwindcss@4.1.13)
+      pagefind:
+        specifier: ^1.4.0
+        version: 1.4.0
 
 packages:
 
