@@ -2,13 +2,19 @@ import {defineConfig, envField} from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import pagefind from "astro-pagefind";
 import mdx from "@astrojs/mdx";
+import remarkWikiLinks from "./src/plugins/remarkWikiLinks.js";
 import rehypeSeeAlso from "./src/plugins/rehypeSeeAlso";
 
-// https://astro.build/config
+
 export default defineConfig({
     integrations: [pagefind(), mdx()],
 
     markdown: {
+        remarkPlugins: [
+            [remarkWikiLinks, {
+                linkResolver: (link) => `/terms/${link.toLowerCase()}/`
+            }]
+        ],
         rehypePlugins: [rehypeSeeAlso]
     },
 
