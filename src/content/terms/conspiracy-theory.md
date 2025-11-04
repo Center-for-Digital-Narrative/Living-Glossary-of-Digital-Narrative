@@ -12,25 +12,25 @@ seeAlso:
   - polarization
   - web-2.0
 worksReferenced: |-
-  Bale, Jeffrey M. “Political Paranoia v. Political Realism: On Distinguishing Between Bogus Conspiracy Theories and Genuine Conspiratorial Politics.” *Patterns of Prejudice*, vol. 41, 2007, pp. 45–60. doi:10.1080/00313220601118751. 
+  Bale, Jeffrey M. “Political Paranoia v. Political Realism: On Distinguishing Between Bogus Conspiracy Theories and Genuine Conspiratorial Politics.” _Patterns of Prejudice_, vol. 41, 2007, pp. 45–60. doi:10.1080/00313220601118751.
 
-  Brinker, Felix. “Hidden Agendas, Endless Investigations, and the Dynamics of Complexity: The Conspiratorial Mode of Storytelling in Contemporary American Television Series.” *aspeers*, vol. 5, 2012, pp. 87–109. 
+  Brinker, Felix. “Hidden Agendas, Endless Investigations, and the Dynamics of Complexity: The Conspiratorial Mode of Storytelling in Contemporary American Television Series.” _aspeers_, vol. 5, 2012, pp. 87–109.
 
-  Fenster, Mark. *Conspiracy Theories: Secrecy and Power in American Culture*. University of Minnesota Press, 2008. 
+  Fenster, Mark. _Conspiracy Theories: Secrecy and Power in American Culture_. University of Minnesota Press, 2008.
 
-  Maly, Ico. *Metapolitics, Algorithms and Violence: New Right Activism and Terrorism in the Attention Economy*. Routledge, 2024. 
+  Maly, Ico. _Metapolitics, Algorithms and Violence: New Right Activism and Terrorism in the Attention Economy_. Routledge, 2024.
 
-  Mason, Jessica. “Making Fiction out of Fact: Attention and Belief in the Discourse of Conspiracy.” *Narrative Inquiry*, vol. 29, no. 2, 2019, pp. 293–312. doi:10.1075/ni.19023.mas. 
+  Mason, Jessica. “Making Fiction out of Fact: Attention and Belief in the Discourse of Conspiracy.” _Narrative Inquiry_, vol. 29, no. 2, 2019, pp. 293–312. doi:10.1075/ni.19023.mas.
 
-  Mittell, Jason. *Complex TV: The Poetics of Contemporary Television Storytelling*. New York University Press, 2015. 
+  Mittell, Jason. _Complex TV: The Poetics of Contemporary Television Storytelling_. New York University Press, 2015.
 
-  Romanishyn, Alexander, Olena Malytska, and Vitaliy Goncharuk. “AI-Driven Disinformation: Policy Recommendations for Democratic Resilience.” *Frontiers in Artificial Intelligence*, vol. 8, 2025, article 1569115. 
+  Romanishyn, Alexander, Olena Malytska, and Vitaliy Goncharuk. “AI-Driven Disinformation: Policy Recommendations for Democratic Resilience.” _Frontiers in Artificial Intelligence_, vol. 8, 2025, article 1569115.
 
-  Sedgwick, Eve Kosofsky. *Touching Feeling: Affect, Pedagogy, Performativity*. Duke University Press, 2003. 
+  Sedgwick, Eve Kosofsky. _Touching Feeling: Affect, Pedagogy, Performativity_. Duke University Press, 2003.
 
-  Tuters, Marc, Emilija Jokubauskaitė, and Daniel Bach. “Post-Truth Protest: How 4chan Cooked Up the Pizzagate Bullshit.” *M/C Journal*, vol. 21, no. 3, 2019. 
+  Tuters, Marc, Emilija Jokubauskaitė, and Daniel Bach. “Post-Truth Protest: How 4chan Cooked Up the Pizzagate Bullshit.” _M/C Journal_, vol. 21, no. 3, 2019.
 
-  Van de Ven, Inge, and Lucie Chateau. *Digital Culture and the Hermeneutic Tradition: Suspicion, Trust & Dialogue*. Routledge, 2024.
+  Van de Ven, Inge, and Lucie Chateau. _Digital Culture and the Hermeneutic Tradition: Suspicion, Trust & Dialogue_. Routledge, 2024.
 furtherReading: |-
   Dawson, Paul. “What Is ‘the Narrative’? Conspiracy Theories and Journalistic Emplotment in the Age of Social Media.” Dawson, P., and M. Mäkelä (editors), _The Routledge Companion to Narrative Theory_. Routledge, 2023, 71–85.
 
