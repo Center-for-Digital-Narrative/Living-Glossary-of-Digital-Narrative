@@ -5,7 +5,7 @@ logo_url: /favicon.svg
 backend:
   name: github
   branch: main
-  repo: Center-for-Digital-Narrative/Glossary-of-Digital-Narrative
+  repo: Center-for-Digital-Narrative/Living-Glossary-of-Digital-Narrative
   site_domain: glossary.cdn.uib.no
   base_url: https://sveltia-cms-auth.colin-robinson.workers.dev/
   automatic_deployments: false
