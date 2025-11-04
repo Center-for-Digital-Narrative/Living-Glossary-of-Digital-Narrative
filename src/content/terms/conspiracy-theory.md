@@ -12,25 +12,25 @@ seeAlso:
   - polarization
   - web-2.0
 worksReferenced: |-
-  Bale, Jeffrey M. “Political Paranoia v. Political Realism: On Distinguishing Between Bogus Conspiracy Theories and Genuine Conspiratorial Politics.” \*Patterns of Prejudice\*, vol. 41, 2007, pp. 45–60. doi:10.1080/00313220601118751.
+  Bale, Jeffrey M. “Political Paranoia v. Political Realism: On Distinguishing Between Bogus Conspiracy Theories and Genuine Conspiratorial Politics.” *Patterns of Prejudice*, vol. 41, 2007, pp. 45–60. doi:10.1080/00313220601118751. 
 
-  Brinker, Felix. “Hidden Agendas, Endless Investigations, and the Dynamics of Complexity: The Conspiratorial Mode of Storytelling in Contemporary American Television Series.” \*aspeers\*, vol. 5, 2012, pp. 87–109.
+  Brinker, Felix. “Hidden Agendas, Endless Investigations, and the Dynamics of Complexity: The Conspiratorial Mode of Storytelling in Contemporary American Television Series.” *aspeers*, vol. 5, 2012, pp. 87–109. 
 
-  Fenster, Mark. \*Conspiracy Theories: Secrecy and Power in American Culture\*. University of Minnesota Press, 2008.
+  Fenster, Mark. *Conspiracy Theories: Secrecy and Power in American Culture*. University of Minnesota Press, 2008. 
 
-  Maly, Ico. \*Metapolitics, Algorithms and Violence: New Right Activism and Terrorism in the Attention Economy\*. Routledge, 2024.
+  Maly, Ico. *Metapolitics, Algorithms and Violence: New Right Activism and Terrorism in the Attention Economy*. Routledge, 2024. 
 
-  Mason, Jessica. “Making Fiction out of Fact: Attention and Belief in the Discourse of Conspiracy.” \*Narrative Inquiry\*, vol. 29, no. 2, 2019, pp. 293–312. doi:10.1075/ni.19023.mas.
+  Mason, Jessica. “Making Fiction out of Fact: Attention and Belief in the Discourse of Conspiracy.” *Narrative Inquiry*, vol. 29, no. 2, 2019, pp. 293–312. doi:10.1075/ni.19023.mas. 
 
-  Mittell, Jason. \*Complex TV: The Poetics of Contemporary Television Storytelling\*. New York University Press, 2015.
+  Mittell, Jason. *Complex TV: The Poetics of Contemporary Television Storytelling*. New York University Press, 2015. 
 
-  Romanishyn, Alexander, Olena Malytska, and Vitaliy Goncharuk. “AI-Driven Disinformation: Policy Recommendations for Democratic Resilience.” \*Frontiers in Artificial Intelligence\*, vol. 8, 2025, article 1569115.
+  Romanishyn, Alexander, Olena Malytska, and Vitaliy Goncharuk. “AI-Driven Disinformation: Policy Recommendations for Democratic Resilience.” *Frontiers in Artificial Intelligence*, vol. 8, 2025, article 1569115. 
 
-  Sedgwick, Eve Kosofsky. \*Touching Feeling: Affect, Pedagogy, Performativity\*. Duke University Press, 2003.
+  Sedgwick, Eve Kosofsky. *Touching Feeling: Affect, Pedagogy, Performativity*. Duke University Press, 2003. 
 
-  Tuters, Marc, Emilija Jokubauskaitė, and Daniel Bach. “Post-Truth Protest: How 4chan Cooked Up the Pizzagate Bullshit.” \*M/C Journal\*, vol. 21, no. 3, 2019.
+  Tuters, Marc, Emilija Jokubauskaitė, and Daniel Bach. “Post-Truth Protest: How 4chan Cooked Up the Pizzagate Bullshit.” *M/C Journal*, vol. 21, no. 3, 2019. 
 
-  Van de Ven, Inge, and Lucie Chateau. \*Digital Culture and the Hermeneutic Tradition: Suspicion, Trust & Dialogue\*. Routledge, 2024.
+  Van de Ven, Inge, and Lucie Chateau. *Digital Culture and the Hermeneutic Tradition: Suspicion, Trust & Dialogue*. Routledge, 2024.
 furtherReading: |-
   Dawson, Paul. “What Is ‘the Narrative’? Conspiracy Theories and Journalistic Emplotment in the Age of Social Media.” Dawson, P., and M. Mäkelä (editors), _The Routledge Companion to Narrative Theory_. Routledge, 2023, 71–85.
 
@@ -82,6 +82,6 @@ These challenges are not hypothetical. The notorious “Pizzagate” conspiracy 
 
 Beyond extreme cases like Pizzagate, conspiracy narratives thrive in broader cultural contexts where fan communities and subcultures perceive the world as layered with hidden meanings. Conspiracy narratives also pervade fandom. The #FreeBritney movement scrutinized Britney Spears’ conservatorship. ‘Swifties’ are devoted to decoding the many “easter eggs” their idol Taylor Swift puts in her videos, lyrics, and appearances. Amber Heard’s defamation trial (2022), P Diddy’s 2024 arrest, and Kate Middleton’s public absence (2024) also fueled wild speculations, whereas K-pop group BTS and Beyoncé have been linked to the Illuminati or ‘New World Order’. Eve Kosofsky Sedgwick argued that “protocols of unveiling have become the common currency of cultural and historical studies” (Sedgwick, 143). Today, this attitude defines media culture at large. This search for hidden meanings is fundamentally hermeneutic, involving interpretation and the uncovering of underlying significance (Van de Ven and Chateau).
 
-Just as audiences decode hidden meanings in real-world conspiracies and celebrity culture, fictional narratives invite similar interpretative labor. Films, TV series, games, and works of electronic literature employ conspiratorial storytelling. often mirroring classical detective fiction in which protagonists investigate mysteries that expand as new information emerges (Fenster 2008). Post-network series such as \*The X-Files\*, \*Lost\*, and \*Stranger Things\* engage audiences in a mode of spectatorship that mirrors conspiracy theorizing, encouraging close attention to formal aspects, plot twists, and diegetic events. As Mittell (35) notes, complex TV series provide “cognitive workouts”, honing problem-solving and observational skills, while Brinker (4) emphasizes the significant time and effort these interpretative communities demand, setting a high threshold for media literacy and information-processing.
+Just as audiences decode hidden meanings in real-world conspiracies and celebrity culture, fictional narratives invite similar interpretative labor. Films, TV series, games, and works of electronic literature employ conspiratorial storytelling. often mirroring classical detective fiction in which protagonists investigate mysteries that expand as new information emerges (Fenster 2008). Post-network series such as _The X-Files_, _Lost_, and _Stranger Things_ engage audiences in a mode of spectatorship that mirrors conspiracy theorizing, encouraging close attention to formal aspects, plot twists, and diegetic events. As Mittell (35) notes, complex TV series provide “cognitive workouts”, honing problem-solving and observational skills, while Brinker (4) emphasizes the significant time and effort these interpretative communities demand, setting a high threshold for media literacy and information-processing.
 
 Together, these dynamics illustrate how conspiracy narratives, from real-world to fictional, shape how audiences interpret, evaluate, and engage with information in an increasingly mediated and participatory culture.
