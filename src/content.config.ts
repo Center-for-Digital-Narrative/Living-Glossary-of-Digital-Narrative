@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content';
+import {type CollectionEntry, defineCollection, reference, z} from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const terms = defineCollection({
@@ -8,7 +8,12 @@ const terms = defineCollection({
         description: z.string(),
         author: z.string().optional(),
         pubDate: z.date().optional(),
+        seeAlso: z.array(reference('terms')).optional(),
+        worksReferenced: z.string().optional(),
+        furtherReading: z.string().optional(),
     })
 });
 
 export const collections = { terms };
+
+export type Term = CollectionEntry<'terms'>;

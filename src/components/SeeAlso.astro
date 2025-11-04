@@ -1,0 +1,22 @@
+---
+import { getEntries } from 'astro:content';
+import type {Term} from "../content.config";
+
+const { seeAlso } = Astro.props
+if(!seeAlso) return;
+
+const seeAlsoTerms: Term[] = await getEntries(seeAlso);
+if (seeAlsoTerms.length === 0) {
+    return;
+}
+seeAlsoTerms.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<h2>See Also</h2>
+<ul>
+    {seeAlsoTerms.map(async item => {
+        if(!item) return null;
+        return item.data.pubDate
+            ? <li><a href={`/terms/${item.id}`}><strong>{item.data.title}</strong></a> - <em>{item.data.description}</em></li>
+            : <li><strong>{item.data.title}</strong> - <em>{item.data.description}</em></li>;
+    })}
+</ul>

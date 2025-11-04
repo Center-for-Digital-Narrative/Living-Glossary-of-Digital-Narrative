@@ -32,6 +32,12 @@ module.exports = {
                                 textDecoration: "none",
                             }
                         },
+                        'code::before': {
+                            content: '',
+                        },
+                        'code::after': {
+                            content: '',
+                        },
 					}
 				}
 			}

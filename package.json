@@ -5,14 +5,16 @@
   "scripts": {
     "start": "astro dev",
     "build": "astro check && astro build",
-    "postbuild": "npx pagefind --site dist/",
-    "preview": "astro build && npm run postbuild && astro preview"
+    "postbuild": "pnpx pagefind --site dist/",
+    "preview": "astro build && pnpm run postbuild && astro preview"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.1.0",
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/markdown-component": "^1.0.5",
+    "@astrojs/mdx": "^4.3.9",
+    "@astropub/md": "^1.0.0",
     "@tailwindcss/vite": "^4.0.12",
-    "astro": "^5.4.2",
+    "astro": "^5.15.3",
     "astro-navbar": "^2.3.6",
     "astro-pagefind": "^1.8.1",
     "autoprefixer": "^10.4.15",

@@ -9,6 +9,8 @@ backend:
   site_domain: glossary.cdn.uib.no
   base_url: https://sveltia-cms-auth.colin-robinson.workers.dev/
   automatic_deployments: false
+output:
+  omit_empty_optional_fields: true
 
 media_folder: "src/assets/images"
 public_folder: "@assets/images"
@@ -22,19 +24,28 @@ collections:
     create: true
     delete: true
     preview_path_date_field: "updated_on"
-    extension: "mdx"
+    extension: "md"
     fields:
       - name: "title"
         widget: "string"
-        label: "Post Title"
-      - label: "Author Name"
+        label: "Title"
+      - label: "Description"
+        name: "description"
+        widget: "text"
+      - label: "Author"
         name: "author"
         widget: "string"
+        required: false
       - label: "Publish Date"
         name: "pubDate"
         widget: "datetime"
         date_format: "YYYY-MM-DD"
         picker_utc: true
+        required: false
+      - name: "body"
+        widget: "markdown"
+        label: "Explication"
+        required: false
       - label: "See Also"
         name: "seeAlso"
         widget: "relation"
@@ -43,10 +54,12 @@ collections:
         search_fields: [ "title" ]
         display_fields: [ "title" ]
         value_field: '{{slug}}'
-      - label: "Description"
-        name: "description"
-        widget: "text"
-      - name: "body"
+        required: false
+      - name: "worksReferenced"
         widget: "markdown"
-        label: "Post Body"
-        editor_components: []
+        label: "Works Referenced"
+        required: false
+      - name: "furtherReading"
+        widget: "markdown"
+        label: "Further Reading"
+        required: false

@@ -3,7 +3,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection, render } from 'astro:content';
 import TermCitation from "../../components/TermCitation.astro";
 import {formatDate} from "../../utils/formatDate";
-import SeeAlso from "../../components/shortcodes/SeeAlso.astro";
+import { Markdown } from '@astropub/md'
+import SeeAlso from "../../components/SeeAlso.astro";
 
 export async function getStaticPaths() {
     const terms = await getCollection('terms');
@@ -15,10 +16,6 @@ export async function getStaticPaths() {
 
 const { term } = Astro.props;
 const { Content } = await render(term);
-
-const components = {
-    SeeAlso
-};
 ---
 <BaseLayout pageTitle={term.data.title + ' | LGDN'}>
     <div class="container p-2 md:p-0">
@@ -32,7 +29,20 @@ const components = {
                     {term.data.pubDate && <span>{formatDate(term.data.pubDate)}</span>}
                 </p>
 
-                <Content components={components} />
+                <h2 id="explication">Explication</h2>
+                <Content />
+
+                <SeeAlso seeAlso={term.data.seeAlso} />
+
+                {term.data.worksReferenced && (
+                    <h2 id="works-referenced">Works Referenced</h2>
+                    <Markdown of={term.data.worksReferenced} />
+                )}
+
+                {term.data.furtherReading && (
+                        <h2 id="further-reading">Further Reading</h2>
+                        <Markdown of={term.data.furtherReading} />
+                )}
 
                 <TermCitation term={term} />
 
