@@ -1,7 +1,7 @@
 ---
 title: Interactive Fiction
 description: Born-digital electronic literature where users navigate narrative and ludic elements by inputting textual commands or making choices
-author: Claire Carroll
+author: Claire James Carroll
 pubDate: 2025-09-24
 seeAlso:
   - electronic-literature-e-lit
