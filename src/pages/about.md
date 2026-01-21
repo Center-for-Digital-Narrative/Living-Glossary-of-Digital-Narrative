@@ -5,7 +5,7 @@ title: About
 
 ## Project Description
 
-The Living Glossary of Digital Narrative (LGDN) is a collaborative project between the the Center for Digital Narrative (CDN) at the University of Bergen in Norway, the University of Stuttgart in Germany, and the Baden Württemberg Foundation. The Bergen project lead is Professor Joseph Tabbi, the Stuttgart project lead is Professor Sibylle Baumbach, Hannah Ackermans and Tegan Pyke handle key administrative tasks, and techncial development and operations are managed by Colin Robinson.
+The Living Glossary of Digital Narrative (LGDN) is a collaborative project between the the Center for Digital Narrative (CDN) at the University of Bergen in Norway, the University of Stuttgart in Germany, and the Baden Württemberg Foundation. The Bergen project lead is Professor Emeritus Joseph Tabbi, the Stuttgart project lead is Professor Sibylle Baumbach. Hannah Ackermans, Tegan Pyke, and Azza Sakr handle key administrative tasks, and technical development and operations are managed by Colin Robinson.
 
 ### Project Deliverable
 
