@@ -9,7 +9,7 @@ The *Living Glossary of Digital Narrative* (*LGDN*) is an online terminology bas
 
  
 
-Anyone is welcome to suggest or draft an entry for the *LGDN*. If you would like to write an explication for a term that already has a definition within the *LGDN*, please contact us to verify nobody else is currently writing for the entry. You are also allowed to submit entries for terms currently not within the *LGDN*. The specification for entries and how to submit can be found on \[our submission page\](https://glossary.cdn.uib.no/submit/). 
+Anyone is welcome to suggest or draft an entry for the *LGDN*. If you would like to write an explication for a term that already has a definition within the *LGDN*, please contact us to verify nobody else is currently writing for the entry. You are also allowed to submit entries for terms currently not within the *LGDN*. The specification for entries and how to submit can be found on [our submission page](https://glossary.cdn.uib.no/submit/). 
 
  
 
