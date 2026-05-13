@@ -10,7 +10,7 @@ seeAlso:
   - fanfiction
   - hermeneutics
   - polarization
-  - web-2.0
+  - web-20
 worksReferenced: |-
   Bale, Jeffrey M. “Political Paranoia v. Political Realism: On Distinguishing Between Bogus Conspiracy Theories and Genuine Conspiratorial Politics.” _Patterns of Prejudice_, vol. 41, 2007, pp. 45–60. doi:10.1080/00313220601118751.
 

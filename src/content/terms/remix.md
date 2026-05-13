@@ -1,14 +1,29 @@
 ---
 title: Remix
-description: "The recombination of existing media elements to create new works, highlighting issues of authorship, originality, and copyright in the digital age"
+description: The recombination of existing media elements to create new works, highlighting issues of authorship, originality, and copyright in the digital age
 author: Daniel Johannes Rosnes
 pubDate: 2025-09-24
 seeAlso:
-    - appropriation
-    - combinatorics
-    - remediation
+  - appropriation
+  - combinatorics
+  - remediation
+worksReferenced: |-
+  Gunkel, David J. _Of Remixology: Ethics and Aesthetics after Remix_. MIT Press, 2016.
+
+  Lessig, Lawrence. _Remix: Making Art and Commerce Thrive in the Hybrid Economy_. Bloomsbury Academic, 2008.
+
+  Manovich, Lev. _The Language of New Media_. MIT Press, 2001.
+
+  Manovich, Lev. _Software Takes Command_. Bloomsbury, 2013.
+
+  Navas, Eduardo. _Remix Theory: The Aesthetics of Sampling_. Springer, 2012.
+
+  Waysdorf, Abby S. “Remix in the Age of Ubiquitous Remix.” _Convergence_, vol. 27, no. 4, Aug. 2021, pp. 1129–44. _SAGE Journals_, https://doi.org/10.1177/1354856521994454.
+furtherReading: |-
+  Sinnreich, Aram. _Mashed up: Music, Technology, and the Rise of Configurable Culture_. Univ. of Massachusetts Press, 2010.
+
+  Boone, Marcus. _In Praise of Copying_. Harvard University Press, 2013.
 ---
-## Explication
 
 Remix is the creation of new works by repurposing existing material. The term remix exists in relation to many similar terms, such as mashup, bricolage, and sampling (Gunkel 2016, 3), but remix emerged as the de facto term that encompasses the spectrum of transformative and derivative works, a synecdoche for a better term that does not exist. Remix is a contested term with many different meanings; remix can be everything from the specific practice of creating art using existing material to the “dominant aesthetics of the era of globalization” (Manovich 2013, 267) and a cultural “binder” that infects every aspect of culture (Navas 2012, 4). Remix does have one boundary, which is that works of remix should be recognizable as reinterpretation of an original (Navas 2012, 65); without this identifiable link, they cease to be a remix.
 
@@ -19,25 +34,3 @@ Although remixes are tied to the digital, there are analogue antecedents. Remix 
 Remix is significant because it reframes originality. Gunkel argues that remix causes “short circuits in the material of Western thought” (2015, 171) by showing the creative potential of “derivative” works that appropriate, recombine, or resituate the work of others. Western culture favors the original over the derivative and places great emphasis on the auteurs who produce canonical works. Gunkel traces the privileged position of the original all the way back to Plato (2015, 35), who reproduced a dialogue between Socrates and Phaedrus, arguing that a transcript of a speech is nothing more than a cheap imitation of the original performance, and the idea had been further expanded by Plato in later works such as with the _Theory of Forms_ and the allegory of the cave (2015, 47). The power of remix inheres in showing that copies can be original in their own right, that they are not just doomed to be lesser. Originality in the digital age is not about producing something that has not been done before but finding new and creative uses for that which already exists.
 
 Remix emerged in the late 1990s and defined the 2000s, and while remix was “ubiquitous” coming into the 2020s (Waysdorf 2021), its hegemony is now challenged. With the emergence of generative AI, remix is more relevant than ever while at the same time at risk of being left behind by a stronger cultural force. Just as remix once defined cultural production, generative AI can once again allow for faster and easier creation of content by remixing the existing material it was trained on—often mass harvested without permission and without any traceable references to the original.
-
-::see-also
-
-## Works Cited
-
-Gunkel, David J. _Of Remixology: Ethics and Aesthetics after Remix_. MIT Press, 2016.
-
-Lessig, Lawrence. _Remix: Making Art and Commerce Thrive in the Hybrid Economy_. Bloomsbury Academic, 2008.
-
-Manovich, Lev. _The Language of New Media_. MIT Press, 2001.
-
-Manovich, Lev. _Software Takes Command_. Bloomsbury, 2013.
-
-Navas, Eduardo. _Remix Theory: The Aesthetics of Sampling_. Springer, 2012.
-
-Waysdorf, Abby S. “Remix in the Age of Ubiquitous Remix.” _Convergence_, vol. 27, no. 4, Aug. 2021, pp. 1129–44. _SAGE Journals_, https://doi.org/10.1177/1354856521994454.
-
-## Further Reading
-
-Sinnreich, Aram. _Mashed up: Music, Technology, and the Rise of Configurable Culture_. Univ. of Massachusetts Press, 2010.
-
-Boone, Marcus. _In Praise of Copying_. Harvard University Press, 2013.

@@ -1,14 +1,21 @@
 ---
 title: Literary Game
-description: "Media artifact that contains both ludic and literary elements"
+description: Media artifact that contains both ludic and literary elements
 author: Calvin Olsen
 pubDate: 2025-03-14
 seeAlso:
-    - electronic-literature-e-lit
-    - hypertext
-    - interactive-fiction
+  - electronic-literature-e-lit
+  - hypertext
+  - interactive-fiction
+worksReferenced: |-
+  Coltrain, James, and Stephen Ramsay. "Can Video Games Be Humanities Scholarship?" *Debates in the Digital Humanities 2019*, edited by Matthew K. Gold and Lauren Klein. 2019, pp. 36-45.
+
+  Ensslin, Astrid. *Literary gaming*. MIT Press, 2023.
+
+  Fernández-Vara, Clara. *Introduction to game analysis*. Routledge, 2019.
+
+  Montfort, Nick, and Stuart Moulthrop. "Face It, Tiger, You Just Hit the Jackpot: Reading and Playing Cadre’s Varicella". *Fineart Forum* vol. 17, no. 8, 2003, n.p.
 ---
-## Explication
 
 Astrid Ensslin defines literary games as "a hybrid subgroup of creative media that has both readerly and playerly characteristics" (1). Said another way, a literary game is a media artifact that contains elements of literature and gameplay. Ensslin’s definition builds on the work of Montfort and Moulthrop, who wrote that the power of literary games may derive from the play between their literary aspects and their nature as games. Think of Mad Libs or Exquisite Corpse, whose parameters are largely textual and whose end results are influenced by the decisions made by those playing. These are literary games at their most basic.
 
@@ -17,16 +24,3 @@ Literary games existed long before electronic literature, but e-lit’s propagat
 As an example of how one might decide whether a media artifact falls within the definition of "literary game," let us consider Shelley Jackson’s hypertext novel Patchwork Girl. The literary aspects of Patchwork Girl are easy to find: it has long been designated a novel, and its connections to Mary Shelley’s Frankenstein are multitudinous to say the least. Anyone familiar with Patchwork Girl knows Jackson’s work is well-situated as a ludic hypertext in addition to being a literary one. There is no one way to read/play Patchwork Girl, and any number of readings can be stitched together as the reader interacts with the writing. And Jackson performs a particularly adept suturing of "reader" and "player" early in the graveyard section found first on Patchwork Girl’s title page. Upon clicking out of the \{headstone} lexia, the reader is transported to the \{out} lexia, which immediately changes perspective and reads "Burdened with body parts, your fingernails packed with mud and chips of bone, you slink out of the graveyard. A kind of resurrection has taken place." This is a fantastic (in both senses of the word) point of view in/from which to write—it could be anyone: the reader, Jackson, Shelley, Patchwork Girl, or multiple someones else. Regardless of who the author is at this point, the reader has been carried into the story in an almost movie-like (or cutscene-esque) way that includes an establishing shot (the graveyard), a closeup (the headstone), and finally a from-the-grave first-person point of view wherein the resurrected creature/reader becomes both Patchwork Girl and a reader-creature hybrid capable of writing its own story. By so doing, Jackson and Patchwork Girl offer us the reader/player enmeshment that can be triangulated with the literary and ludic elements of the text to classify Patchwork Girl as a literary game. It may not be a perfect fit in all places, but its reliance on interactive storytelling and the reader/player’s decision aligns well with Ensslin’s categorization.
 
 Whatever form it takes, a literary game does not exist in a vacuum. This is because, as Clara Fernández-Vara wrote, "When we analyze games, we study meaning within the game (meaningful play) and around it (cultural significance). The text is not limited to the work itself, but also to where the text is interpreted and by whom" (6). Labeling a media artifact a "literary game" is largely an exercise in symbolism, but the possibilities inherent in the coupling of the ludic and the literary fit well within the porous confines of electronic literature.
-
-::see-also
-
-## Works Referenced
-
-Coltrain, James, and Stephen Ramsay. "Can Video Games Be Humanities Scholarship?" *Debates in the Digital Humanities 2019*, edited by Matthew K. Gold and Lauren Klein. 2019, pp. 36-45.
-
-Ensslin, Astrid. *Literary gaming*. MIT Press, 2023.
-
-Fernández-Vara, Clara. *Introduction to game analysis*. Routledge, 2019.
-
-Montfort, Nick, and Stuart Moulthrop. "Face It, Tiger, You Just Hit the Jackpot: Reading and Playing Cadre’s Varicella". *Fineart Forum* vol. 17, no. 8, 2003, n.p.
-
