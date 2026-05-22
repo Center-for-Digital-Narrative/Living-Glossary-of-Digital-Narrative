@@ -3,8 +3,6 @@ layout: ../layouts/MarkdownPage.astro
 title: About
 ---
 
-# About 
-
 The *Living Glossary of Digital Narrative* (*LGDN*) is an online terminology base for disciplines related to the crafting and study of digital narrative. The *LGDN* is a growing resource, with new entries being published on a regular basis. As such, it adapts to and reflects evolving terminology use across multiple fields. The *LGDN* collects multiple meanings of a singular term in one entry, providing a cohesive overview of how a term is employed across different disciplines. This shared vocabulary will aid in the building of a unified community, allowing for productive discussion both within and across disciplines. 
 
  
