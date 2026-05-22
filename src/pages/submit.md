@@ -5,11 +5,11 @@ title: Submit
 
 ## Entry Guidelines
 
-The Living Glossary of Digital Narrative (LGDN) is a collaborative project between the University of Stuttgart, Germany, and the Center for Digital Narrative at the University of Bergen, Norway. The project is spearheaded by Joseph Tabbi and Hannah Ackermans.
+The Living Glossary of Digital Narrative (LGDN) is a collaborative project between the University of Stuttgart, Germany, and the Center for Digital Narrative at the University of Bergen, Norway.
 
 The aim of the LGDN project is to produce an online terminology base for disciplines related to the crafting and study of born digital narratives. Rather than a book written by one person or a small team, the Glossary is a living document, publishing entries that are written by a variety of authors across career stages, affiliations, and industries. Writing a glossary entry is a useful research exercise that results in **a peer-reviewed publication** serving the wider community.
 
-**Send submissions and questions to glossary.cdn@uib.no**
+[Make a new submission](https://ojs.cdn.uib.no/index.php/lgdn/submission) or [view your pending submissions](https://ojs.cdn.uib.no/index.php/lgdn/submission). 
 
 ## Taxonomy of an LGDN Entry
 Glossary entries are composed of four separate sections:
