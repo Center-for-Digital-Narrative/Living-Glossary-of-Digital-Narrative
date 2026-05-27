@@ -15,7 +15,7 @@ worksReferenced: |-
   Wei, Jiaheng, et al. "Measuring and Reducing LLM Hallucination without Gold-Standard Answers." _arXiv preprint arXiv:2402.10412_, 2024.  
 
   Zweig, Katharina. _Ein Algorithmus hat kein Taktgefühl: Wo künstliche Intelligenz sich irrt, warum uns das betrifft und was wir dagegen tun können_. Heyne Verlag, 2019.
-furtherReading: 'Maleki, Negar, Balaji Padmanabhan, and Kaushik Dutta. "AI Hallucinations: a Misnomer Worth Clarifying." _2024 IEEE conference on artificial intelligence (CAI)_. IEEE, 2024.'
+furtherReading: 'Maleki, Negar, Balaji Padmanabhan, and Kaushik Dutta. "AI Hallucinations: a Misnomer Worth Clarifying." _2024 IEEE Conference on Artificial Intelligence (CAI)_. IEEE, 2024.'
 ---
 
 A machine learning algorithm is made up of two parts: _machine_, which describes a computational process, and _learning_, because the algorithm is improving and becoming optimized to solve a problem by experience. While rule-based systems are implemented with a fixed set of rules and then used for a specific task, machine learning algorithms derive the rules from exemplary data and improve over time, given exposure to data. 
