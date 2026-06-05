@@ -32,7 +32,7 @@ furtherReading: |-
   Murray, Janet H. _Hamlet on the Holodeck: The Future of Narrative in Cyberspace_. MIT Press, 1997.
 ---
 
-The term Ergodic Literature was coined in 1997 by Espen Aarseth in an effort to describe the differentiation between traditional textual mediums and their emerging counterpart present in videogame narratives. “This phenomenon I call ergodic, using a term appropriated from physics that derives from the Greek words: _ergon_ and _hodos_, meaning "work" and "path" (Aarseth 1-2)”.  
+The term Ergodic Literature was coined in 1997 by Espen Aarseth in an effort to describe the differentiation between traditional textual mediums and their emerging counterpart present in videogame narratives. “This phenomenon I call ergodic, using a term appropriated from physics that derives from the Greek words: _ergon_ and _hodos_, meaning 'work' and 'path'" (Aarseth 1-2). 
 
 While the non-ergodic literature also needed effort to traverse the narrative, it is trivial, a predestined sequence of visual input. Ergodic literature differs from this in its essence. The effort needed to traverse the narrative is non-trivial. The solution to continue the story is not set; individuals’ own affordances and choices compound to form the narrative. The path is not already paved like in the non-ergodic narrative. The agent needs to pave their own way. 
 
