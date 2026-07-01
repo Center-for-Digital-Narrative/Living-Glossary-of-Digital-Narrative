@@ -14,6 +14,7 @@ const { class: className, ...rest } = Astro.props
     }
 </style>
 <StickyHeader
+        data-nosnippet
         data-pagefind-ignore="all"
         class:list={['md:hidden sticky top-0 z-20 transition-all bg-dark-blue text-white', className]} {...rest}
         scrollY={50}
