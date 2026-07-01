@@ -18,6 +18,13 @@ const { term } = Astro.props;
 const { Content } = await render(term);
 ---
 <BaseLayout pageTitle={term.data.title + ' | LGDN'}>
+    <Fragment slot="head">
+        <meta name="citation_title" content={term.data.title} />
+        <meta name="citation_journal_title" content="The Living Glossary of Digital Narrative" />
+        <meta name="citation_abstract_html_url" content={`https://glossary.cdn.uib.no/terms/${term.id}`} />
+        {term.data.author && <meta name="citation_author" content={term.data.author} />}
+        {term.data.pubDate && <meta name="citation_publication_date" content={term.data.pubDate.toISOString().slice(0, 10).replace(/-/g, '/')} />}
+    </Fragment>
     <div class="container p-2 md:p-0">
         <div class="flex flex-col items-center">
             <article class="prose dark:prose-invert xl:prose-lg my-8 data-pagefind-body">
