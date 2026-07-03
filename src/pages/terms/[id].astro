@@ -16,6 +16,7 @@ export async function getStaticPaths() {
 
 const { term } = Astro.props;
 const { Content } = await render(term);
+const citationAuthors = term.data.author?.split(' and ').map(author => author.trim());
 ---
 <BaseLayout pageTitle={term.data.title + ' | LGDN'}>
     <Fragment slot="head">
@@ -26,7 +27,7 @@ const { Content } = await render(term);
         <meta name="citation_abstract" content={term.data.description} />
         <meta name="citation_language" content="en" />
         <meta name="citation_fulltext_html_url" content={`https://glossary.cdn.uib.no/terms/${term.id}`} />
-        {term.data.author && <meta name="citation_author" content={term.data.author} />}
+        {citationAuthors?.map(author => <meta name="citation_author" content={author} />)}
         {term.data.pubDate && <meta name="citation_publication_date" content={term.data.pubDate.toISOString().slice(0, 10).replace(/-/g, '/')} />}
 
         <meta property="og:type" content="article" />
