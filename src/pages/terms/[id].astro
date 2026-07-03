@@ -16,8 +16,30 @@ export async function getStaticPaths() {
 
 const { term } = Astro.props;
 const { Content } = await render(term);
+const citationAuthors = term.data.author?.split(' and ').map(author => author.trim());
 ---
 <BaseLayout pageTitle={term.data.title + ' | LGDN'}>
+    <Fragment slot="head">
+        <meta name="description" content={term.data.description} />
+
+        <meta name="citation_title" content={term.data.title} />
+        <meta name="citation_journal_title" content="The Living Glossary of Digital Narrative" />
+        <meta name="citation_abstract" content={term.data.description} />
+        <meta name="citation_language" content="en" />
+        <meta name="citation_fulltext_html_url" content={`https://glossary.cdn.uib.no/terms/${term.id}`} />
+        {citationAuthors?.map(author => <meta name="citation_author" content={author} />)}
+        {term.data.pubDate && <meta name="citation_publication_date" content={term.data.pubDate.toISOString().slice(0, 10).replace(/-/g, '/')} />}
+
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="The Living Glossary of Digital Narrative" />
+        <meta property="og:title" content={term.data.title} />
+        <meta property="og:description" content={term.data.description} />
+        <meta property="og:url" content={`https://glossary.cdn.uib.no/terms/${term.id}`} />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={term.data.title} />
+        <meta name="twitter:description" content={term.data.description} />
+    </Fragment>
     <div class="container p-2 md:p-0">
         <div class="flex flex-col items-center">
             <article class="prose dark:prose-invert xl:prose-lg my-8 data-pagefind-body">
