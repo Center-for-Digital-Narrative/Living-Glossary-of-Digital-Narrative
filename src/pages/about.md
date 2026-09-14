@@ -15,4 +15,4 @@ The *LGDN*'s editorial process is led by Hannah Ackermans, with Azza Hisham Sakr
 
  
 
-The *LGDN* is a collaborative project between the Center for Digital Narrative (CDN) at the University of Bergen in Norway, the University of Stuttgart in Germany, and the Baden Württemberg Foundation. The *LGDN* project was founded by Professor Emeritus Joseph Tabbi and Professor Sibylle Baumbach. Technical development and operations are managed by Colin Robinson. 
+The *LGDN* is a collaborative project between the Center for Digital Narrative (CDN) at the University of Bergen in Norway, the University of Stuttgart in Germany, and the Baden Württemberg Foundation. The LGDN is edited, published, and hosted by the CDN. The project was founded by Professor Emeritus Joseph Tabbi and Professor Sibylle Baumbach. Technical development and operations are managed by Colin Robinson. 
