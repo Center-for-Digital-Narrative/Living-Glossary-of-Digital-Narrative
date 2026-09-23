@@ -18,13 +18,19 @@ import {default as PageFind} from "astro-pagefind/components/Search"; // https:/
 </style>
 <BaseLayout pageTitle='Search | LGDN'>
     <div id="pagefind_container" class="container mt-4 px-2 relative" transition:name='search'>
+        <h1 class="text-black dark:text-gray-200 text-4xl font-bold mb-4">Search</h1>
+        <label id="search-label" for="search-input" class="sr-only">Search</label>
         <PageFind id="search_results" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
     </div>
 </BaseLayout>
 <script>
     document.addEventListener("astro:page-load", () => {
         setTimeout(()=>{
-            document.querySelector<HTMLInputElement>('.pagefind-ui__search-input')?.focus();
+            const searchInput = document.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
+            if (searchInput) {
+                searchInput.id = 'search-input';
+                searchInput.focus();
+            }
             document.getElementById("pagefind_container")?.removeAttribute("data-astro-transition-scope");
         }, 50);
     });
