@@ -20,11 +20,35 @@ import {default as PageFind} from "astro-pagefind/components/Search"; // https:/
     <div id="pagefind_container" class="container mt-4 px-2 relative" transition:name='search'>
         <h1 class="text-black dark:text-gray-200 text-4xl font-bold mb-4">Search</h1>
         <label id="search-label" for="search-input" class="sr-only">Search</label>
-        <PageFind id="search_results" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
+        <PageFind id="search" className="pagefind-ui" uiOptions={{ autofocus: true, showImages: false }} />
     </div>
 </BaseLayout>
 <script>
     document.addEventListener("astro:page-load", () => {
+        const search = document.getElementById("search");
+        const status = document.getElementById("sr-status");
+        if (search && status) {
+            let debounceTimer: number | undefined;
+
+            const announce = (msg: string) => {
+                status.textContent = "";
+                setTimeout(() => (status.textContent = msg), 50);
+            };
+
+            const mirrorPagefindMessage = () => {
+                const message = search.querySelector<HTMLElement>(".pagefind-ui__message");
+                const text = message?.textContent?.trim();
+                if (text) announce(text);
+            };
+
+            const observer = new MutationObserver(() => {
+                window.clearTimeout(debounceTimer);
+                debounceTimer = window.setTimeout(mirrorPagefindMessage, 150);
+            });
+            observer.observe(search, { childList: true, subtree: true, characterData: true });
+            mirrorPagefindMessage();
+        }
+
         setTimeout(()=>{
             const searchInput = document.querySelector<HTMLInputElement>('.pagefind-ui__search-input');
             if (searchInput) {
