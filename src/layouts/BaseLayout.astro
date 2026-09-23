@@ -24,14 +24,15 @@ const { pageTitle, letter } = Astro.props;
 </head>
 <body class="flex flex-col min-h-screen dark:bg-black">
 
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:bg-white focus:p-2">Skip to main content</a>
     <NavMain />
 
     <NavSmall letter={letter} />
     <NavMobile />
 
-    <div class="grow">
+    <main id="main" tabindex="-1" class="grow">
         <slot />
-    </div>
+    </main>
 
     <Footer />
 

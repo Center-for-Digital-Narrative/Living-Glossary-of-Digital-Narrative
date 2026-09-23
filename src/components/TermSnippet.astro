@@ -6,7 +6,7 @@ const { term } = Astro.props
         {term.data.author
             ? <a class="text-accent-blue hover:underline" href={`/terms/${term.id}/`}>{term.data.title}</a>
             : <span class="dark:text-gray-200 relative group">
-                <a class="font-medium text-base text-accent-blue absolute left-[-22px] top-1/2 -translate-y-1/2 px-2 opacity-0 group-hover:opacity-50 focus:opacity-100 hover:opacity-100! transition-opacity duration-300" href={`/terms/${term.id}/`} aria-label={`Open ${term.data.title} entry`}>#</a>
+                <a class="font-medium text-base text-accent-blue absolute left-[-22px] top-1/2 -translate-y-1/2 px-2 opacity-0 group-hover:opacity-50 focus:opacity-100 hover:opacity-100! transition-opacity duration-300" href={`/terms/${term.id}/`} aria-label={`Hidden link to ${term.data.title}`}>#</a>
                 {term.data.title}
               </span>}
     </h2>
