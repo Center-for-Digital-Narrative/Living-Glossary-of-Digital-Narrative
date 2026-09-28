@@ -17,7 +17,13 @@ export async function getStaticPaths() {
 const { term } = Astro.props;
 const { Content } = await render(term);
 const citationAuthors = term.data.author?.split(' and ').map(author => author.trim());
-const doiUrl = term.data.doi ? `https://doi.org/${encodeURI(term.data.doi)}` : undefined;
+const doiUrl = term.data.doi
+    ? (() => {
+        const url = new URL('https://doi.org');
+        url.pathname = `/${term.data.doi}`;
+        return url.toString();
+    })()
+    : undefined;
 ---
 <BaseLayout pageTitle={term.data.title + ' | LGDN'}>
     <Fragment slot="head">
