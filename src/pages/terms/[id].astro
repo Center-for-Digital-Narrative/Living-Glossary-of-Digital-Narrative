@@ -50,6 +50,7 @@ const citationAuthors = term.data.author?.split(' and ').map(author => author.tr
                     <br>
                     {term.data.author && <span>{term.data.author}</span>}
                     {term.data.pubDate && <span>{formatDate(term.data.pubDate)}</span>}
+                    {term.data.doi && <br>}
                     {term.data.doi && <span>DOI: <a href={`https://doi.org/${term.data.doi}`} aria-label={`Open DOI for ${term.data.title}`} class="underline hover:no-underline">{term.data.doi}</a></span>}
                 </p>
 
