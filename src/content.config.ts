@@ -8,6 +8,7 @@ const terms = defineCollection({
         description: z.string(),
         author: z.string().optional(),
         pubDate: z.date().optional(),
+        doi: z.string().optional(),
         seeAlso: z.array(reference('terms')).optional(),
         worksReferenced: z.string().optional(),
         furtherReading: z.string().optional(),

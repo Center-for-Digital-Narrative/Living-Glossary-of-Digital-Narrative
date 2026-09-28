@@ -3,6 +3,7 @@ title: Chatbot
 description: Software application designed to simulate conversation with human users, often used in digital narratives to provide interactive storytelling experiences
 author: Lina Ruth Harder
 pubDate: 2026-05-27
+doi: 10.64773/14x3-tw30
 seeAlso:
   - algorithmic-narrativity
   - histobot
