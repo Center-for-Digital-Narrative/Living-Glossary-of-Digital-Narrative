@@ -52,7 +52,7 @@ const doiUrl = term.data.doi ? `https://doi.org/${encodeURIComponent(term.data.d
                     {term.data.author && <span>{term.data.author}</span>}
                     {term.data.pubDate && <span>{formatDate(term.data.pubDate)}</span>}
                     {term.data.doi && <br>}
-                    {term.data.doi && <span>DOI: <a href={doiUrl} aria-label={`Open DOI for ${term.data.title}`} class="underline hover:no-underline">{term.data.doi}</a></span>}
+                    {term.data.doi && <span>DOI: <a href={doiUrl} class="underline hover:no-underline">{term.data.doi}</a></span>}
                 </p>
 
                 <h2 id="explication">Explication</h2>
