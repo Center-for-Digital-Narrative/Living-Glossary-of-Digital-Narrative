@@ -29,6 +29,9 @@
             }
           ]
         },
+        "doi": {
+          "type": "string"
+        },
         "seeAlso": {
           "type": "array",
           "items": {
