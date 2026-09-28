@@ -3,6 +3,7 @@ title: Digital Poetry
 description: Employment of computer technology to create, present, or enhance poetic experiences beyond traditional print formats
 author: Nataliya Gorbina
 pubDate: 2025-11-04
+doi: 10.64773/0e41-5776
 seeAlso:
   - born-digital
   - cybertext

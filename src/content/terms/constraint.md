@@ -3,6 +3,7 @@ title: Constraint
 description: Predetermined limitations set by the author or system that shape the creation or interaction of a narrative, often used to foster creativity and innovation
 author: Agata Waszkiewicz
 pubDate: 2026-02-18
+doi: 10.64773/17fd-46ec
 seeAlso:
   - dada
   - interactive-fiction

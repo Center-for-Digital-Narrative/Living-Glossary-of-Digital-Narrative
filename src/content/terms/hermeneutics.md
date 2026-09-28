@@ -3,6 +3,7 @@ title: Hermeneutics
 description: Field of research that focuses on theorizing and conceptualizing the circular and dialogic character of interpretation in understanding, for instance, different texts and narratives
 author: Hanna-Riikka Roine
 pubDate: 2026-05-27
+doi: 10.64773/5451-d709
 seeAlso:
   - cybertext
   - ergodic-literature

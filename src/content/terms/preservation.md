@@ -3,6 +3,7 @@ title: Preservation
 description: Strategies and practices used to ensure the long-term accessibility and integrity of digital works, addressing challenges such as technological obsolescence and format compatibility
 author: Richard Snyder
 pubDate: 2026-04-15
+doi: 10.64773/ecda-d792
 seeAlso:
   - transmediality
   - gutenberg-parenthesis

@@ -3,6 +3,7 @@ title: Alternate Reality Game (ARG)
 description: Interactive narrative that uses the real world as a platform, often involving multiple media and game elements, to deliver a story that can be influenced by players' actions
 author: Tim Schumacher
 pubDate: 2026-08-10
+doi: 10.64773/218b-d085
 seeAlso:
   - conspiracy-theory
   - electronic-literature-e-lit

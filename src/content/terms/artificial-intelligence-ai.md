@@ -3,6 +3,7 @@ title: Artificial Intelligence (AI)
 description: Simulation of human intelligence processes by computer systems, to create or interpret content in innovative and sometimes literary ways
 author: David Jhave Johnston
 pubDate: 2026-05-27
+doi: 10.64773/d10a-cc03
 seeAlso:
   - combinatorics
   - digital-poetry

@@ -3,6 +3,7 @@ title: Ergodic Literature
 description: Texts that require significant effort from the reader to traverse, often involving non-linear navigation and interaction that contribute to the narrative's meaning
 author: Odin Berle Arntzen
 pubDate: 2026-06-05
+doi: 10.64773/61a7-d2f0
 seeAlso:
   - cybertext
   - hypertext

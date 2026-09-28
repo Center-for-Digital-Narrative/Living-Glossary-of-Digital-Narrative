@@ -3,6 +3,7 @@ title: Conspiracy Theory
 description: Explanatory framework based on belief and speculation that attributes major events to a secret, often malevolent group of actors, typically lacking verifiable evidence and contradicting official accounts
 author: Inge van de Ven
 pubDate: 2025-11-04
+doi: 10.64773/a896-ee14
 seeAlso:
   - artificial-intelligence-ai
   - chatbot

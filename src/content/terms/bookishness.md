@@ -3,6 +3,7 @@ title: Bookishness
 description: Qualities or characteristics of traditional books retained or evoked in digital media, highlighting the ongoing influence of print culture on digital forms
 author: Maxi Laumann
 pubDate: 2026-08-07
+doi: 10.64773/0cc0-e302
 seeAlso:
   - remediation
   - materiality

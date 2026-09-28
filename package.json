@@ -6,7 +6,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "postbuild": "pnpx pagefind --site dist/",
-    "preview": "astro build && pnpm run postbuild && astro preview"
+    "preview": "astro build && pnpm run postbuild && astro preview",
+    "doi": "python3 scripts/archiving/create_crossref_doi.py"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",

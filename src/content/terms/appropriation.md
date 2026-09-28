@@ -3,6 +3,7 @@ title: Appropriation
 description: Use of pre-existing media or texts within a new work, often to critique, comment upon, or pay homage to the original source material
 author: Polina Barmina
 pubDate: 2025-09-24
+doi: 10.64773/ee9f-85ce
 seeAlso:
   - digital-narrative
   - electronic-literature-e-lit

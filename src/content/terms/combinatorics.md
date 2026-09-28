@@ -3,6 +3,7 @@ title: Combinatorics
 description: Combination and recombination of text, images, or other media to create varied storylines or poetic structures from a defined set of elements, enabling intricate patterns of interaction and interpretation
 author: Nat Moore
 pubDate: 2025-03-14
+doi: 10.64773/425f-d1da
 seeAlso:
   - aleatory
   - cybertext

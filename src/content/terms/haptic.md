@@ -3,6 +3,7 @@ title: Haptic
 description: Tactile feedback technology that recreates the sense of touch by applying forces, vibrations, or motions to the user, enhancing the sensory experience of digital environments
 author: Reem Chehab
 pubDate: 2026-07-15
+doi: 10.64773/9a6a-4c6b
 seeAlso:
   - embodiment
   - affordances

@@ -3,6 +3,7 @@ title: Hypertext
 description: Type of document comprised of interrelated textual nodes that are connected via associative links, facilitating non-linear traversal and reading
 author: Ruben Trunzer
 pubDate: 2026-08-07
+doi: 10.64773/b123-0e66
 seeAlso:
   - cybertext
   - digital-narrative

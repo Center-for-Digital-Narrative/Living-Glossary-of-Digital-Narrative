@@ -3,6 +3,7 @@ title: Wreader
 description: Dual role of users in digital spaces, being consumers as well as creators of written content
 author: Hanna Weimann
 pubDate: 2026-03-13
+doi: 10.64773/447d-35ec
 seeAlso:
   - hypertext
 worksReferenced: |-

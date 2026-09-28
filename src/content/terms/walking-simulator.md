@@ -3,6 +3,7 @@ title: Walking Simulator
 description: Genre of video games focused on exploration and storytelling rather than traditional gameplay mechanics, emphasizing narrative immersion and environmental storytelling
 author: Agata Waszkiewicz
 pubDate: 2026-02-18
+doi: 10.64773/9126-c917
 seeAlso:
   - digital-narrative
   - visual-novel

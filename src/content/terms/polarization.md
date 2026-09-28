@@ -3,6 +3,7 @@ title: Polarization
 description: Process where beliefs become more extreme and divided between opposing sides while moderate beliefs become less commonly represented or accepted
 author: Reem Chehab
 pubDate: 2026-07-15
+doi: 10.64773/1318-bab9
 seeAlso:
   - algorithmic-narrativity
   - conspiracy-theory

@@ -3,6 +3,7 @@ title: Literary Game
 description: Media artifact that contains both ludic and literary elements
 author: Calvin Olsen
 pubDate: 2025-03-14
+doi: 10.64773/4f92-15c5
 seeAlso:
   - electronic-literature-e-lit
   - hypertext

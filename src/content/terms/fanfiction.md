@@ -3,6 +3,7 @@ title: Fanfiction
 description: Genre of writing, often published and shared in online communities, where fans create new stories based on characters, settings, or plots from existing works
 author: Sarah Schnitzler
 pubDate: 2025-11-04
+doi: 10.64773/066c-c915
 seeAlso:
   - intertextuality
   - participatory-narrative

@@ -3,6 +3,7 @@ title: Remix
 description: The recombination of existing media elements to create new works, highlighting issues of authorship, originality, and copyright in the digital age
 author: Daniel Johannes Rosnes
 pubDate: 2025-09-24
+doi: 10.64773/334b-8453
 seeAlso:
   - appropriation
   - combinatorics

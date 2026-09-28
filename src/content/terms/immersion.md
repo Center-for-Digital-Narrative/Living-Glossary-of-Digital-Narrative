@@ -3,6 +3,7 @@ title: Immersion
 description: Experience of being absorbed in a storyworld through imaginative or technological simulation, often along spatial, temporal, and emotional dimensions
 author: Joshua Lee
 pubDate: 2026-09-18
+doi: 10.64773/fee7-1482
 seeAlso:
   - virtual-reality-vr
   - interactive-fiction

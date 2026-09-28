@@ -3,6 +3,7 @@ title: Technoeikon
 description: A dynamic tapestry of digital elements - such as images, kinetic text, sound, video, and graphic design - that collectively animate and deepen the experience of digital literature
 author: Mehulkumar Desai
 pubDate: 2025-09-24
+doi: 10.64773/a1f2-671b
 worksReferenced: |-
   Genette, Gérard. _Paratexts: Thresholds of Interpretation._ Edited by Richard Macksey, translated by Jane E. Lewin, Cambridge University Press, 1997.
 

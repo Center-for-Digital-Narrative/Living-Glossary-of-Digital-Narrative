@@ -3,6 +3,7 @@ title: Histobot
 description: Generative AI chatbot that reenacts historical figures, using large language models to simulate historically contextual dialogue
 author: Lina Ruth Harder
 pubDate: 2026-05-22
+doi: 10.64773/a71f-8c7d
 seeAlso:
   - algorithmic-narrativity
   - avatar

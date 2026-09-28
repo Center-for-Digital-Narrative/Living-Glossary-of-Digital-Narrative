@@ -3,6 +3,7 @@ title: Parasocial Relationships
 description: One-sided relationships where individuals become attached to media personalities as if they are engaged in reciprocal friendship
 author: Anneliese Frolow
 pubDate: 2026-09-04
+doi: 10.64773/9b6e-cf40
 seeAlso:
   - fanfiction
   - interactive-fiction

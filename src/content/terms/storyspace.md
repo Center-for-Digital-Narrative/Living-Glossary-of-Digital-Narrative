@@ -3,6 +3,7 @@ title: Storyspace
 description: Software tool designed for creating and reading hypertext fiction, distinguished by its support of non-linear narrative structures and conditional logic systems called guard fields, which has played a foundational role in the development of electronic literature
 author: Robert Arellano
 pubDate: 2025-11-04
+doi: 10.64773/c2bf-569e
 seeAlso:
   - authoring-software
   - ergodic-literature

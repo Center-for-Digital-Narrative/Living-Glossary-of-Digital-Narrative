@@ -3,6 +3,7 @@ title: Media Ecology
 description: Complex interactions between media, technology, and human environments, including the ways media and communication technologies affect human perception, understanding, and society
 author: Hanna-Riikka Roine
 pubDate: 2026-02-20
+doi: 10.64773/166f-5031
 seeAlso:
   - affordances
   - algorithmic-narrativity

@@ -3,6 +3,7 @@ title: Floating Motif
 description: In AI-generated text, a narrative unit that is detached from its expected context and turns up in strange places in a given text
 author: Anne Sigrid Refsum
 pubDate: 2026-09-18
+doi: 10.64773/fa4f-a2ab
 seeAlso:
   - ai-hallucination
   - algorithmic-narrativity

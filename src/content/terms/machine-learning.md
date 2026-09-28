@@ -3,6 +3,7 @@ title: Machine Learning
 description: Subset of artificial intelligence that involves the development of algorithms that allow computers to learn and adapt through experience, used in digital narratives to generate content or enhance interactivity
 author: Charlotte Ammer
 pubDate: 2026-05-27
+doi: 10.64773/ba65-b2d6
 seeAlso:
   - chatbot
   - algorithmic-narrativity

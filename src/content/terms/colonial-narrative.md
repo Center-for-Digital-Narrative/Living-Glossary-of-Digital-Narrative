@@ -3,6 +3,7 @@ title: Colonial Narrative
 description: In AI-generated fiction, a circular default narrative which colludes with colonialist, orientalist and/or imperialist discourse and ideology in form and/or function
 author: Zahra Rizvi
 pubDate: 2026-09-18
+doi: 10.64773/600a-e405
 seeAlso:
   - algorithmic-narrativity
 worksReferenced: |-

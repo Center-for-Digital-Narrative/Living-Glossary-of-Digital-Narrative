@@ -3,6 +3,7 @@ title: Instapoetry
 description: Poetry posted on the Instagram social media platform, which is characterized by brief, visually appealing texts that often incorporate themes of personal identity, traumatic experiences, and emotional catharsis
 author: Shweta Khilnani
 pubDate: 2025-03-14
+doi: 10.64773/96e1-a68b
 seeAlso:
   - digital-poetry
   - twitterature

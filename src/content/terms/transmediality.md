@@ -3,6 +3,7 @@ title: Transmediality
 description: Practice of telling a single story or story experience across multiple platforms and formats, utilizing the material affordances of each medium to enrich the narrative
 author: Jacopo Triggiani
 pubDate: 2025-09-24
+doi: 10.64773/9dcb-2c9f
 worksReferenced: |-
   Jenkins, Henry. _Convergent Culture: Where Old and New Media collide._ New York University Press, 2006.
 

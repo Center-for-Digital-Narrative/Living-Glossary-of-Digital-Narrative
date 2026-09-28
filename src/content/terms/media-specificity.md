@@ -3,6 +3,7 @@ title: Media-specificity
 description: Acknowledgement of the centrality of a text's technical attributes which combine to enact meaning, often associated with materiality
 author: Jennifer Schloske
 pubDate: 2026-07-15
+doi: 10.64773/99fa-f97a
 seeAlso:
   - materiality
   - hypertext

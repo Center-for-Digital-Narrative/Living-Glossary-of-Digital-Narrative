@@ -3,6 +3,7 @@ title: Implied Reader
 description: Hypothetical reader of a text as inferred from its characteristics
 author: Tuuli Hongisto
 pubDate: 2025-09-24
+doi: 10.64773/f565-52c0
 seeAlso:
   - affordances
   - ergodic-literature

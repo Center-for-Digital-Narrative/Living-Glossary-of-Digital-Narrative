@@ -3,6 +3,7 @@ title: Twine
 description: Open-source tool for creating interactive, non-linear stories and games, widely used in the digital literature community for its simplicity, versatility, and accessibility to non-programmers
 author: Evgenia Kleidona
 pubDate: 2026-03-13
+doi: 10.64773/cb20-7f14
 seeAlso:
   - authoring-software
   - digital-narrative

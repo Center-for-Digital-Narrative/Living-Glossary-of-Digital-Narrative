@@ -3,6 +3,7 @@ title: Biopunk
 description: Subgenre of science fiction focusing on the biological advancements possible through technology
 author: Aurora Angione
 pubDate: 2026-09-04
+doi: 10.64773/b87e-0c47
 seeAlso:
   - biopoetics
   - player-agency

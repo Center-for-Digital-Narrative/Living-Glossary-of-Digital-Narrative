@@ -3,6 +3,7 @@ title: Metainterface
 description: Paradigm where the computer’s interface seemingly becomes both omnipresent and invisible, at once embedded in everyday objects and characterized by hidden exchanges of information between objects and networks
 author: Christian Ulrik Andersen and Søren Pold
 pubDate: 2025-11-04
+doi: 10.64773/9bf4-542d
 seeAlso:
   - digital-narrative
 worksReferenced: |-

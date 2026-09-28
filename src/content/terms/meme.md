@@ -3,6 +3,7 @@ title: Meme
 description: Image, video, or text that is shared and modified extensively by users in digital spaces, giving rise to a rich body of derivatives
 author: Shweta Khilnani
 pubDate: 2025-03-14
+doi: 10.64773/1e51-1619
 seeAlso:
   - intertextuality
   - participatory-narrative
