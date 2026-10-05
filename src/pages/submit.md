@@ -5,9 +5,11 @@ title: Submit
 
 ## Entry Guidelines
 
-The Living Glossary of Digital Narrative (LGDN) is a collaborative project between the University of Stuttgart, Germany, and the Center for Digital Narrative at the University of Bergen, Norway.
+_The Living Glossary of Digital Narrative_ (_LGDN_) is a collaborative project between the University of Stuttgart, Germany, and the Center for Digital Narrative at the University of Bergen, Norway.
 
-The aim of the LGDN project is to produce an online terminology base for disciplines related to the crafting and study of born digital narratives. Rather than a book written by one person or a small team, the Glossary is a living document, publishing entries that are written by a variety of authors across career stages, affiliations, and industries. Writing a glossary entry is a useful research exercise that results in **a peer-reviewed publication** serving the wider community.
+The aim of the _LGDN_ project is to produce an online terminology base for disciplines related to the crafting and study of born digital narratives. Rather than a book written by one person or a small team, the Glossary is a living document, publishing entries that are written by a variety of authors across career stages, affiliations, and industries. Writing a glossary entry is a useful research exercise that results in **a peer-reviewed publication** serving the wider community.
+
+After submitting your entry, it will go through external peer review. The peer reviewer will write you a letter with recommendations for improvement and optionally comments throughout the document. After you revise your entry to a satisfactory level, the entry will be proofread by our editor and published on the website. 
 
 [Make a new submission](https://ojs.cdn.uib.no/index.php/lgdn/submission) or [view your pending submissions](https://ojs.cdn.uib.no/index.php/lgdn/submission). 
 
