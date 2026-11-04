@@ -8,7 +8,8 @@
  * - 1240px and up: the main bar, with the sub-bar under it.
  * - 860 to 1239px: the main bar folds into a Menu button; the sub-bar stays.
  * - Below 860px: the sub-bar folds into the menu too, except an A to Z
- *   index, which becomes a strip under the bar.
+ *   index, which becomes a strip under the bar. Below 440px the Menu
+ *   button shows only its icon.
  *
  * The site links sit in the same place on every site: the logo block is
  * always 400px wide and the actions get 130px. 400px fits the longest
@@ -979,3 +980,16 @@ html.dark .cdn-header .ch-theme .ch-moon.ch-line {
 		color: #fff;
 	}
 }
+
+/* Narrow phones: the Menu button drops its label, leaving the icon, so
+   the site's name has room. The same width on every site, so the label
+   never comes and goes between sites. */
+@media (max-width: 439px) {
+	.cdn-header .ch-menu-button {
+		padding: 7px 12px;
+	}
+	.cdn-header .ch-menu-button span {
+		display: none !important;
+	}
+}
+
