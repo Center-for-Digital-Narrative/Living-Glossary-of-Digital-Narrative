@@ -1,0 +1,86 @@
+---
+// The CDN header. This is our implementation of the header specified in the
+// cdn-home-frontend repo, in static/header/: index.html shows every CDN
+// site's header (this one is "Glossary"), and cdn-header.css is copied to
+// src/styles/ unchanged. Synced with cdn-home-frontend commit 360d0eb.
+import '../styles/cdn-header.css';
+import { allLetters, lettersWithoutTerms } from '../utils/letters';
+import ThemeIcon from './ThemeIcon.astro';
+
+interface Props {
+    // The front page shows its own About, Submit and letters in the hero,
+    // so its sub-bar only appears in the phone menu.
+    front?: boolean;
+    letter?: string;
+}
+const { front = false, letter } = Astro.props;
+const path = Astro.url.pathname;
+
+const app = 'The Living Glossary of Digital Narrative';
+const sites = [
+    { label: 'CDN Hub', href: 'https://cdn.uib.no' },
+    { label: 'DNKB', href: 'https://dnkb.cdn.uib.no' },
+    { label: 'Glossary', href: 'https://glossary.cdn.uib.no', current: true },
+    { label: 'Collection', href: 'https://collection.cdn.uib.no' },
+];
+const partners = [
+    { label: 'CELL', href: 'https://cellproject.net' },
+    { label: 'ELMCIP', href: 'https://elmcip.net' },
+    { label: 'ebr', href: 'https://electronicbookreview.com', keepCase: true },
+];
+const links = [
+    { label: 'About', href: '/about/' },
+    { label: 'Submit', href: '/submit/' },
+    { label: 'Search', href: '/search/' },
+];
+---
+<header class="cdn-header" data-nosnippet data-pagefind-ignore="all">
+    <div class="ch-bar">
+        <div class="ch-inner">
+            <a class="ch-brand" href="/">
+                <img class="ch-logo ch-light" src="/header/cdn-icon.svg" alt="" />
+                <img class="ch-logo ch-dark" src="/header/cdn-icon-negative.svg" alt="" />
+                <span class="ch-names"><span class="ch-org">Center for Digital Narrative</span><span class="ch-app">{app}</span></span>
+            </a>
+            <span class="ch-label ch-sites-label">CDN sites</span>
+            <nav class="ch-sites" aria-label="CDN sites">
+                {sites.map((s) => <a href={s.href} aria-current={s.current ? 'true' : undefined}>{s.label}</a>)}
+                <span class="ch-break" aria-hidden="true"></span>
+                {partners.map((s) => (
+                    <a href={s.href} class:list={['ch-partner', { 'ch-keep-case': s.keepCase }]} title={`${s.label} (partner site)`}>
+                        {s.label}<svg class="ch-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+                    </a>
+                ))}
+            </nav>
+            <div class="ch-tools">
+                <!-- The glossary's own dark mode toggle, unchanged. -->
+                <ThemeIcon />
+            </div>
+            <input class="ch-menu-toggle" type="checkbox" id="ch-menu" aria-label="Menu" />
+            <label class="ch-menu-button" for="ch-menu">
+                <svg class="ch-when-closed" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+                <svg class="ch-when-open" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12" /></svg>
+                <span class="ch-when-closed">Menu</span><span class="ch-when-open">Close</span>
+            </label>
+        </div>
+    </div>
+    <div class:list={['ch-sub', { 'ch-menu-only': front }]}>
+        <div class="ch-inner">
+            <span class="ch-label ch-app-label">{app}</span>
+            <div class="ch-subnav">
+                <nav class="ch-links" aria-label="Glossary">
+                    {links.map((l) => <a href={l.href} aria-current={path === l.href ? 'page' : undefined}>{l.label}</a>)}
+                </nav>
+            </div>
+            {!front && (
+                <nav class="ch-index ch-letters" aria-label="Terms by letter">
+                    {allLetters.map((l) =>
+                        lettersWithoutTerms.includes(l)
+                            ? <span>{l.toUpperCase()}</span>
+                            : <a href={`/terms/${l}`} aria-current={l === letter ? 'page' : undefined}>{l.toUpperCase()}</a>
+                    )}
+                </nav>
+            )}
+        </div>
+    </div>
+</header>

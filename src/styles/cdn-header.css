@@ -1,0 +1,981 @@
+/*
+ * The CDN header, shared by all CDN sites. index.html next to this file
+ * shows every site's header and is its specification: which links,
+ * buttons and bars each site has. Each site copies this file as it is and
+ * renders the same markup itself.
+ *
+ * Three sizes:
+ * - 1240px and up: the main bar, with the sub-bar under it.
+ * - 860 to 1239px: the main bar folds into a Menu button; the sub-bar stays.
+ * - Below 860px: the sub-bar folds into the menu too, except an A to Z
+ *   index, which becomes a strip under the bar.
+ *
+ * The site links sit in the same place on every site: the logo block is
+ * always 400px wide and the actions get 130px. 400px fits the longest
+ * site name; 130px fits dark mode plus a Log in button, so anything
+ * bigger goes in a profile menu.
+ *
+ * Opening the menu needs no script (a checkbox and its label). Each site
+ * wires up the dark mode button and closes the profile menu on an outside
+ * click with its own small script; dark mode is the dark class on <html>.
+ */
+
+.cdn-header {
+	--ch-bar-bg: #ffffff;
+	--ch-menu-bg: #f1f6f9;
+	--ch-sub-bg: #002934;
+	--ch-border: #d5e2e8;
+	--ch-text: #082532;
+	--ch-muted: #4a6572;
+	--ch-accent: #0073a3;
+	--ch-brand-text: #111827;
+	--ch-brand-muted: #6b7280;
+	--ch-link: #6b7280;
+	--ch-link-hover: #0076ad;
+	--ch-link-active: #0076ad;
+	--ch-pill-text: #2c4c5b;
+	--ch-pill-hover-bg: #e6f0f5;
+	--ch-pill-hover-text: #082532;
+	--ch-pill-active-bg: rgba(0, 115, 163, 0.1);
+	--ch-pill-active-text: #005a80;
+	--ch-pill-active-border: rgba(0, 115, 163, 0.3);
+	--ch-button-bg: #eef4f7;
+	--ch-button-hover-bg: #e0ebf0;
+	--ch-button-text: #082532;
+	--ch-button-border: #c6d8e0;
+	--ch-primary-bg: #0076ad;
+	--ch-primary-hover-bg: #2a8fc2;
+	--ch-menu-primary-bg: #0073a3;
+	--ch-menu-primary-hover-bg: #1a87b8;
+	--ch-outline-border: #c4d6d0;
+	--ch-icon-hover-bg: #e7f4ef;
+	--ch-icon: #082532;
+	--ch-input-bg: #ffffff;
+	--ch-input-border: #bfd2dc;
+	--ch-input-text: #082532;
+	--ch-placeholder: #6c8694;
+	--ch-current-letter: #2b9991;
+	--ch-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	--ch-brand-font: 'Segoe Pro', Arial, sans-serif;
+	--ch-button-font: 'Segoe Pro', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Source Sans 3', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--ch-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	--ch-search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23ffffff' stroke-opacity='0.7' stroke-width='2' stroke-linecap='round' viewBox='0 0 24 24'%3E%3Cpath d='M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z'/%3E%3C/svg%3E");
+	--ch-menu-search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%236c8694' stroke-width='2' stroke-linecap='round' viewBox='0 0 24 24'%3E%3Cpath d='M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z'/%3E%3C/svg%3E");
+	display: block;
+	position: relative;
+	color: var(--ch-text);
+	font-family: var(--ch-sans);
+	font-size: 16px;
+	line-height: 1.5;
+	text-align: left;
+}
+html.dark .cdn-header {
+	--ch-bar-bg: #0b1d26;
+	--ch-menu-bg: #0f2530;
+	--ch-border: #1a3847;
+	--ch-text: #e6f0f5;
+	--ch-muted: #8ba6b5;
+	--ch-accent: #2b9991;
+	--ch-brand-text: #ffffff;
+	--ch-brand-muted: #9ca3af;
+	--ch-link: #9ca3af;
+	--ch-link-hover: #e5e7eb;
+	--ch-link-active: #2b9991;
+	--ch-pill-text: #b8ced9;
+	--ch-pill-hover-bg: #15303d;
+	--ch-pill-hover-text: #ffffff;
+	--ch-pill-active-bg: rgba(43, 153, 145, 0.2);
+	--ch-pill-active-text: #2b9991;
+	--ch-pill-active-border: rgba(43, 153, 145, 0.5);
+	--ch-button-bg: #142e3b;
+	--ch-button-hover-bg: #1c3d4d;
+	--ch-button-text: #d5e6ed;
+	--ch-button-border: #254b5c;
+	--ch-primary-bg: #2b9991;
+	--ch-primary-hover-bg: #36b0a7;
+	--ch-menu-primary-bg: #2b9991;
+	--ch-menu-primary-hover-bg: #36b0a7;
+	--ch-outline-border: rgba(196, 214, 208, 0.32);
+	--ch-icon-hover-bg: #012235;
+	--ch-icon: #f5c451;
+	--ch-input-bg: #07161e;
+	--ch-input-border: #234859;
+	--ch-input-text: #e6f0f5;
+	--ch-placeholder: #688796;
+}
+.cdn-header,
+.cdn-header * {
+	box-sizing: border-box;
+}
+.cdn-header a:focus-visible,
+.cdn-header button:focus-visible,
+.cdn-header summary:focus-visible,
+.cdn-header .ch-menu-toggle:focus-visible + .ch-menu-button {
+	outline: 2px solid var(--ch-accent);
+	outline-offset: 2px;
+}
+.cdn-header .ch-inner {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 24px 0 0;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+/* The main bar */
+.cdn-header .ch-bar {
+	background: var(--ch-bar-bg);
+	border-bottom: 1px solid var(--ch-border);
+}
+.cdn-header .ch-bar .ch-inner {
+	display: grid;
+	grid-template-columns: 400px minmax(0, 1fr) 130px;
+	min-height: 80px;
+}
+.cdn-header .ch-brand {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+	min-width: 0;
+	color: var(--ch-text);
+	text-decoration: none;
+}
+/* The logo files are trimmed to the icon, so nothing starts left of it. */
+.cdn-header .ch-logo {
+	display: block;
+	flex-shrink: 0;
+	width: auto;
+	max-width: none;
+	height: 41px;
+}
+.cdn-header .ch-logo.ch-dark,
+html.dark .cdn-header .ch-logo.ch-light {
+	display: none;
+}
+html.dark .cdn-header .ch-logo.ch-dark {
+	display: block;
+}
+/* The same font, sizes and colours as the DNKB's header. */
+.cdn-header .ch-names {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	min-width: 0;
+	font-family: var(--ch-brand-font);
+	line-height: 1;
+}
+.cdn-header .ch-org {
+	color: var(--ch-brand-text);
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	white-space: nowrap;
+}
+.cdn-header .ch-app {
+	color: var(--ch-brand-muted);
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+/* The links between the CDN sites, styled like the DNKB's; partner
+   sites after a divider. */
+.cdn-header .ch-sites {
+	display: flex;
+	align-items: center;
+	justify-self: center;
+	gap: 24px;
+	font-family: var(--ch-brand-font);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 20px;
+	letter-spacing: 0.025em;
+	text-transform: uppercase;
+}
+.cdn-header .ch-sites a {
+	padding: 0 0 4px;
+	border-bottom: 2px solid transparent;
+	color: var(--ch-link);
+	text-decoration: none;
+	white-space: nowrap;
+	transition: color 0.15s ease, border-bottom-color 0.15s ease;
+}
+.cdn-header .ch-sites a:hover {
+	color: var(--ch-link-hover);
+}
+.cdn-header .ch-sites a[aria-current] {
+	color: var(--ch-link-active);
+}
+.cdn-header .ch-sites a[aria-current] {
+	border-bottom-color: var(--ch-link-active);
+}
+.cdn-header .ch-sites .ch-keep-case {
+	text-transform: none;
+}
+.cdn-header .ch-sites .ch-partner {
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+}
+.cdn-header .ch-external {
+	width: 10px;
+	height: 10px;
+	opacity: 0.6;
+}
+.cdn-header .ch-break {
+	width: 1px;
+	height: 18px;
+	background: var(--ch-border);
+}
+
+/* Dark mode and the site's actions */
+.cdn-header .ch-tools {
+	display: flex;
+	align-items: center;
+	justify-self: end;
+	gap: 10px;
+}
+.cdn-header .ch-actions {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.cdn-header .ch-theme {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	margin: 0;
+	padding: 7px;
+	border: 1px solid transparent;
+	border-radius: 6px;
+	background: transparent;
+	color: var(--ch-link);
+	font: inherit;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+	cursor: pointer;
+	transition: background-color 0.15s ease;
+}
+.cdn-header .ch-theme:hover {
+	background: var(--ch-icon-hover-bg);
+	color: var(--ch-link-active);
+}
+.cdn-header .ch-theme svg {
+	display: block;
+}
+.cdn-header .ch-theme .ch-filled {
+	color: var(--ch-icon);
+}
+/* The icon and text say which mode is on. */
+.cdn-header .ch-theme .ch-moon,
+.cdn-header .ch-theme .ch-filled,
+.cdn-header .ch-theme-text,
+html.dark .cdn-header .ch-theme .ch-sun {
+	display: none;
+}
+html.dark .cdn-header .ch-theme .ch-moon.ch-line {
+	display: block;
+}
+
+/* The Menu button: a checkbox and its label, shown below 1240px. */
+.cdn-header .ch-menu-toggle {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+.cdn-header .ch-menu-button,
+.cdn-header .ch-label,
+.cdn-header .ch-bar .ch-fold-menu {
+	display: none;
+	margin: 0;
+}
+
+/* The sub-bar */
+.cdn-header .ch-sub {
+	background: var(--ch-sub-bg);
+	color: #fff;
+}
+.cdn-header .ch-sub .ch-inner {
+	min-height: 46px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	gap: 24px;
+}
+.cdn-header .ch-subnav {
+	display: flex;
+	flex: 1 0 auto;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 24px;
+	min-width: 0;
+}
+.cdn-header .ch-subnav > .ch-end {
+	margin-left: auto;
+}
+.cdn-header .ch-index {
+	order: 2;
+}
+/* When space runs short the search narrows before links wrap. */
+.cdn-header .ch-search {
+	order: 3;
+	flex: 0 1 auto;
+	min-width: 160px;
+	position: relative;
+	margin: 0;
+}
+
+/* Links in the sub-bar */
+.cdn-header .ch-links {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 24px;
+	font-size: 14px;
+	line-height: 20px;
+}
+.cdn-header .ch-links a {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.88;
+}
+.cdn-header .ch-links a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+.cdn-header .ch-links a[aria-current] {
+	opacity: 1;
+	font-weight: 600;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+/* Breadcrumbs: links and a last <span aria-current="page"> */
+.cdn-header .ch-crumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 8px;
+	font-size: 14px;
+	line-height: 20px;
+}
+.cdn-header .ch-crumbs a {
+	color: inherit;
+	text-decoration: none;
+	opacity: 0.75;
+}
+.cdn-header .ch-crumbs a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+.cdn-header .ch-crumbs [aria-current] {
+	font-weight: 600;
+}
+.cdn-header .ch-crumbs > * + *::before {
+	content: '/';
+	display: inline-block;
+	margin-right: 8px;
+	opacity: 0.5;
+	font-weight: 400;
+}
+
+/* An A to Z index; <span> for a letter without entries */
+.cdn-header .ch-letters {
+	display: flex;
+	font-family: var(--ch-mono);
+	font-size: 13px;
+	line-height: 24px;
+	white-space: nowrap;
+}
+.cdn-header .ch-letters a,
+.cdn-header .ch-letters span {
+	min-width: 22px;
+	height: 24px;
+	border-radius: 4px;
+	color: inherit;
+	text-align: center;
+	text-decoration: none;
+}
+.cdn-header .ch-letters a:hover {
+	background: rgba(255, 255, 255, 0.14);
+}
+.cdn-header .ch-letters span {
+	opacity: 0.3;
+}
+.cdn-header .ch-letters [aria-current] {
+	opacity: 1;
+	background: var(--ch-current-letter);
+	color: #fff;
+	font-weight: 700;
+}
+
+/* A search field */
+.cdn-header .ch-search input {
+	display: block;
+	width: 272px;
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 5px 12px 5px 30px;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.1) var(--ch-search-icon) no-repeat 10px center;
+	box-shadow: none;
+	color: #fff;
+	font: inherit;
+	font-size: 13px;
+	line-height: 18px;
+}
+.cdn-header .ch-search input::placeholder {
+	color: rgba(255, 255, 255, 0.65);
+}
+.cdn-header .ch-search input:focus {
+	outline: none;
+	border-color: #2b9991;
+	background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* Buttons for the actions; ch-primary for the main one (Log in) */
+.cdn-header .ch-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	margin: 0;
+	padding: 7px 14px;
+	border: 1px solid var(--ch-outline-border);
+	border-radius: 6px;
+	background: transparent;
+	color: inherit;
+	font-family: var(--ch-button-font);
+	font-size: 0.85rem;
+	font-weight: 600;
+	line-height: 1.3;
+	letter-spacing: 0.02em;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.cdn-header .ch-button:hover {
+	border-color: var(--ch-link-active);
+	color: var(--ch-link-active);
+}
+.cdn-header .ch-button.ch-primary {
+	padding: 8px 15px;
+	border-color: transparent;
+	background: var(--ch-primary-bg);
+	box-shadow: 0 1px 2px rgba(0, 19, 43, 0.12);
+	color: #fff;
+}
+.cdn-header .ch-button.ch-primary:hover {
+	background: var(--ch-primary-hover-bg);
+	color: #fff;
+}
+
+/* A profile menu: <details class="ch-account"> with a ch-avatar summary */
+.cdn-header .ch-account {
+	position: relative;
+	max-width: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.cdn-header .ch-account > summary {
+	display: block;
+	list-style: none;
+	cursor: pointer;
+}
+.cdn-header .ch-account > summary::-webkit-details-marker {
+	display: none;
+}
+.cdn-header .ch-avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: var(--ch-primary-bg);
+	box-shadow: 0 1px 2px rgba(0, 19, 43, 0.12);
+	color: #fff;
+	transition: background-color 0.15s ease;
+}
+.cdn-header .ch-avatar:hover {
+	background: var(--ch-primary-hover-bg);
+}
+.cdn-header .ch-avatar svg {
+	width: 20px;
+	height: 20px;
+}
+.cdn-header .ch-account-menu {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	z-index: 10;
+	min-width: 190px;
+	padding: 6px 0;
+	border: 1px solid var(--ch-border);
+	border-radius: 8px;
+	background: var(--ch-bar-bg);
+	box-shadow: 0 12px 28px rgba(0, 19, 43, 0.16);
+	font-size: 14px;
+	text-align: left;
+}
+.cdn-header .ch-account-menu a,
+.cdn-header .ch-account-menu button {
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 7px 14px;
+	border: 0;
+	border-radius: 0;
+	background: transparent;
+	color: var(--ch-text);
+	font: inherit;
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+}
+.cdn-header .ch-account-menu a:hover,
+.cdn-header .ch-account-menu button:hover {
+	background: var(--ch-pill-hover-bg);
+	color: var(--ch-text);
+}
+.cdn-header .ch-account-name {
+	display: block;
+	margin-bottom: 4px;
+	padding: 4px 14px 8px;
+	border-bottom: 1px solid var(--ch-border);
+	color: var(--ch-muted);
+	font-size: 12px;
+}
+
+/* ch-menu-only: only in the phone menu, e.g. a sub-bar for a page that
+   has none on bigger screens. */
+@media (min-width: 860px) {
+	.cdn-header .ch-menu-only {
+		display: none !important;
+	}
+}
+
+/* When dark mode is the last thing in the bar, line the icon itself, not
+   its padding, up with the right edge. */
+@media (min-width: 1240px) {
+	.cdn-header .ch-tools:not(:has(.ch-actions)) .ch-theme {
+		margin-right: -8px;
+	}
+}
+
+/* Tablets and phones: the main bar shows the logo and the Menu button,
+   and the menu holds the CDN sites, dark mode and the actions. The header
+   becomes a grid that takes its parts from both bars. */
+@media (max-width: 1239px) {
+	.cdn-header {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		column-gap: 12px;
+		padding: 0 16px;
+		background: var(--ch-menu-bg);
+	}
+	.cdn-header:has(.ch-menu-toggle:checked) {
+		max-height: 100vh;
+		max-height: 100dvh;
+		overflow-y: auto;
+		padding-bottom: 16px;
+		border-bottom: 1px solid var(--ch-border);
+	}
+	.cdn-header::before {
+		content: '';
+		grid-row: 1;
+		grid-column: 1 / -1;
+		align-self: stretch;
+		margin: 0 -16px;
+		background: var(--ch-bar-bg);
+		border-bottom: 1px solid var(--ch-border);
+	}
+	.cdn-header .ch-bar,
+	.cdn-header .ch-bar .ch-inner {
+		display: contents;
+	}
+	.cdn-header .ch-sub {
+		grid-column: 1 / -1;
+		order: 1;
+		margin: 0 -16px;
+	}
+	.cdn-header .ch-sub .ch-inner {
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	.cdn-header .ch-brand {
+		grid-row: 1;
+		grid-column: 1;
+		gap: 18px;
+		padding: 12px 0;
+	}
+	.cdn-header .ch-logo {
+		height: 27px;
+	}
+	.cdn-header .ch-names {
+		gap: 0;
+		font-family: var(--ch-sans);
+	}
+	.cdn-header .ch-org {
+		margin-bottom: 0.25rem;
+		font-size: 16px;
+		line-height: 1;
+		letter-spacing: normal;
+	}
+	.cdn-header .ch-app {
+		overflow: hidden;
+		font-size: 10px;
+		line-height: 1;
+		letter-spacing: 0.1em;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.cdn-header .ch-menu-button {
+		grid-row: 1;
+		grid-column: 2;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 6px 12px;
+		border: 1px solid var(--ch-button-border);
+		border-radius: 8px;
+		background: var(--ch-button-bg);
+		color: var(--ch-button-text);
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 16px;
+		cursor: pointer;
+		user-select: none;
+	}
+	.cdn-header .ch-menu-button:hover {
+		background: var(--ch-button-hover-bg);
+	}
+	.cdn-header .ch-menu-button .ch-when-open,
+	.cdn-header:has(.ch-menu-toggle:checked) .ch-menu-button .ch-when-closed {
+		display: none;
+	}
+	.cdn-header:has(.ch-menu-toggle:checked) .ch-menu-button .ch-when-open {
+		display: block;
+	}
+
+	/* Closed, the menu's parts are hidden. */
+	.cdn-header:not(:has(.ch-menu-toggle:checked)) .ch-label,
+	.cdn-header:not(:has(.ch-menu-toggle:checked)) .ch-sites,
+	.cdn-header:not(:has(.ch-menu-toggle:checked)) .ch-tools,
+	.cdn-header:not(:has(.ch-menu-toggle:checked)) .ch-fold-menu {
+		display: none;
+	}
+
+	/* Open: the menu's sections, each under a small heading. */
+	.cdn-header .ch-label,
+	.cdn-header .ch-sites,
+	.cdn-header .ch-tools,
+	.cdn-header .ch-fold-menu {
+		grid-column: 1 / -1;
+	}
+	.cdn-header .ch-label {
+		margin-top: 16px;
+		margin-bottom: 6px;
+		color: var(--ch-muted);
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+	}
+	.cdn-header .ch-sites-label {
+		display: block;
+		order: 30;
+	}
+
+	/* Links marked ch-fold leave the sub-bar on tablets and show in the
+	   menu instead, as their copy in ch-fold-menu. */
+	.cdn-header .ch-fold-label {
+		display: block;
+		order: 20;
+	}
+	.cdn-header .ch-bar .ch-fold-menu {
+		display: grid;
+		order: 21;
+		grid-template-columns: 1fr 1fr;
+		gap: 6px;
+	}
+	.cdn-header .ch-sub .ch-fold {
+		display: none;
+	}
+	.cdn-header:has(.ch-fold-menu) .ch-sites-label {
+		padding-top: 12px;
+		border-top: 1px solid var(--ch-border);
+	}
+
+	.cdn-header .ch-sites {
+		display: grid;
+		order: 31;
+		justify-self: stretch;
+		grid-template-columns: 1fr 1fr;
+		gap: 6px;
+		font-family: var(--ch-sans);
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+	.cdn-header .ch-sites a {
+		padding: 6px 10px;
+		border: 1px solid transparent;
+		border-radius: 6px;
+		color: var(--ch-pill-text);
+		line-height: 16px;
+	}
+	.cdn-header .ch-sites a:hover {
+		background: var(--ch-pill-hover-bg);
+		color: var(--ch-pill-hover-text);
+	}
+	.cdn-header .ch-sites a[aria-current] {
+		border-color: var(--ch-pill-active-border);
+		background: var(--ch-pill-active-bg);
+		color: var(--ch-pill-active-text);
+		font-weight: 600;
+	}
+	.cdn-header .ch-sites .ch-partner {
+		display: flex;
+		gap: 4px;
+	}
+	.cdn-header .ch-break {
+		grid-column: 1 / -1;
+		width: auto;
+		height: 1px;
+		margin: 4px 10px;
+	}
+	.cdn-header .ch-tools {
+		order: 40;
+		justify-self: stretch;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 16px;
+		padding-top: 12px;
+		border-top: 1px solid var(--ch-border);
+	}
+	.cdn-header .ch-theme {
+		padding: 8px 12px;
+		border-color: var(--ch-button-border);
+		border-radius: 8px;
+		background: var(--ch-button-bg);
+		color: var(--ch-button-text);
+	}
+	.cdn-header .ch-theme:hover {
+		background: var(--ch-button-hover-bg);
+		color: var(--ch-button-text);
+	}
+	/* In the menu the button has an icon and says which mode is on. */
+	.cdn-header .ch-theme .ch-line,
+	html.dark .cdn-header .ch-theme .ch-moon.ch-line {
+		display: none;
+	}
+	.cdn-header .ch-theme-text,
+	.cdn-header .ch-theme-text .ch-sun,
+	html.dark .cdn-header .ch-theme-text .ch-moon {
+		display: inline;
+	}
+	.cdn-header .ch-theme .ch-sun.ch-filled,
+	html.dark .cdn-header .ch-theme .ch-moon.ch-filled {
+		display: block;
+	}
+	.cdn-header .ch-actions {
+		margin-left: auto;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+
+	/* In the menu: the actions, folded links and the profile menu. */
+	.cdn-header .ch-fold-menu a,
+	.cdn-header .ch-button {
+		padding: 6px 10px;
+		border: 1px solid var(--ch-button-border);
+		border-radius: 6px;
+		background: var(--ch-button-bg);
+		box-shadow: none;
+		color: var(--ch-button-text);
+		font-family: inherit;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: 0;
+		opacity: 1;
+		text-decoration: none;
+	}
+	.cdn-header .ch-fold-menu a:hover,
+	.cdn-header .ch-button:hover {
+		border-color: var(--ch-button-border);
+		background: var(--ch-button-hover-bg);
+		color: var(--ch-button-text);
+		text-decoration: none;
+	}
+	.cdn-header .ch-button {
+		padding: 8px 14px;
+		border-radius: 8px;
+		font-weight: 600;
+	}
+	.cdn-header .ch-button.ch-primary {
+		border-color: transparent;
+		background: var(--ch-menu-primary-bg);
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+		color: #fff;
+		letter-spacing: 0.025em;
+	}
+	.cdn-header .ch-button.ch-primary:hover {
+		background: var(--ch-menu-primary-hover-bg);
+		color: #fff;
+	}
+	.cdn-header .ch-account-menu {
+		top: auto;
+		bottom: calc(100% + 8px);
+	}
+}
+
+/* Phones: the sub-bar folds into the menu as well, its search first and
+   its links under the site's name. An index stays out of the menu, as a
+   strip under the bar. */
+@media (max-width: 859px) {
+	.cdn-header .ch-sub,
+	.cdn-header .ch-sub .ch-inner {
+		display: contents;
+	}
+	.cdn-header .ch-sub {
+		color: var(--ch-text);
+	}
+	.cdn-header .ch-fold-label,
+	.cdn-header .ch-fold-menu {
+		display: none !important;
+	}
+	.cdn-header .ch-sub .ch-fold {
+		display: contents;
+	}
+	.cdn-header .ch-index {
+		display: block;
+		grid-column: 1 / -1;
+		order: 1;
+		margin: 0 -16px;
+		padding: 6px 16px;
+		overflow-x: auto;
+		background: var(--ch-sub-bg);
+		color: #fff;
+		scrollbar-width: none;
+	}
+	.cdn-header:not(:has(.ch-menu-toggle:checked)) .ch-search,
+	.cdn-header:not(:has(.ch-menu-toggle:checked)) .ch-subnav {
+		display: none;
+	}
+	.cdn-header .ch-search,
+	.cdn-header .ch-subnav {
+		grid-column: 1 / -1;
+	}
+	.cdn-header .ch-search-label,
+	.cdn-header .ch-app-label {
+		display: block;
+	}
+	.cdn-header .ch-search-label {
+		order: 10;
+	}
+	.cdn-header .ch-search {
+		order: 11;
+		min-width: 0;
+	}
+	.cdn-header .ch-app-label {
+		order: 20;
+	}
+	/* Each section but the first has a line above it. */
+	.cdn-header:has(.ch-search) .ch-app-label,
+	.cdn-header:has(.ch-sub) .ch-sites-label {
+		padding-top: 12px;
+		border-top: 1px solid var(--ch-border);
+	}
+	.cdn-header .ch-subnav {
+		display: grid;
+		order: 21;
+		grid-template-columns: 1fr 1fr;
+		gap: 6px;
+	}
+	.cdn-header .ch-subnav > .ch-end {
+		margin-left: 0;
+	}
+	.cdn-header .ch-links {
+		display: contents;
+	}
+	.cdn-header .ch-subnav .ch-links a {
+		padding: 6px 10px;
+		border: 1px solid var(--ch-button-border);
+		border-radius: 6px;
+		background: var(--ch-button-bg);
+		color: var(--ch-button-text);
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 16px;
+		opacity: 1;
+		text-decoration: none;
+	}
+	.cdn-header .ch-subnav .ch-links a:hover {
+		background: var(--ch-button-hover-bg);
+		text-decoration: none;
+	}
+	.cdn-header .ch-subnav .ch-links a[aria-current] {
+		border-color: var(--ch-pill-active-border);
+		background: var(--ch-pill-active-bg);
+		color: var(--ch-pill-active-text);
+		font-weight: 600;
+	}
+	.cdn-header .ch-crumbs {
+		grid-column: 1 / -1;
+		padding-bottom: 4px;
+		font-size: 13px;
+	}
+	.cdn-header .ch-search input {
+		width: 100%;
+		padding: 8px 12px 8px 30px;
+		border-color: var(--ch-input-border);
+		border-radius: 8px;
+		background-color: var(--ch-input-bg);
+		background-image: var(--ch-menu-search-icon);
+		color: var(--ch-input-text);
+		font-size: 12px;
+		line-height: 16px;
+	}
+	.cdn-header .ch-search input::placeholder {
+		color: var(--ch-placeholder);
+	}
+	.cdn-header .ch-search input:focus {
+		border-color: var(--ch-accent);
+		background-color: var(--ch-input-bg);
+	}
+	.cdn-header .ch-letters {
+		gap: 4px;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 20px;
+	}
+	.cdn-header .ch-letters a,
+	.cdn-header .ch-letters span {
+		flex-shrink: 0;
+		min-width: 0;
+		height: 20px;
+		padding: 0 8px;
+		color: rgba(255, 255, 255, 0.8);
+	}
+	.cdn-header .ch-letters a:hover {
+		background: transparent;
+		color: #fff;
+	}
+}
