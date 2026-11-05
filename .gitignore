@@ -1,5 +1,7 @@
 .idea/
 dist/
+# Astro's generated types and content cache
+.astro/
 node_modules/
 .env
 .env.*
