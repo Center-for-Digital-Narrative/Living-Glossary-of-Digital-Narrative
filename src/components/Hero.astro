@@ -2,31 +2,138 @@
 import {allLetters, lettersWithoutTerms} from "../utils/letters";
 ---
 <style>
+    /* Like the cdn.uib.no hero: the Glyph Drift animation on deep navy, a
+       left-to-right scrim so the title stays legible, and the title in the
+       same serif italic. */
     #hero {
-        background-color: #82af65;
-        background-image: url('/hero-bg.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% calc(50%);
+        position: relative;
+        overflow: hidden;
+        background: #00132b;
+        color: #f2fdf6;
     }
-    #hero a {
-        background-color: rgba(255, 255, 255, 0.7);
+    #hero canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    /* Shadows from the bars above and below, so the animation looks set
+       back behind the front of the page. Above the canvas, below the text. */
+    #hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        box-shadow:
+            inset 0 22px 28px -14px rgba(0, 0, 0, 0.95),
+            inset 0 -22px 28px -14px rgba(0, 0, 0, 0.7);
+    }
+    #hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        /* A faint grain over the fade dithers it: the two navies are only
+           a few colour steps apart, so the plain gradient shows bands. */
+        background:
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+            linear-gradient(
+                90deg,
+                rgba(0, 10, 21, 0.78) 0%,
+                rgba(0, 10, 21, 0.55) 30%,
+                rgba(0, 10, 21, 0.22) 50%,
+                rgba(0, 10, 21, 0) 68%
+            );
+    }
+    /* Phones: a plain navy hero, no animation (the script does not start
+       it), and so no scrim or shadows either. */
+    @media (max-width: 767px) {
+        #hero canvas,
+        #hero::before,
+        #hero::after {
+            display: none;
+        }
+    }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        pointer-events: none;
+    }
+    .hero-title {
+        margin: 0 0 20px;
+        max-width: 14ch;
+        color: #fff;
+        font-family: 'Sitka Text', 'Sitka Display', Charter, 'Charis SIL', Georgia, 'Times New Roman', serif;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 1.02;
+        letter-spacing: -0.018em;
+        text-wrap: balance;
+    }
+    .hero-title em {
+        color: #e4d673;
+    }
+    /* What the glossary is, as on cdn.uib.no's hero. */
+    .hero-lede {
+        max-width: 60ch;
+        margin: 0 0 12px;
+        color: #d4fce5;
+        line-height: 1.6;
+    }
+    .hero-about {
+        display: inline-block;
+        margin-bottom: 28px;
+        color: #8df0b5;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        pointer-events: auto;
+    }
+    .hero-about:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+    .hero-search {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+        max-width: 720px;
+        padding: 14px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        color: rgba(255, 255, 255, 0.7);
+        cursor: text;
+        pointer-events: auto;
+        transition: background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .hero-search:hover {
+        border-color: #2b9991;
+        background: rgba(255, 255, 255, 0.16);
     }
 </style>
-<div id="hero" class="hidden md:flex h-[300px] xl:h-[500px] 2xl:h-[640px]">
-    <div class="container relative md:flex h-full flex-col items-center justify-center">
-        <h1 class="absolute top-[10%] left-8 font-semibold text-4xl xl:text-5xl 2xl:text-6xl text-white bg-dark-blue inline-block px-4 py-2 rounded-[16px]">The Living Glossary<br>of Digital Narrative</h1>
-
-        <div class="w-[400px] md:w-[600px] lg:w-[800px] xl:w-[1200px] mt-20">
-            <a data-astro-prefetch="load" transition:name="search" href="/search/" type="button" class="cursor-text flex items-center justify-end w-full p-4 text-base rounded-full" aria-label="link to search page">
-                <img src="/search-icon.png" alt="search icon" class="ml-auto h-6 w-6 mr-5" />
-            </a>
-        </div>
+<div id="hero">
+    <canvas id="hero-glyphs" aria-hidden="true"></canvas>
+    <div class="container hero-content py-10 md:py-16 xl:py-24 2xl:py-32">
+        <h1 class="hero-title text-4xl md:text-6xl xl:text-7xl 2xl:text-[78px]">The <em>Living</em> Glossary of Digital Narrative</h1>
+        <p class="hero-lede text-base md:text-lg">
+            A terminology base for the study of digital narrative. Peer-reviewed, edited and published as a collaboration between the Center for Digital Narrative at the University of Bergen and the University of Stuttgart.
+        </p>
+        <a class="hero-about" href="/about/">About the glossary &rarr;</a>
+        <a data-astro-prefetch="load" transition:name="search" href="/search/" class="hero-search text-base md:text-lg" aria-label="Search the glossary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" /></svg>
+            <span>Search glossary terms…</span>
+        </a>
     </div>
 </div>
-<div class="bg-dark-blue text-white hidden md:block">
+<div class="bg-dark-blue text-white hidden min-[860px]:block">
     <nav class="container mb-4">
-        <div class="py-6 px-4 mx-auto flex flex-row md:text-lg xl:text-xl 2xl:text-2xl justify-between">
+        <div class="py-6 mx-auto flex flex-row md:text-lg xl:text-xl 2xl:text-2xl justify-between">
             <div class="flex flex-row gap-4 2xl:gap-8">
                 <a href="/about/" class="hover:underline">About</a>
                 <a href="/submit/" class="hover:underline">Submit</a>
@@ -41,3 +148,192 @@ import {allLetters, lettersWithoutTerms} from "../utils/letters";
         </div>
     </nav>
 </div>
+
+<script>
+    // The Glyph Drift hero animation from cdn.uib.no
+    // (cdn-home-frontend, src/lib/hero/GlyphDriftCanvas.svelte): language
+    // and code glyphs drift upward; the cursor parts the stream.
+    function start(canvas: HTMLCanvasElement) {
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return () => {};
+
+        let W = 0;
+        let H = 0;
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        let animId = 0;
+
+        function resize() {
+            const r = canvas.getBoundingClientRect();
+            W = r.width;
+            H = r.height;
+            canvas.width = W * dpr;
+            canvas.height = H * dpr;
+            ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const palette = [
+            '43,153,145', // CDN teal
+            '149,190,99', // CDN green
+            '92,131,193', // CDN lavender
+            '78,157,180' // CDN sea teal
+        ];
+        const HIGHLIGHT = '228,214,115'; // CDN yellow
+        // The letters of "Center for Digital Narrative" and "The Living
+        // Glossary", the Norwegian æ, ø and å, curly brackets and "!".
+        const GLYPHS = 'acdefghilnorstvyæøå{}!'.split('');
+
+        interface Glyph {
+            x: number;
+            y: number;
+            vy: number;
+            sway: number;
+            swayPhase: number;
+            char: string;
+            size: number;
+            color: string;
+            depth: number;
+            offsetX: number;
+        }
+
+        const COUNT = 110;
+        // A third of cdn.uib.no's speed: drift and sway both slowed.
+        const SPEED = 1 / 3;
+        const glyphs: Glyph[] = [];
+        function spawn(g?: Glyph, anywhere = false): Glyph {
+            const q = g ?? ({} as Glyph);
+            const depth = Math.random();
+            q.x = Math.random() * W;
+            q.y = anywhere ? Math.random() * H : H + 20;
+            q.vy = -(0.12 + depth * 0.45) * SPEED;
+            q.sway = 6 + Math.random() * 16;
+            q.swayPhase = Math.random() * Math.PI * 2;
+            q.char = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+            q.size = 9 + depth * 17;
+            q.color = palette[Math.floor(Math.random() * palette.length)];
+            q.depth = depth;
+            q.offsetX = 0;
+            return q;
+        }
+        for (let i = 0; i < COUNT; i++) glyphs.push(spawn(undefined, true));
+
+        // The canvas sits under the hero's text, so track the pointer on the
+        // whole hero.
+        const area = canvas.parentElement ?? canvas;
+        let mouseX = -1e6;
+        let mouseY = -1e6;
+        const PUSH_RADIUS = 120;
+        const setMouse = (event: PointerEvent) => {
+            const rect = canvas.getBoundingClientRect();
+            mouseX = event.clientX - rect.left;
+            mouseY = event.clientY - rect.top;
+        };
+        const clearMouse = () => {
+            mouseX = -1e6;
+            mouseY = -1e6;
+        };
+        area.addEventListener('pointermove', setMouse);
+        area.addEventListener('pointerenter', setMouse);
+        area.addEventListener('pointerleave', clearMouse);
+
+        let t = 0;
+        let running = false;
+        let visible = true;
+
+        function frame() {
+            ctx!.fillStyle = '#00132b';
+            ctx!.fillRect(0, 0, W, H);
+            ctx!.textAlign = 'center';
+            ctx!.textBaseline = 'middle';
+
+            for (const g of glyphs) {
+                g.y += g.vy;
+                const swayX = Math.sin(t * 0.6 + g.swayPhase) * g.sway;
+                const x = g.x + swayX + g.offsetX;
+
+                const dx = x - mouseX;
+                const dy = g.y - mouseY;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                const near = dist < PUSH_RADIUS;
+                if (near) {
+                    const push = (1 - dist / PUSH_RADIUS) ** 2;
+                    g.offsetX += (dx >= 0 ? 1 : -1) * push * 6;
+                }
+                g.offsetX *= 0.92;
+
+                if (g.y < -24) spawn(g);
+
+                const alpha = 0.25 + g.depth * 0.6;
+                ctx!.font = `${g.size.toFixed(1)}px ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace`;
+                ctx!.fillStyle = `rgba(${near ? HIGHLIGHT : g.color},${(near ? Math.min(1, alpha + 0.3) : alpha).toFixed(3)})`;
+                ctx!.fillText(g.char, x, g.y);
+            }
+
+            t += 0.016 * SPEED;
+            if (running) animId = requestAnimationFrame(frame);
+        }
+
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        function drawStaticFrame() {
+            running = false;
+            frame();
+        }
+        function startStop() {
+            const shouldRun = visible && !reducedMotion.matches;
+            if (shouldRun && !running) {
+                running = true;
+                animId = requestAnimationFrame(frame);
+            } else if (!shouldRun && running) {
+                running = false;
+                cancelAnimationFrame(animId);
+            }
+        }
+        const handleMotionChange = () => {
+            startStop();
+            if (reducedMotion.matches) drawStaticFrame();
+        };
+        reducedMotion.addEventListener('change', handleMotionChange);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                visible = entries[0]?.isIntersecting ?? true;
+                startStop();
+            },
+            { threshold: 0 }
+        );
+        observer.observe(canvas);
+
+        if (reducedMotion.matches) drawStaticFrame();
+        else startStop();
+
+        return () => {
+            running = false;
+            cancelAnimationFrame(animId);
+            observer.disconnect();
+            reducedMotion.removeEventListener('change', handleMotionChange);
+            window.removeEventListener('resize', resize);
+            area.removeEventListener('pointermove', setMouse);
+            area.removeEventListener('pointerenter', setMouse);
+            area.removeEventListener('pointerleave', clearMouse);
+        };
+    }
+
+    // Start on every page load (page transitions included) and stop before
+    // the page is swapped out. Phones get a plain hero (see the CSS), so
+    // the animation only runs from 768px up, starting or stopping when the
+    // window crosses that width.
+    let stop: (() => void) | undefined;
+    const wide = window.matchMedia('(min-width: 768px)');
+    function update() {
+        stop?.();
+        stop = undefined;
+        const canvas = document.getElementById('hero-glyphs');
+        if (wide.matches && canvas instanceof HTMLCanvasElement) stop = start(canvas);
+    }
+    document.addEventListener('astro:page-load', update);
+    wide.addEventListener('change', update);
+    document.addEventListener('astro:before-swap', () => {
+        stop?.();
+        stop = undefined;
+    });
+</script>

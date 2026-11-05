@@ -56,9 +56,7 @@
 	--ch-input-text: #082532;
 	--ch-placeholder: #6c8694;
 	--ch-current-letter: #2b9991;
-	--ch-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-	--ch-brand-font: 'Segoe Pro', Arial, sans-serif;
-	--ch-button-font: 'Segoe Pro', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Source Sans 3', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--ch-sans: 'Segoe Pro', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Source Sans 3', Roboto, 'Helvetica Neue', Arial, sans-serif;
 	--ch-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 	--ch-search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23ffffff' stroke-opacity='0.7' stroke-width='2' stroke-linecap='round' viewBox='0 0 24 24'%3E%3Cpath d='M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z'/%3E%3C/svg%3E");
 	--ch-menu-search-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%236c8694' stroke-width='2' stroke-linecap='round' viewBox='0 0 24 24'%3E%3Cpath d='M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z'/%3E%3C/svg%3E");
@@ -157,13 +155,13 @@ html.dark .cdn-header .ch-logo.ch-light {
 html.dark .cdn-header .ch-logo.ch-dark {
 	display: block;
 }
-/* The same font, sizes and colours as the DNKB's header. */
+/* The same sizes and colours as the DNKB's header. */
 .cdn-header .ch-names {
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
 	min-width: 0;
-	font-family: var(--ch-brand-font);
+	font-family: var(--ch-sans);
 	line-height: 1;
 }
 .cdn-header .ch-org {
@@ -188,7 +186,7 @@ html.dark .cdn-header .ch-logo.ch-dark {
 	align-items: center;
 	justify-self: center;
 	gap: 24px;
-	font-family: var(--ch-brand-font);
+	font-family: var(--ch-sans);
 	font-size: 14px;
 	font-weight: 600;
 	line-height: 20px;
@@ -196,7 +194,9 @@ html.dark .cdn-header .ch-logo.ch-dark {
 	text-transform: uppercase;
 }
 .cdn-header .ch-sites a {
-	padding: 0 0 4px;
+	/* 6px above balances the 4px and 2px underline below, so the text is
+	   centred whether or not the underline shows. */
+	padding: 6px 0 4px;
 	border-bottom: 2px solid transparent;
 	color: var(--ch-link);
 	text-decoration: none;
@@ -456,7 +456,7 @@ html.dark .cdn-header .ch-theme .ch-moon.ch-line {
 	border-radius: 6px;
 	background: transparent;
 	color: inherit;
-	font-family: var(--ch-button-font);
+	font-family: var(--ch-sans);
 	font-size: 0.85rem;
 	font-weight: 600;
 	line-height: 1.3;

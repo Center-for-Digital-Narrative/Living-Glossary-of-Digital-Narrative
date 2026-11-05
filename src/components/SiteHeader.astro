@@ -2,14 +2,15 @@
 // The CDN header. This is our implementation of the header specified in the
 // cdn-home-frontend repo, in static/header/: index.html shows every CDN
 // site's header (this one is "Glossary"), and cdn-header.css is copied to
-// src/styles/ unchanged. Synced with cdn-home-frontend commit 2a58951.
+// src/styles/ unchanged. Synced with cdn-home-frontend commit 32ae55a.
 import '../styles/cdn-header.css';
 import { allLetters, lettersWithoutTerms } from '../utils/letters';
 import ThemeIcon from './ThemeIcon.astro';
 
 interface Props {
-    // The front page shows its own About, Submit and letters in the hero,
-    // so its sub-bar only appears in the phone menu.
+    // The front page shows its own About, Submit and letters under the hero
+    // on bigger screens, so its sub-bar only appears on phones: the links in
+    // the menu, the letters as the strip under the header.
     front?: boolean;
     letter?: string;
 }
@@ -18,7 +19,7 @@ const path = Astro.url.pathname;
 
 const app = 'The Living Glossary of Digital Narrative';
 const sites = [
-    { label: 'CDN Hub', href: 'https://cdn.uib.no' },
+    { label: 'Hub', href: 'https://cdn.uib.no' },
     { label: 'DNKB', href: 'https://dnkb.cdn.uib.no' },
     { label: 'Glossary', href: 'https://glossary.cdn.uib.no', current: true },
     { label: 'Collection', href: 'https://collection.cdn.uib.no' },
@@ -72,17 +73,15 @@ const links = [
                     {links.map((l) => <a href={l.href} aria-current={path === l.href ? 'page' : undefined}>{l.label}</a>)}
                 </nav>
             </div>
-            {!front && (
-                <nav class="ch-index ch-letters" aria-label="Terms by letter">
-                    {allLetters.map((l) =>
-                        lettersWithoutTerms.includes(l)
-                            ? <span>{l.toUpperCase()}</span>
-                            : l === letter
-                                ? <a href={`/terms/${l}`} aria-current="page">{l.toUpperCase()}</a>
-                                : <a href={`/terms/${l}`} transition:name={`letter ${l.toUpperCase()}`}>{l.toUpperCase()}</a>
-                    )}
-                </nav>
-            )}
+            <nav class="ch-index ch-letters" aria-label="Terms by letter">
+                {allLetters.map((l) =>
+                    lettersWithoutTerms.includes(l)
+                        ? <span>{l.toUpperCase()}</span>
+                        : l === letter
+                            ? <a href={`/terms/${l}`} aria-current="page">{l.toUpperCase()}</a>
+                            : <a href={`/terms/${l}`} transition:name={`letter ${l.toUpperCase()}`}>{l.toUpperCase()}</a>
+                )}
+            </nav>
         </div>
     </div>
 </header>

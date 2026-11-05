@@ -15,6 +15,48 @@ import {default as PageFind} from "astro-pagefind/components/Search"; // https:/
     --pagefind-ui-border: #152028;
     --pagefind-ui-tag: #152028;
 }
+
+/* While Pagefind searches, its "Searching for ..." line becomes the five
+   CDN dots (as in cdn.uib.no's DotsDivider), rising in turn. The words
+   stay for screen readers. */
+.pagefind-ui__message.is-searching {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+.pagefind-ui__message.is-searching .search-dots-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+.search-dots {
+    display: flex;
+    gap: 15px;
+}
+.search-dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    animation: search-dot 1.2s ease-in-out infinite;
+}
+.search-dots span:nth-child(1) { background: #0076ad; }
+.search-dots span:nth-child(2) { background: #95be63; animation-delay: 0.12s; }
+.search-dots span:nth-child(3) { background: #5c83c1; animation-delay: 0.24s; }
+.search-dots span:nth-child(4) { background: #1f7a73; animation-delay: 0.36s; }
+.search-dots span:nth-child(5) { background: #4e9db4; animation-delay: 0.48s; }
+@keyframes search-dot {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.55; }
+    30% { transform: translateY(-10px); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .search-dots span {
+        animation: none;
+        opacity: 1;
+    }
+}
 </style>
 <BaseLayout pageTitle='Search | LGDN'>
     <div id="pagefind_container" class="container mt-4 px-2 relative" transition:name='search'>
@@ -41,7 +83,26 @@ import {default as PageFind} from "astro-pagefind/components/Search"; // https:/
                 if (text) announce(text);
             };
 
+            // Pagefind shows its "Searching for ..." line on its own while a
+            // search runs, then replaces it with the results message.
+            const showDots = () => {
+                const message = search.querySelector<HTMLElement>(".pagefind-ui__message");
+                if (!message || message.classList.contains("is-searching")) return;
+                const results = message.nextElementSibling?.classList.contains("pagefind-ui__results");
+                if (results || !message.textContent?.trim().startsWith("Searching")) return;
+                const text = document.createElement("span");
+                text.className = "search-dots-text";
+                text.append(...message.childNodes);
+                const dots = document.createElement("span");
+                dots.className = "search-dots";
+                dots.setAttribute("aria-hidden", "true");
+                dots.innerHTML = "<span></span><span></span><span></span><span></span><span></span>";
+                message.append(text, dots);
+                message.classList.add("is-searching");
+            };
+
             const observer = new MutationObserver(() => {
+                showDots();
                 window.clearTimeout(debounceTimer);
                 debounceTimer = window.setTimeout(mirrorPagefindMessage, 150);
             });
