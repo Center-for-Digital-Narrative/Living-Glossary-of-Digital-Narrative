@@ -4,9 +4,10 @@
  * buttons and bars each site has. Each site copies this file as it is and
  * renders the same markup itself.
  *
- * Three sizes:
- * - 1240px and up: the main bar, with the sub-bar under it.
- * - 860 to 1239px: the main bar folds into a Menu button; the sub-bar stays.
+ * Sizes:
+ * - 1240px and up: the main bar with all links inline, and the sub-bar.
+ * - 1100 to 1239px: the three partner sites fold into a Partners menu.
+ * - 860 to 1099px: the main bar folds into a Menu button; the sub-bar stays.
  * - Below 860px: the sub-bar folds into the menu too, except an A to Z
  *   index, which becomes a strip under the bar. Below 440px the Menu
  *   button shows only its icon.
@@ -109,14 +110,15 @@ html.dark .cdn-header {
 .cdn-header a:focus-visible,
 .cdn-header button:focus-visible,
 .cdn-header summary:focus-visible,
+.cdn-header .ch-partners-toggle:has(input:focus-visible),
 .cdn-header .ch-menu-toggle:focus-visible + .ch-menu-button {
 	outline: 2px solid var(--ch-accent);
 	outline-offset: 2px;
 }
 .cdn-header .ch-inner {
-	max-width: 1280px;
+	max-width: 1328px;
 	margin: 0 auto;
-	padding: 0 24px 0 0;
+	padding: 0 24px;
 	display: flex;
 	align-items: center;
 	gap: 24px;
@@ -185,7 +187,7 @@ html.dark .cdn-header .ch-logo.ch-dark {
 	display: flex;
 	align-items: center;
 	justify-self: center;
-	gap: 24px;
+	gap: 18px;
 	font-family: var(--ch-sans);
 	font-size: 14px;
 	font-weight: 600;
@@ -229,6 +231,99 @@ html.dark .cdn-header .ch-logo.ch-dark {
 	width: 1px;
 	height: 18px;
 	background: var(--ch-border);
+}
+
+/* Partner sites: inline at 1240px+, a dropdown at 1100-1239px, and pills in the menu. */
+.cdn-header .ch-partners,
+.cdn-header .ch-partners-menu {
+	display: contents;
+}
+.cdn-header .ch-partners-toggle,
+.cdn-header .ch-partner-full {
+	display: none;
+}
+@media (max-width: 1239px) {
+	.cdn-header .ch-partner-short {
+		display: none;
+	}
+	.cdn-header .ch-partner-full {
+		display: inline;
+	}
+}
+@media (min-width: 1100px) and (max-width: 1239px) {
+	.cdn-header .ch-inner {
+		gap: 16px;
+	}
+	.cdn-header .ch-partners {
+		display: block;
+		position: relative;
+	}
+	.cdn-header .ch-partners-toggle {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		padding: 6px 0 4px;
+		border-bottom: 2px solid transparent;
+		color: var(--ch-link);
+		white-space: nowrap;
+		cursor: pointer;
+		user-select: none;
+		transition: color 0.15s ease;
+	}
+	.cdn-header .ch-partners-toggle:hover,
+	.cdn-header .ch-partners:has(input:checked) .ch-partners-toggle {
+		color: var(--ch-link-hover);
+	}
+	.cdn-header .ch-partners-toggle input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		margin: 0;
+		opacity: 0;
+		pointer-events: none;
+	}
+	.cdn-header .ch-chevron {
+		width: 12px;
+		height: 12px;
+		opacity: 0.75;
+		transition: transform 0.15s ease;
+	}
+	.cdn-header .ch-partners:has(input:checked) .ch-chevron {
+		transform: rotate(180deg);
+	}
+	.cdn-header .ch-partners-menu {
+		display: none;
+		position: absolute;
+		top: calc(100% + 8px);
+		right: 0;
+		z-index: 10;
+		min-width: 195px;
+		padding: 6px 0;
+		border: 1px solid var(--ch-border);
+		border-radius: 8px;
+		background: var(--ch-bar-bg);
+		box-shadow: 0 12px 28px rgba(0, 19, 43, 0.16);
+		font-size: 13px;
+		font-weight: 500;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+	.cdn-header .ch-partners:has(input:checked) .ch-partners-menu {
+		display: block;
+	}
+	.cdn-header .ch-partners-menu a {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 7px 14px;
+		border-bottom: 0;
+		color: var(--ch-text);
+	}
+	.cdn-header .ch-partners-menu a:hover {
+		background: var(--ch-pill-hover-bg);
+		color: var(--ch-link-hover);
+	}
 }
 
 /* Dark mode and the site's actions */
@@ -282,7 +377,7 @@ html.dark .cdn-header .ch-theme .ch-moon.ch-line {
 	display: block;
 }
 
-/* The Menu button: a checkbox and its label, shown below 1240px. */
+/* The Menu button: a checkbox and its label, shown below 1100px. */
 .cdn-header .ch-menu-toggle {
 	position: absolute;
 	width: 1px;
@@ -570,7 +665,7 @@ html.dark .cdn-header .ch-theme .ch-moon.ch-line {
 
 /* When dark mode is the last thing in the bar, line the icon itself, not
    its padding, up with the right edge. */
-@media (min-width: 1240px) {
+@media (min-width: 1100px) {
 	.cdn-header .ch-tools:not(:has(.ch-actions)) .ch-theme {
 		margin-right: -8px;
 	}
@@ -579,7 +674,7 @@ html.dark .cdn-header .ch-theme .ch-moon.ch-line {
 /* Tablets and phones: the main bar shows the logo and the Menu button,
    and the menu holds the CDN sites, dark mode and the actions. The header
    becomes a grid that takes its parts from both bars. */
-@media (max-width: 1239px) {
+@media (max-width: 1099px) {
 	.cdn-header {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) auto;
@@ -756,10 +851,14 @@ html.dark .cdn-header .ch-theme .ch-moon.ch-line {
 		gap: 4px;
 	}
 	.cdn-header .ch-break {
-		grid-column: 1 / -1;
-		width: auto;
-		height: 1px;
-		margin: 4px 10px;
+		display: none;
+	}
+	.cdn-header .ch-partners-label {
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 0;
+		padding-top: 12px;
+		border-top: 1px solid var(--ch-border);
 	}
 	.cdn-header .ch-tools {
 		order: 40;
