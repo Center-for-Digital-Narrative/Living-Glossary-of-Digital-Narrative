@@ -2,7 +2,7 @@
 // The CDN header. This is our implementation of the header specified in the
 // cdn-home-frontend repo, in static/header/: index.html shows every CDN
 // site's header (this one is "Glossary"), and cdn-header.css is copied to
-// src/styles/ unchanged. Synced with cdn-home-frontend commit 32ae55a.
+// src/styles/ unchanged. Synced with cdn-home-frontend commit 8092acf.
 import '../styles/cdn-header.css';
 import { allLetters, lettersWithoutTerms } from '../utils/letters';
 import ThemeIcon from './ThemeIcon.astro';
@@ -20,14 +20,14 @@ const path = Astro.url.pathname;
 const app = 'The Living Glossary of Digital Narrative';
 const sites = [
     { label: 'Hub', href: 'https://cdn.uib.no' },
-    { label: 'DNKB', href: 'https://dnkb.cdn.uib.no' },
+    { label: 'Knowledge Base', href: 'https://dnkb.cdn.uib.no' },
     { label: 'Glossary', href: 'https://glossary.cdn.uib.no', current: true },
     { label: 'Collection', href: 'https://collection.cdn.uib.no' },
 ];
 const partners = [
-    { label: 'CELL', href: 'https://cellproject.net' },
-    { label: 'ELMCIP', href: 'https://elmcip.net' },
-    { label: 'ebr', href: 'https://electronicbookreview.com', keepCase: true },
+    { label: 'CELL', full: 'CELL Project', href: 'https://cellproject.net' },
+    { label: 'ELMCIP', full: 'ELMCIP', href: 'https://elmcip.net' },
+    { label: 'ebr', full: 'electronic book review', href: 'https://electronicbookreview.com', keepCase: true },
 ];
 const links = [
     { label: 'About', href: '/about/' },
@@ -47,11 +47,17 @@ const links = [
             <nav class="ch-sites" aria-label="CDN sites">
                 {sites.map((s) => <a href={s.href} aria-current={s.current ? 'true' : undefined}>{s.label}</a>)}
                 <span class="ch-break" aria-hidden="true"></span>
-                {partners.map((s) => (
-                    <a href={s.href} class:list={['ch-partner', { 'ch-keep-case': s.keepCase }]} title={`${s.label} (partner site)`}>
-                        {s.label}<svg class="ch-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
-                    </a>
-                ))}
+                <div class="ch-partners">
+                    <span class="ch-label ch-partners-label">Partner sites</span>
+                    <label class="ch-partners-toggle"><input type="checkbox" aria-label="Partner sites" />Partners<svg class="ch-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></label>
+                    <div class="ch-partners-menu">
+                        {partners.map((s) => (
+                            <a href={s.href} class:list={['ch-partner', { 'ch-keep-case': s.keepCase }]} title={`${s.full} (partner site)`}>
+                                {s.full === s.label ? s.label : <Fragment><span class="ch-partner-short">{s.label}</span><span class="ch-partner-full">{s.full}</span></Fragment>}<svg class="ch-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9" /></svg>
+                            </a>
+                        ))}
+                    </div>
+                </div>
             </nav>
             <div class="ch-tools">
                 <!-- The glossary's own dark mode toggle, unchanged. -->
@@ -85,3 +91,20 @@ const links = [
         </div>
     </div>
 </header>
+<script>
+    // Close the Partners dropdown on an outside click or Escape. These listeners
+    // are on the document, so they keep working across client-side navigation.
+    document.addEventListener('click', (event) => {
+        document.querySelectorAll<HTMLInputElement>('.ch-partners input:checked').forEach((toggle) => {
+            if (!toggle.closest('.ch-partners')?.contains(event.target as Node)) toggle.checked = false;
+        });
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key !== 'Escape') return;
+        const toggle = document.querySelector<HTMLInputElement>('.ch-partners input:checked');
+        if (toggle) {
+            toggle.checked = false;
+            toggle.focus();
+        }
+    });
+</script>

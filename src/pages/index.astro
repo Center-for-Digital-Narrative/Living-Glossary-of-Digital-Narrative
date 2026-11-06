@@ -11,11 +11,11 @@ const allPosts = (await getCollection("terms")).sort((a, b) => a.data.title.loca
 <html lang="en" style="overflow-y: scroll">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content={Astro.generator} />
-    <title>The Living Glossary of Digital Narrative</title>
+    <title>The Living Glossary of Digital Narrative | LGDN</title>
     <ClientRouter />
 </head>
 <body class="flex flex-col min-h-screen dark:bg-black">
